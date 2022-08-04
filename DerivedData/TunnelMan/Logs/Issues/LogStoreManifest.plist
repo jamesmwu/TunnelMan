@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>logFormatVersion</key>
+	<integer>10</integer>
+	<key>logs</key>
+	<dict>
+		<key>566BEDC5-6AA3-443B-A4D9-4DC6EEE34621</key>
+		<dict>
+			<key>className</key>
+			<string>IDEActivityLogMajorGroupSection</string>
+			<key>documentTypeString</key>
+			<string>&lt;nil&gt;</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
+			<key>fileName</key>
+			<string>566BEDC5-6AA3-443B-A4D9-4DC6EEE34621.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>W</string>
+			</dict>
+			<key>signature</key>
+			<string>TunnelMan-goyvvdkbmdjmxnhivjqebpgvbqos</string>
+			<key>timeStartedRecording</key>
+			<real>681273916.63436496</real>
+			<key>timeStoppedRecording</key>
+			<real>681273919.61866605</real>
+			<key>title</key>
+			<string>Build target TunnelMan</string>
+			<key>uniqueIdentifier</key>
+			<string>566BEDC5-6AA3-443B-A4D9-4DC6EEE34621</string>
+		</dict>
+	</dict>
+	<key>preserveOldLogs</key>
+	<true/>
+</dict>
+</plist>
