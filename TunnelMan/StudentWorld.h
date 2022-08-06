@@ -7,7 +7,9 @@
 #include <string>
 #include <vector>
 
-// Students:  Add code to this file, StudentWorld.cpp, Actor.h, and Actor.cpp
+//For testing purposes
+#include <iostream>
+using namespace std;
 
 class TunnelMan;
 class Actor;
@@ -37,7 +39,7 @@ public:
         }
         
         //Create TunnelMan obj
-        tunnelManPtr = new TunnelMan();
+        tunnelManPtr = new TunnelMan(this);
 
         
 		return GWSTATUS_CONTINUE_GAME;
@@ -47,11 +49,21 @@ public:
 	{
         setGameStatText("Scr: 000000 Lvl: 0 Lives: 3 Hlth: 100% Wtr: 5 Gld: 1 Sonar: 1 Oil Left: 2");
         
+        tunnelManPtr->doSomething();
+        
 		decLives();
         return GWSTATUS_CONTINUE_GAME;
 
 //		return GWSTATUS_PLAYER_DIED;
 	}
+    
+    void tunnelManEarthOverlap(){
+        int x = tunnelManPtr->getX();
+        int y = tunnelManPtr->getY();
+        
+
+        
+    }
 
 	virtual void cleanUp()
 	{

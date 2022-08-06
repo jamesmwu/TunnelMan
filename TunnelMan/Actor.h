@@ -4,20 +4,30 @@
 //#include "GraphObject.h"
 #include "GameObject.h"
 
-//For each object, you must specify: imageID, x, y at minimum
+class StudentWorld;
 
+//For each object, you must specify: imageID, x, y at minimum
 class Earth : public GameObject {
 public:
     Earth(int x, int y);
 
+    int getX() const;
+    int getY() const;
+    
     virtual ~Earth();
+private:
+    int x;
+    int y;
 };
 
 class TunnelMan : public GameObject {
 public:
-    TunnelMan();
+    TunnelMan(StudentWorld* sw);
     
     virtual void doSomething();
+    
+    int getX() const;
+    int getY() const;
     
     virtual ~TunnelMan();
 
@@ -28,6 +38,7 @@ private:
     int nuggets;
     int x;
     int y;
+    StudentWorld* m_studentWorld;
 };
 
 #endif // ACTOR_H_
