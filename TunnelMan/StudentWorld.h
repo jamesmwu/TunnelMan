@@ -3,9 +3,14 @@
 
 #include "GameWorld.h"
 #include "GameConstants.h"
+#include "Actor.h"
 #include <string>
+#include <vector>
 
 // Students:  Add code to this file, StudentWorld.cpp, Actor.h, and Actor.cpp
+
+class TunnelMan;
+class Actor;
 
 class StudentWorld : public GameWorld
 {
@@ -13,26 +18,58 @@ public:
 	StudentWorld(std::string assetDir)
 		: GameWorld(assetDir)
 	{
+        tunnelManPtr = nullptr;
 	}
 
+    //Initialize data structures, construct new oil field, allocate / insert TunnelMan Object
 	virtual int init()
 	{
+        //Fill rows 0 to 59 with Earth objects w exception of vertical mine shaft in middle of field
+        //Rows (y)
+        for(int i = 0; i < 60; i++){
+            //Cols (x)
+            for(int j = 0; j < 64; j++){
+                //4 Squares wide at cols 30-33 and 56 squares deep are empty
+                if(j >= 30 && j <= 33 && i <= 55) continue;
+                
+                earthObjects[i][j] = new Earth(j, 59 - i);
+            }
+        }
+        
+        //Create TunnelMan obj
+        tunnelManPtr = new TunnelMan();
+
+        
 		return GWSTATUS_CONTINUE_GAME;
 	}
 
 	virtual int move()
 	{
-		// This code is here merely to allow the game to build, run, and terminate after you hit enter a few times.
-		// Notice that the return value GWSTATUS_PLAYER_DIED will cause our framework to end the current level.
+        setGameStatText("Scr: 000000 Lvl: 0 Lives: 3 Hlth: 100% Wtr: 5 Gld: 1 Sonar: 1 Oil Left: 2");
+        
 		decLives();
-		return GWSTATUS_PLAYER_DIED;
+        return GWSTATUS_CONTINUE_GAME;
+
+//		return GWSTATUS_PLAYER_DIED;
 	}
 
 	virtual void cleanUp()
 	{
+        //Delete Earth
+        for(int i = 0; i < 60; i++){
+            for(int j = 0; j < 64; j++){
+                //4 Squares wide at cols 30-33 and 56 squares deep are empty
+                delete earthObjects[i][j];
+            }
+        }
+        
+        delete tunnelManPtr;
 	}
 
 private:
+    TunnelMan* tunnelManPtr;
+    std::vector<Actor*> gameObjects;
+    Earth* earthObjects[64][60];  //Rows 0 - 59 are filled with Earth objs
 };
 
 #endif // STUDENTWORLD_H_
