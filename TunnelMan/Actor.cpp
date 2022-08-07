@@ -27,13 +27,13 @@ Earth::~Earth(){
 /*========== TunnelMan ==========*/
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0){
     setVisible(true);
-    
     hitPoints = 10;
     water = 5;
     sonar = 1;
     nuggets = 0;
     x = 30;
     y = 60;
+    
     m_studentWorld = sw;
 }
 
@@ -76,6 +76,10 @@ void TunnelMan::doSomething(){
         }
         else if(ch == KEY_PRESS_ESCAPE){
             hitPoints = 0;  //Kill tunnelman
+        }
+        //Debugging
+        else if(ch == KEY_PRESS_SPACE){
+            m_studentWorld->print();
         }
     }
 }

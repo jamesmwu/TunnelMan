@@ -36,8 +36,10 @@ private:
     int water;
     int sonar;
     int nuggets;
+    //Anchor point x and y
     int x;
     int y;
+    
     StudentWorld* m_studentWorld;
 };
 
