@@ -64,7 +64,7 @@ public:
     void print(){
         cout << endl;
         //Rows (y)
-        for(int i = 59; i >= 0; i--){
+        for(int i = 60; i >= 0; i--){
             //Cols (x)
             for(int j = 0; j < 64; j++){
                 if(earthObjects[i][j] == nullptr) cout << "*";
@@ -83,9 +83,12 @@ public:
         int x = tunnelManPtr->getX();
         int y = tunnelManPtr->getY();
         
+        
         //Delete the Earth objects with the coordinates where the tunnelMan is
         for(int i = 0; i < 4; i++){
             for(int j = 0; j < 4; j++){
+                if(y >= 60) return; //Catch edge case where tunnelman is on top of Earth
+
                 if(earthObjects[y][x] != nullptr){
                     delete earthObjects[y][x];
                     earthObjects[y][x] = nullptr;
@@ -116,7 +119,7 @@ public:
 private:
     TunnelMan* tunnelManPtr;
     std::vector<Actor*> gameObjects;
-    Earth* earthObjects[64][60];  //Rows 0 - 59 are filled with Earth objs
+    Earth* earthObjects[60][64];  //Rows 0 - 59 are filled with Earth objs
 };
 
 #endif // STUDENTWORLD_H_
