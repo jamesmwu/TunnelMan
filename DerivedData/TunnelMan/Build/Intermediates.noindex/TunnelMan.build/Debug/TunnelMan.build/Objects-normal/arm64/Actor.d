@@ -1,6 +1,5 @@
 dependencies: /Users/jameswu/Desktop/TunnelMan/TunnelMan/Actor.cpp \
   /Users/jameswu/Desktop/TunnelMan/TunnelMan/Actor.h \
-  /Users/jameswu/Desktop/TunnelMan/TunnelMan/GameObject.h \
   /Users/jameswu/Desktop/TunnelMan/TunnelMan/GraphObject.h \
   /Users/jameswu/Desktop/TunnelMan/TunnelMan/SpriteManager.h \
   /Users/jameswu/Desktop/TunnelMan/TunnelMan/freeglut.h \

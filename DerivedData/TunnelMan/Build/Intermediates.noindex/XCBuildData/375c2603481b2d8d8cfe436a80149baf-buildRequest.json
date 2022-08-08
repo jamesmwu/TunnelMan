@@ -1,0 +1,58 @@
+{
+  "_buildCommand2" : {
+    "command" : "build",
+    "skipDependencies" : false,
+    "style" : "buildAndRun"
+  },
+  "buildCommand" : "build",
+  "configuredTargets" : [
+    {
+      "guid" : "90a555d6df0372968c45cd933bdc4ad5e7c0ead2fda0cacef9b04929c02aa297"
+    }
+  ],
+  "containerPath" : "/Users/jameswu/Desktop/TunnelMan/TunnelMan.xcodeproj",
+  "continueBuildingAfterErrors" : false,
+  "enableIndexBuildArena" : false,
+  "hideShellScriptEnvironment" : false,
+  "parameters" : {
+    "action" : "build",
+    "activeArchitecture" : "arm64",
+    "activeRunDestination" : {
+      "disableOnlyActiveArch" : false,
+      "platform" : "macosx",
+      "sdk" : "macosx12.3",
+      "sdkVariant" : "macos",
+      "supportedArchitectures" : [
+        "arm64e",
+        "arm64",
+        "x86_64"
+      ],
+      "targetArchitecture" : "arm64"
+    },
+    "arenaInfo" : {
+      "buildIntermediatesPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData/TunnelMan/Build/Intermediates.noindex",
+      "buildProductsPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData/TunnelMan/Build/Products",
+      "derivedDataPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData",
+      "indexDataStoreFolderPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData/TunnelMan/Index/DataStore",
+      "indexEnableDataStore" : true,
+      "indexPCHPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData/TunnelMan/Index/PrecompiledHeaders",
+      "pchPath" : "/Users/jameswu/Desktop/TunnelMan/DerivedData/TunnelMan/Build/Intermediates.noindex/PrecompiledHeaders"
+    },
+    "configurationName" : "Debug",
+    "overrides" : {
+      "synthesized" : {
+        "table" : {
+          "ENABLE_PREVIEWS" : "NO"
+        }
+      }
+    }
+  },
+  "schemeCommand" : "launch",
+  "schemeCommand2" : "launch",
+  "shouldCollectMetrics" : false,
+  "showNonLoggedProgress" : true,
+  "useDryRun" : false,
+  "useImplicitDependencies" : true,
+  "useLegacyBuildLocations" : false,
+  "useParallelTargets" : true
+}

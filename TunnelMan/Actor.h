@@ -1,33 +1,48 @@
 #ifndef ACTOR_H_
 #define ACTOR_H_
 
-//#include "GraphObject.h"
-#include "GameObject.h"
+#include "GraphObject.h"
 
 class StudentWorld;
 
-//For each object, you must specify: imageID, x, y at minimum
-class Earth : public GameObject {
+/*========== GameObject base class ==========*/
+class GameObject : public GraphObject {
 public:
-    Earth(int x, int y);
-
-    int getX() const;
-    int getY() const;
+    //Default values of GraphObject constructor
+    GameObject(int imageID, int startX, int startY, Direction dir = right, double size = 1.0, unsigned int depth = 0);
     
-    virtual ~Earth();
+    virtual void doSomething(){}
+    
+    int getX() const;
+    void updateX(int val);
+    
+    int getY() const;
+    void updateY(int val);
+    
+    virtual ~GameObject();
+
 private:
     int x;
     int y;
+    
 };
 
+/*========== Earth class ==========*/
+class Earth : public GameObject {
+public:
+    //For each object, you must specify: imageID, x, y at minimum
+    Earth(int x, int y);
+    
+    virtual ~Earth();
+
+};
+
+/*========== TunnelMan class ==========*/
 class TunnelMan : public GameObject {
 public:
     TunnelMan(StudentWorld* sw);
     
     virtual void doSomething();
-    
-    int getX() const;
-    int getY() const;
     
     virtual ~TunnelMan();
 
@@ -36,9 +51,6 @@ private:
     int water;
     int sonar;
     int nuggets;
-    //Anchor point x and y
-    int x;
-    int y;
     
     StudentWorld* m_studentWorld;
 };
