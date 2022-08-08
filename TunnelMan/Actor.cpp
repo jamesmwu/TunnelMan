@@ -43,6 +43,34 @@ Earth::~Earth(){
     setVisible(false);  //Deleting earth object, remove
 }
 
+/*========== Boulder ==========*/
+Boulder::Boulder(int x, int y, StudentWorld* sw) : GameObject(TID_BOULDER, x, y, Direction::down, 1.0, 1){
+    setVisible(true);
+    alive = true;
+    state = "stable";
+    m_studentWorld = sw;
+}
+
+void Boulder::doSomething(){
+    if(!alive) return;
+    
+    m_studentWorld->earthOverlap(getX(), getY());
+    
+    if(state == "stable"){
+        //Check to see if there is any earth in 4 squares immediately below boulder (same Y val). If there is ANY earth, do nothing.
+        //If NONE of the 4 squares have earth, change state to "waiting" for the next 30 ticks
+        //Then, change to falling state and play sound SOUND_FALLING_ROCK. It must continue to move downward one square each tick until it hits the bottom of the oil field, runs into the top of another Boulder, or runs into Earth. Then set state to dead. If, in this state, the boulder comes within a radius of 3 (inclusive) of any Protestors or TunnelMan, it does 100 pts annoyance (killing them instantly).
+    }
+    
+    
+    
+    
+}
+
+Boulder::~Boulder(){
+    setVisible(false);
+}
+
 /*========== TunnelMan ==========*/
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0){
     setVisible(true);
@@ -57,9 +85,10 @@ TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Directio
 void TunnelMan::doSomething(){
     if(hitPoints <= 0) return;
     
-    m_studentWorld->tunnelManEarthOverlap();
     int x = getX();
     int y = getY();
+    
+    m_studentWorld->earthOverlap(x, y);
 
     int ch;
     if (m_studentWorld->getKey(ch) == true)

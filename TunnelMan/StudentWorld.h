@@ -19,7 +19,9 @@ public:
 
     virtual int move();
 
-    void tunnelManEarthOverlap();
+    void earthOverlap(int x, int y);
+    
+    bool distance(int x, int y);
 
     virtual void cleanUp();
     

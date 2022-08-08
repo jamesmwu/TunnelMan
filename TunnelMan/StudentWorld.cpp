@@ -1,6 +1,9 @@
 #include "StudentWorld.h"
 #include <string>
+#include <stdlib.h> //Used for rand when creating gameObjects
+#include <time.h>   //Used for time in using srand to reset rand
 #include <vector>
+#include <cmath>    //Used to calculate distance to other gameObjects
 
 using namespace std;
 
@@ -34,6 +37,35 @@ int StudentWorld::init(){
     //Create TunnelMan obj
     tunnelManPtr = new TunnelMan(this);
 
+    //Create other game objects
+    int level = getLevel();
+    int boulder = min(level / 2 + 2, 9);
+//    int nugget = max(5 - level / 2, 2);
+//    int barrel = min(2 + level, 21);
+    
+    //Subtract 4 from the range since the anchor point of the object is the bottom left.
+    int xRange = 60;
+    int yRange = 56;
+    
+    srand((unsigned)time(NULL));
+    
+    for(int i = 0; i < boulder; i++){
+        
+        //Generate 2 random x and y locations for boulder
+        int x = rand() % xRange;
+        int y = rand() % yRange;
+        bool inRange = distance(x, y);
+        
+        //Ensure boulder is within the oil field and not in the tunnel and not in range of other objects
+        while(x < 0 || x > 60 || y < 20 || y > 56 || (x >= 25 && x <= 35 && y >= 1) || inRange){
+            x = rand() % xRange;
+            y = rand() % yRange;
+            inRange = distance(x, y);
+        }
+        
+        GameObject* bldr = new Boulder(x, y, this);
+        gameObjects.push_back(bldr);
+    }
     
     return GWSTATUS_CONTINUE_GAME;
 }
@@ -43,20 +75,21 @@ int StudentWorld::move(){
     
     tunnelManPtr->doSomething();
     
-    decLives();
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        (*it)->doSomething();
+    }
+    
+//    decLives();
     return GWSTATUS_CONTINUE_GAME;
 
 //        return GWSTATUS_PLAYER_DIED;
 }
 
-void StudentWorld::tunnelManEarthOverlap(){
+void StudentWorld::earthOverlap(int x, int y){
     
-    //Delete any earth objects that have same coords as where the tunnelMan is
-    int x = tunnelManPtr->getX();
-    int y = tunnelManPtr->getY();
+    //Delete any earth objects that have same coords as a given obj
     
-    
-    //Delete the Earth objects with the coordinates where the tunnelMan is
+    //Delete the Earth objects with the same coordinates
     for(int i = 0; i < 4; i++){
         for(int j = 0; j < 4; j++){
             if(y >= 60) return; //Catch edge case where tunnelman is on top of Earth
@@ -75,20 +108,32 @@ void StudentWorld::tunnelManEarthOverlap(){
             
 }
 
+//Uses distance formula to determine if a given coordinate is in the range of a gameObject
+bool StudentWorld::distance(int x, int y){
+    
+    //Cover just the anchor point of the 4x4 sprites
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        //Calculate distance to boulder
+        int tempX = (*it)->getX();
+        int tempY = (*it)->getY();
+        
+        int dist = sqrt(pow(tempX - x, 2) + pow(tempY - y, 2));
+        if(dist <= 6) return true;
+    }
+    
+    return false;
+}
+
 void StudentWorld::cleanUp(){
     //Free tunnelMan
     delete tunnelManPtr;
     tunnelManPtr = nullptr;
     
     //Free gameObjects
-    for(int i = 0; i < gameObjects.size(); i++){
-        GameObject* ptr = gameObjects[i];
-        delete ptr;
-        ptr = nullptr;
-        
-        delete gameObjects[i];
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        delete *it;
     }
-    
+    gameObjects.clear();
     
     //Free earthObjects
     for(int i = 0; i < 60; i++){
@@ -101,19 +146,3 @@ void StudentWorld::cleanUp(){
 StudentWorld::~StudentWorld(){
     cleanUp();
 }
-
-//HELPER: Print earth array for debug testing
-//void print(){
-//    cout << endl;
-//    //Rows (y)
-//    for(int i = 60; i >= 0; i--){
-//        //Cols (x)
-//        for(int j = 0; j < 64; j++){
-//            if(earthObjects[i][j] == nullptr) cout << "*";
-//            else cout << ".";
-//        }
-//        cout << endl;
-//    }
-//
-//    cout << endl;
-//}

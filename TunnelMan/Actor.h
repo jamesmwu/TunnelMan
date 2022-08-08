@@ -37,6 +37,22 @@ public:
 
 };
 
+/*========== Boulder class ==========*/
+class Boulder : public GameObject {
+public:
+    Boulder(int x, int y, StudentWorld* sw);
+    
+    virtual void doSomething();
+    
+    virtual ~Boulder();
+    
+private:
+    bool alive;
+    std::string state;
+    
+    StudentWorld* m_studentWorld;
+};
+
 /*========== TunnelMan class ==========*/
 class TunnelMan : public GameObject {
 public:
