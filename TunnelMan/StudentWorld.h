@@ -21,6 +21,10 @@ public:
 
     void earthOverlap(int x, int y);
     
+    bool checkEarthUnderBoulder(int x, int y);
+    
+    bool checkObjectUnderBoulder(int x, int y);
+    
     bool distance(int x, int y);
 
     virtual void cleanUp();

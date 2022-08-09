@@ -11,7 +11,9 @@ public:
     //Default values of GraphObject constructor
     GameObject(int imageID, int startX, int startY, Direction dir = right, double size = 1.0, unsigned int depth = 0);
     
-    virtual void doSomething(){}
+    virtual void doSomething();
+    
+    virtual void annoyed(int val);
     
     int getX() const;
     void updateX(int val);
@@ -49,6 +51,7 @@ public:
 private:
     bool alive;
     std::string state;
+    int tick;
     
     StudentWorld* m_studentWorld;
 };
@@ -59,6 +62,10 @@ public:
     TunnelMan(StudentWorld* sw);
     
     virtual void doSomething();
+    
+    virtual void annoyed(int val);
+    
+    bool isAlive();
     
     virtual ~TunnelMan();
 

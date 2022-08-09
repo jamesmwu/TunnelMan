@@ -73,13 +73,16 @@ int StudentWorld::init(){
 int StudentWorld::move(){
     setGameStatText("Scr: 000000 Lvl: 0 Lives: 3 Hlth: 100% Wtr: 5 Gld: 1 Sonar: 1 Oil Left: 2");
     
+    if(!tunnelManPtr->isAlive()){
+        decLives();
+    }
+    
     tunnelManPtr->doSomething();
     
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         (*it)->doSomething();
     }
     
-//    decLives();
     return GWSTATUS_CONTINUE_GAME;
 
 //        return GWSTATUS_PLAYER_DIED;
@@ -119,6 +122,31 @@ bool StudentWorld::distance(int x, int y){
         
         int dist = sqrt(pow(tempX - x, 2) + pow(tempY - y, 2));
         if(dist <= 6) return true;
+    }
+    
+    return false;
+}
+
+//Returns whether or not there is earth under the boulder
+bool StudentWorld::checkEarthUnderBoulder(int x, int y){
+    
+    //Y is constant, but x changes
+    y--;
+    
+    for(int i = 0; i < 4; i++){
+        if(earthObjects[y][x + i] != nullptr) return true;
+    }
+    
+    return false;
+    
+}
+
+//Returns whether there is another game object under boulder
+bool StudentWorld::checkObjectUnderBoulder(int x, int y){
+    y--;
+    
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        if((*it)->getY() + 3 == y && (x - 3 <= (*it)->getX() <= x + 3)) return true;
     }
     
     return false;

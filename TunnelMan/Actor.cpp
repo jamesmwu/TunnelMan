@@ -29,6 +29,10 @@ void GameObject::updateY(int val){
     y += val;
 }
 
+void GameObject::doSomething(){}
+
+void GameObject::annoyed(int val){}
+
 GameObject::~GameObject(){
     
 }
@@ -49,6 +53,7 @@ Boulder::Boulder(int x, int y, StudentWorld* sw) : GameObject(TID_BOULDER, x, y,
     alive = true;
     state = "stable";
     m_studentWorld = sw;
+    tick = 30;
 }
 
 void Boulder::doSomething(){
@@ -58,11 +63,31 @@ void Boulder::doSomething(){
     
     if(state == "stable"){
         //Check to see if there is any earth in 4 squares immediately below boulder (same Y val). If there is ANY earth, do nothing.
-        //If NONE of the 4 squares have earth, change state to "waiting" for the next 30 ticks
-        //Then, change to falling state and play sound SOUND_FALLING_ROCK. It must continue to move downward one square each tick until it hits the bottom of the oil field, runs into the top of another Boulder, or runs into Earth. Then set state to dead. If, in this state, the boulder comes within a radius of 3 (inclusive) of any Protestors or TunnelMan, it does 100 pts annoyance (killing them instantly).
+        if(!m_studentWorld->checkEarthUnderBoulder(getX(), getY())) state = "waiting";
+        
+        return;
     }
-    
-    
+    //If NONE of the 4 squares have earth, change state to "waiting" for the next 30 ticks
+    else if(state == "waiting"){
+        tick--;
+        if(tick == 0){
+            state = "falling";
+            m_studentWorld->playSound(SOUND_FALLING_ROCK);
+        }
+        return;
+    }
+    else if(state == "falling"){
+        
+        //Boulder is at bottom of oil field, run into earth, another boulder, or another earth object
+        if(getY() == 0 || m_studentWorld->checkEarthUnderBoulder(getX(), getY()) || m_studentWorld->checkObjectUnderBoulder(getX(), getY())){
+            alive = false;
+            return;
+        }
+        
+        moveTo(getX(), getY() - 1);
+        updateY(-1);
+    }
+    //Then, change to falling state and play sound SOUND_FALLING_ROCK. It must continue to move downward one square each tick until it hits the bottom of the oil field, runs into the top of another Boulder, or runs into Earth. Then set state to dead. If, in this state, the boulder comes within a radius of 3 (inclusive) of any Protestors or TunnelMan, it does 100 pts annoyance (killing them instantly).
     
     
 }
@@ -128,6 +153,16 @@ void TunnelMan::doSomething(){
     }
 }
 
+void TunnelMan::annoyed(int val){
+    hitPoints -= val;
+    if(hitPoints <= 0){
+        m_studentWorld->playSound(SOUND_PLAYER_GIVE_UP);
+    }
+}
+
+bool TunnelMan::isAlive(){
+    return hitPoints <= 0 ? false : true;
+}
 
 TunnelMan::~TunnelMan(){
     setVisible(false);  //Delete tunnelman, remove
