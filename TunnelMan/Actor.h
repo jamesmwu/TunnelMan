@@ -4,6 +4,7 @@
 #include "GraphObject.h"
 
 class StudentWorld;
+class TunnelMan;
 
 /*========== GameObject base class ==========*/
 class GameObject : public GraphObject {
@@ -56,6 +57,22 @@ private:
     StudentWorld* m_studentWorld;
 };
 
+/*========== Barrel class ==========*/
+class Barrel : public GameObject {
+public:
+    Barrel(int x, int y, TunnelMan* tm, StudentWorld* sw);
+    
+    virtual void doSomething();
+    
+    virtual ~Barrel();
+    
+private:
+    bool alive;
+    
+    TunnelMan* m_tunnelMan;
+    StudentWorld* m_studentWorld;
+};
+
 /*========== TunnelMan class ==========*/
 class TunnelMan : public GameObject {
 public:
@@ -77,5 +94,8 @@ private:
     
     StudentWorld* m_studentWorld;
 };
+
+/*========== Auxiliary Functions ==========*/
+bool distance(int x, int y, int x2, int y2, int radius);
 
 #endif // ACTOR_H_

@@ -19,13 +19,17 @@ public:
 
     virtual int move();
 
-    void earthOverlap(int x, int y);
+    bool earthOverlap(int x, int y);
     
     bool checkEarthUnderBoulder(int x, int y);
     
     bool checkObjectUnderBoulder(int x, int y);
     
     bool distance(int x, int y);
+    
+    void generate(int amt, int xRange, int yRange, std::string type);
+    
+    void decBarrel();
 
     virtual void cleanUp();
     
@@ -35,6 +39,7 @@ private:
     TunnelMan* tunnelManPtr;
     std::vector<GameObject*> gameObjects;
     Earth* earthObjects[60][64];  //Rows 0 - 59 are filled with Earth objs
+    int barrels;
 };
 
 #endif // STUDENTWORLD_H_

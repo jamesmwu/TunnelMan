@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>034916CF-6F27-48E5-97D9-A7EC9A18B505</key>
+		<key>0118B04E-D936-45D1-8CA9-F52A440E6536</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>034916CF-6F27-48E5-97D9-A7EC9A18B505.xcactivitylog</string>
+			<string>0118B04E-D936-45D1-8CA9-F52A440E6536.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -32,15 +32,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688029.19432902</real>
+			<real>681809060.88711095</real>
 			<key>timeStoppedRecording</key>
-			<real>681688029.22439206</real>
+			<real>681809060.96029794</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>034916CF-6F27-48E5-97D9-A7EC9A18B505</string>
+			<string>0118B04E-D936-45D1-8CA9-F52A440E6536</string>
 		</dict>
-		<key>036C4222-F5B8-4B6B-8073-180F2A15C9DA</key>
+		<key>18751233-5373-4EC4-A5EB-B084A0FABC89</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -49,7 +49,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>036C4222-F5B8-4B6B-8073-180F2A15C9DA.xcactivitylog</string>
+			<string>18751233-5373-4EC4-A5EB-B084A0FABC89.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -66,15 +66,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681692006.50583398</real>
+			<real>681807658.12678397</real>
 			<key>timeStoppedRecording</key>
-			<real>681692006.54969501</real>
+			<real>681807659.45066404</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>036C4222-F5B8-4B6B-8073-180F2A15C9DA</string>
+			<string>18751233-5373-4EC4-A5EB-B084A0FABC89</string>
 		</dict>
-		<key>04D99140-F4E7-4BAA-95AE-2235E2828844</key>
+		<key>1A13B5FE-90A4-4CEC-B807-466BD5A4CD51</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -83,13 +83,13 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>04D99140-F4E7-4BAA-95AE-2235E2828844.xcactivitylog</string>
+			<string>1A13B5FE-90A4-4CEC-B807-466BD5A4CD51.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>TunnelMan project</string>
@@ -100,15 +100,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688869.07200396</real>
+			<real>681809302.74341404</real>
 			<key>timeStoppedRecording</key>
-			<real>681688869.895913</real>
+			<real>681809303.67298102</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>04D99140-F4E7-4BAA-95AE-2235E2828844</string>
+			<string>1A13B5FE-90A4-4CEC-B807-466BD5A4CD51</string>
 		</dict>
-		<key>09D83EA8-21F1-4CEC-B0F3-813547AE2EBA</key>
+		<key>4AA389AF-E61B-4C73-9C25-887CA6CBC1DF</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -117,7 +117,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>09D83EA8-21F1-4CEC-B0F3-813547AE2EBA.xcactivitylog</string>
+			<string>4AA389AF-E61B-4C73-9C25-887CA6CBC1DF.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -134,15 +134,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688553.48101795</real>
+			<real>681807687.80177104</real>
 			<key>timeStoppedRecording</key>
-			<real>681688553.50861394</real>
+			<real>681807687.834674</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>09D83EA8-21F1-4CEC-B0F3-813547AE2EBA</string>
+			<string>4AA389AF-E61B-4C73-9C25-887CA6CBC1DF</string>
 		</dict>
-		<key>0A4B5F55-8C2B-4B03-B747-430E142E488A</key>
+		<key>524B9909-0237-4B7E-8537-8F67B5DB0DF2</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -151,7 +151,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>0A4B5F55-8C2B-4B03-B747-430E142E488A.xcactivitylog</string>
+			<string>524B9909-0237-4B7E-8537-8F67B5DB0DF2.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -168,1611 +168,13 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681690760.30339301</real>
+			<real>681807700.50542295</real>
 			<key>timeStoppedRecording</key>
-			<real>681690760.34618795</real>
+			<real>681807700.53274</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>0A4B5F55-8C2B-4B03-B747-430E142E488A</string>
-		</dict>
-		<key>1006E8C9-A338-48AF-8C3A-089BDF5E374B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1006E8C9-A338-48AF-8C3A-089BDF5E374B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697754.50681996</real>
-			<key>timeStoppedRecording</key>
-			<real>681697754.53687799</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1006E8C9-A338-48AF-8C3A-089BDF5E374B</string>
-		</dict>
-		<key>1597BF0C-6A78-4C44-95EC-DF647F4B61A0</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1597BF0C-6A78-4C44-95EC-DF647F4B61A0.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697638.35375702</real>
-			<key>timeStoppedRecording</key>
-			<real>681697639.17455399</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1597BF0C-6A78-4C44-95EC-DF647F4B61A0</string>
-		</dict>
-		<key>188EB670-B7C4-49BA-8C7D-232F8C7D71E9</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>188EB670-B7C4-49BA-8C7D-232F8C7D71E9.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697830.44679105</real>
-			<key>timeStoppedRecording</key>
-			<real>681697830.48187494</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>188EB670-B7C4-49BA-8C7D-232F8C7D71E9</string>
-		</dict>
-		<key>19783144-F623-4813-ACA4-D68A3F7D6371</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>19783144-F623-4813-ACA4-D68A3F7D6371.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689165.84130204</real>
-			<key>timeStoppedRecording</key>
-			<real>681689166.63986301</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>19783144-F623-4813-ACA4-D68A3F7D6371</string>
-		</dict>
-		<key>199B8FF3-70AD-466F-9893-018AFCA7C83C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>199B8FF3-70AD-466F-9893-018AFCA7C83C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689469.43510401</real>
-			<key>timeStoppedRecording</key>
-			<real>681689469.46788299</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>199B8FF3-70AD-466F-9893-018AFCA7C83C</string>
-		</dict>
-		<key>1A8E8ACD-DCE4-45DE-ADB7-17C7024FF418</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1A8E8ACD-DCE4-45DE-ADB7-17C7024FF418.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688887.79951406</real>
-			<key>timeStoppedRecording</key>
-			<real>681688887.827721</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1A8E8ACD-DCE4-45DE-ADB7-17C7024FF418</string>
-		</dict>
-		<key>1C3B86EA-EAE7-4FED-9490-AF9AE9671C74</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1C3B86EA-EAE7-4FED-9490-AF9AE9671C74.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691983.09470999</real>
-			<key>timeStoppedRecording</key>
-			<real>681691984.03128505</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1C3B86EA-EAE7-4FED-9490-AF9AE9671C74</string>
-		</dict>
-		<key>1C8BF58A-AD38-4458-8B74-2038BC973E71</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1C8BF58A-AD38-4458-8B74-2038BC973E71.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688496.09729695</real>
-			<key>timeStoppedRecording</key>
-			<real>681688496.12525296</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1C8BF58A-AD38-4458-8B74-2038BC973E71</string>
-		</dict>
-		<key>1F8FE788-10B3-4618-A89B-2E0ECDAFAB53</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>1F8FE788-10B3-4618-A89B-2E0ECDAFAB53.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681687968.09271801</real>
-			<key>timeStoppedRecording</key>
-			<real>681687968.12491596</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>1F8FE788-10B3-4618-A89B-2E0ECDAFAB53</string>
-		</dict>
-		<key>2435C934-6124-4085-B181-46B84078334B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2435C934-6124-4085-B181-46B84078334B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688807.43837404</real>
-			<key>timeStoppedRecording</key>
-			<real>681688808.09628296</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>2435C934-6124-4085-B181-46B84078334B</string>
-		</dict>
-		<key>26AC96E0-1659-437A-8900-9C7E6C1C871F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>26AC96E0-1659-437A-8900-9C7E6C1C871F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697644.34512198</real>
-			<key>timeStoppedRecording</key>
-			<real>681697644.38495302</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>26AC96E0-1659-437A-8900-9C7E6C1C871F</string>
-		</dict>
-		<key>291B0B16-40C4-4BB5-9D54-01CB0E5330BB</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>291B0B16-40C4-4BB5-9D54-01CB0E5330BB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688637.80204797</real>
-			<key>timeStoppedRecording</key>
-			<real>681688637.85265994</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>291B0B16-40C4-4BB5-9D54-01CB0E5330BB</string>
-		</dict>
-		<key>2B4D7B07-4DA8-4DC5-BD37-002CFDC21C3A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2B4D7B07-4DA8-4DC5-BD37-002CFDC21C3A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689488.779845</real>
-			<key>timeStoppedRecording</key>
-			<real>681689488.81295097</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>2B4D7B07-4DA8-4DC5-BD37-002CFDC21C3A</string>
-		</dict>
-		<key>2C0DADBF-9FFB-4547-888E-4ADB20F97028</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2C0DADBF-9FFB-4547-888E-4ADB20F97028.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691879.42228901</real>
-			<key>timeStoppedRecording</key>
-			<real>681691879.45095301</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>2C0DADBF-9FFB-4547-888E-4ADB20F97028</string>
-		</dict>
-		<key>2CE977DB-7614-4D20-9B58-0BBCA315803A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2CE977DB-7614-4D20-9B58-0BBCA315803A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697758.61836398</real>
-			<key>timeStoppedRecording</key>
-			<real>681697758.64524901</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>2CE977DB-7614-4D20-9B58-0BBCA315803A</string>
-		</dict>
-		<key>2DD9A787-0A1E-4852-9F9F-50DA22AE8645</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>2DD9A787-0A1E-4852-9F9F-50DA22AE8645.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681687492.91465199</real>
-			<key>timeStoppedRecording</key>
-			<real>681687492.98362601</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>2DD9A787-0A1E-4852-9F9F-50DA22AE8645</string>
-		</dict>
-		<key>30707F4C-57E2-40BD-B76A-BE9CAF001FC4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>30707F4C-57E2-40BD-B76A-BE9CAF001FC4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692016.22420597</real>
-			<key>timeStoppedRecording</key>
-			<real>681692016.25569606</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>30707F4C-57E2-40BD-B76A-BE9CAF001FC4</string>
-		</dict>
-		<key>308E1A0E-1EF2-4A42-BBFB-0D6C93E06684</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>308E1A0E-1EF2-4A42-BBFB-0D6C93E06684.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697707.06934202</real>
-			<key>timeStoppedRecording</key>
-			<real>681697707.11020398</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>308E1A0E-1EF2-4A42-BBFB-0D6C93E06684</string>
-		</dict>
-		<key>322E29D1-C351-49A5-BBED-90C76CC5158C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>322E29D1-C351-49A5-BBED-90C76CC5158C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689500.364537</real>
-			<key>timeStoppedRecording</key>
-			<real>681689500.38903701</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>322E29D1-C351-49A5-BBED-90C76CC5158C</string>
-		</dict>
-		<key>32B8A396-AA50-4723-A632-A83411319369</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>32B8A396-AA50-4723-A632-A83411319369.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691622.35160005</real>
-			<key>timeStoppedRecording</key>
-			<real>681691622.38908696</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>32B8A396-AA50-4723-A632-A83411319369</string>
-		</dict>
-		<key>351C89FC-4849-4F75-B3C2-1937DDE9470F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>351C89FC-4849-4F75-B3C2-1937DDE9470F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688019.91123104</real>
-			<key>timeStoppedRecording</key>
-			<real>681688019.95926404</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>351C89FC-4849-4F75-B3C2-1937DDE9470F</string>
-		</dict>
-		<key>35354F80-A07D-4E09-B014-A536F54BF7D6</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>35354F80-A07D-4E09-B014-A536F54BF7D6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691871.68750203</real>
-			<key>timeStoppedRecording</key>
-			<real>681691871.72296</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>35354F80-A07D-4E09-B014-A536F54BF7D6</string>
-		</dict>
-		<key>35589550-5744-4F29-8AFD-64B07D9778E8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>35589550-5744-4F29-8AFD-64B07D9778E8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697689.98563898</real>
-			<key>timeStoppedRecording</key>
-			<real>681697690.03059006</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>35589550-5744-4F29-8AFD-64B07D9778E8</string>
-		</dict>
-		<key>37EAD6A1-8DB3-4805-AC10-6CBEECF9E599</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>37EAD6A1-8DB3-4805-AC10-6CBEECF9E599.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690786.33097899</real>
-			<key>timeStoppedRecording</key>
-			<real>681690786.36187994</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>37EAD6A1-8DB3-4805-AC10-6CBEECF9E599</string>
-		</dict>
-		<key>397B7AC1-6FE1-4C3B-BA6C-293758614D58</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>397B7AC1-6FE1-4C3B-BA6C-293758614D58.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690807.80779505</real>
-			<key>timeStoppedRecording</key>
-			<real>681690807.85272503</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>397B7AC1-6FE1-4C3B-BA6C-293758614D58</string>
-		</dict>
-		<key>3C0F794D-D7C0-4E12-96D4-A7DA67A07524</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>3C0F794D-D7C0-4E12-96D4-A7DA67A07524.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691596.92521</real>
-			<key>timeStoppedRecording</key>
-			<real>681691596.97703898</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>3C0F794D-D7C0-4E12-96D4-A7DA67A07524</string>
-		</dict>
-		<key>3D7A692B-DCD7-44D9-97C4-07E6654FE301</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>3D7A692B-DCD7-44D9-97C4-07E6654FE301.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697682.18121302</real>
-			<key>timeStoppedRecording</key>
-			<real>681697682.21641004</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>3D7A692B-DCD7-44D9-97C4-07E6654FE301</string>
-		</dict>
-		<key>41594121-4B8E-43CF-A9A1-9C4DDE7D060B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>41594121-4B8E-43CF-A9A1-9C4DDE7D060B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692019.470397</real>
-			<key>timeStoppedRecording</key>
-			<real>681692019.50050497</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>41594121-4B8E-43CF-A9A1-9C4DDE7D060B</string>
-		</dict>
-		<key>4315637D-B70B-426A-9E13-C5BC8B3A411F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>4315637D-B70B-426A-9E13-C5BC8B3A411F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681686511.98492002</real>
-			<key>timeStoppedRecording</key>
-			<real>681686512.02999604</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>4315637D-B70B-426A-9E13-C5BC8B3A411F</string>
-		</dict>
-		<key>435EAC2F-89B1-4FF9-9026-A91B8A88838E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>435EAC2F-89B1-4FF9-9026-A91B8A88838E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681687291.16080499</real>
-			<key>timeStoppedRecording</key>
-			<real>681687292.21865797</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>435EAC2F-89B1-4FF9-9026-A91B8A88838E</string>
-		</dict>
-		<key>44CE59AB-68C4-41B7-8D86-21CE883B06B4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>44CE59AB-68C4-41B7-8D86-21CE883B06B4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697710.84024203</real>
-			<key>timeStoppedRecording</key>
-			<real>681697710.86711299</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>44CE59AB-68C4-41B7-8D86-21CE883B06B4</string>
-		</dict>
-		<key>455D36D7-5C8A-475D-A06F-0D7566FC59A3</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>455D36D7-5C8A-475D-A06F-0D7566FC59A3.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697651.82504296</real>
-			<key>timeStoppedRecording</key>
-			<real>681697651.85022604</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>455D36D7-5C8A-475D-A06F-0D7566FC59A3</string>
-		</dict>
-		<key>463369C6-AEAD-4061-A58F-02E09B530F0F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>463369C6-AEAD-4061-A58F-02E09B530F0F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697544.70898294</real>
-			<key>timeStoppedRecording</key>
-			<real>681697545.55925906</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>463369C6-AEAD-4061-A58F-02E09B530F0F</string>
-		</dict>
-		<key>466A9E04-2B43-470B-BA41-FA640CC917ED</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>466A9E04-2B43-470B-BA41-FA640CC917ED.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689503.75349295</real>
-			<key>timeStoppedRecording</key>
-			<real>681689503.78294897</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>466A9E04-2B43-470B-BA41-FA640CC917ED</string>
-		</dict>
-		<key>484BBA8A-2F4F-4796-9864-CE2BB4BBD8D2</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>484BBA8A-2F4F-4796-9864-CE2BB4BBD8D2.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688645.88273001</real>
-			<key>timeStoppedRecording</key>
-			<real>681688645.91106606</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>484BBA8A-2F4F-4796-9864-CE2BB4BBD8D2</string>
-		</dict>
-		<key>4C7F1495-1CE4-4141-8BA2-C473A0584FF5</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>4C7F1495-1CE4-4141-8BA2-C473A0584FF5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691618.55586696</real>
-			<key>timeStoppedRecording</key>
-			<real>681691618.58673298</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>4C7F1495-1CE4-4141-8BA2-C473A0584FF5</string>
-		</dict>
-		<key>4EF327AA-BFC7-44C2-AD1F-DD0D0CF66AA4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>4EF327AA-BFC7-44C2-AD1F-DD0D0CF66AA4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697750.92314696</real>
-			<key>timeStoppedRecording</key>
-			<real>681697750.95116305</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>4EF327AA-BFC7-44C2-AD1F-DD0D0CF66AA4</string>
-		</dict>
-		<key>507CE446-01D9-4A66-A333-3663DAB2D986</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>507CE446-01D9-4A66-A333-3663DAB2D986.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681684911.96112502</real>
-			<key>timeStoppedRecording</key>
-			<real>681684913.02507198</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>507CE446-01D9-4A66-A333-3663DAB2D986</string>
-		</dict>
-		<key>51157214-6220-42B0-8C4E-D76ACE441DF4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>51157214-6220-42B0-8C4E-D76ACE441DF4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681696829.42925096</real>
-			<key>timeStoppedRecording</key>
-			<real>681696830.55016196</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>51157214-6220-42B0-8C4E-D76ACE441DF4</string>
-		</dict>
-		<key>51646E24-0012-41A6-94B6-56E73FC35C02</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>51646E24-0012-41A6-94B6-56E73FC35C02.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697820.31854296</real>
-			<key>timeStoppedRecording</key>
-			<real>681697821.17889094</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>51646E24-0012-41A6-94B6-56E73FC35C02</string>
-		</dict>
-		<key>52D8B447-D0BA-4691-9170-FBA3E9F7D63E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>52D8B447-D0BA-4691-9170-FBA3E9F7D63E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691875.52510095</real>
-			<key>timeStoppedRecording</key>
-			<real>681691875.56227195</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>52D8B447-D0BA-4691-9170-FBA3E9F7D63E</string>
-		</dict>
-		<key>55E7ABBE-7F0C-460E-9D7F-EA12F32890EC</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>55E7ABBE-7F0C-460E-9D7F-EA12F32890EC.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690776.90437901</real>
-			<key>timeStoppedRecording</key>
-			<real>681690776.94352603</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>55E7ABBE-7F0C-460E-9D7F-EA12F32890EC</string>
-		</dict>
-		<key>56B6DBB7-480F-4047-8C8D-C085DBFDE3CA</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>56B6DBB7-480F-4047-8C8D-C085DBFDE3CA.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690732.64249206</real>
-			<key>timeStoppedRecording</key>
-			<real>681690733.68461597</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>56B6DBB7-480F-4047-8C8D-C085DBFDE3CA</string>
-		</dict>
-		<key>5DAF2317-D8FE-4533-B716-15A5BF7E2CF6</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>5DAF2317-D8FE-4533-B716-15A5BF7E2CF6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691893.27290297</real>
-			<key>timeStoppedRecording</key>
-			<real>681691893.323807</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>5DAF2317-D8FE-4533-B716-15A5BF7E2CF6</string>
-		</dict>
-		<key>5E5A97F0-9238-47E6-9069-B738BE80C840</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>5E5A97F0-9238-47E6-9069-B738BE80C840.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691629.66190195</real>
-			<key>timeStoppedRecording</key>
-			<real>681691629.69023502</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>5E5A97F0-9238-47E6-9069-B738BE80C840</string>
-		</dict>
-		<key>5EDC2ED9-F603-4D4E-9BE9-286FAA2D7F2B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>5EDC2ED9-F603-4D4E-9BE9-286FAA2D7F2B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689493.08247006</real>
-			<key>timeStoppedRecording</key>
-			<real>681689493.11418796</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>5EDC2ED9-F603-4D4E-9BE9-286FAA2D7F2B</string>
-		</dict>
-		<key>608D9A34-911A-43CF-880F-1D7F6CE71959</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>608D9A34-911A-43CF-880F-1D7F6CE71959.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689143.31697798</real>
-			<key>timeStoppedRecording</key>
-			<real>681689143.35875797</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>608D9A34-911A-43CF-880F-1D7F6CE71959</string>
+			<string>524B9909-0237-4B7E-8537-8F67B5DB0DF2</string>
 		</dict>
 		<key>6188E6DD-312F-4814-B5A2-9003D70D8A1D</key>
 		<dict>
@@ -1808,7 +210,7 @@
 			<key>uniqueIdentifier</key>
 			<string>6188E6DD-312F-4814-B5A2-9003D70D8A1D</string>
 		</dict>
-		<key>653D7259-636D-4478-BF64-598B96162E03</key>
+		<key>62B8B1FC-03BE-4F07-8C35-A34B95F8B6BF</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1817,7 +219,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>653D7259-636D-4478-BF64-598B96162E03.xcactivitylog</string>
+			<string>62B8B1FC-03BE-4F07-8C35-A34B95F8B6BF.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1834,15 +236,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681689175.82852995</real>
+			<real>681807901.717044</real>
 			<key>timeStoppedRecording</key>
-			<real>681689175.87161696</real>
+			<real>681807903.04798698</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>653D7259-636D-4478-BF64-598B96162E03</string>
+			<string>62B8B1FC-03BE-4F07-8C35-A34B95F8B6BF</string>
 		</dict>
-		<key>65BEE05C-86AE-428E-8F29-42AB0C4B39B8</key>
+		<key>6691479E-B17B-4AA1-8C67-A68808D590C9</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1851,7 +253,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>65BEE05C-86AE-428E-8F29-42AB0C4B39B8.xcactivitylog</string>
+			<string>6691479E-B17B-4AA1-8C67-A68808D590C9.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1868,15 +270,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681685636.069525</real>
+			<real>681808338.45885003</real>
 			<key>timeStoppedRecording</key>
-			<real>681685637.113011</real>
+			<real>681808339.30567801</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>65BEE05C-86AE-428E-8F29-42AB0C4B39B8</string>
+			<string>6691479E-B17B-4AA1-8C67-A68808D590C9</string>
 		</dict>
-		<key>65CD9835-C387-4834-91CF-919DECD2D7E6</key>
+		<key>670A4B17-032C-441A-BBEB-301E08FA83D4</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1885,7 +287,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>65CD9835-C387-4834-91CF-919DECD2D7E6.xcactivitylog</string>
+			<string>670A4B17-032C-441A-BBEB-301E08FA83D4.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1902,15 +304,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681691989.84346998</real>
+			<real>681808243.21895003</real>
 			<key>timeStoppedRecording</key>
-			<real>681691989.87691498</real>
+			<real>681808244.47254705</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>65CD9835-C387-4834-91CF-919DECD2D7E6</string>
+			<string>670A4B17-032C-441A-BBEB-301E08FA83D4</string>
 		</dict>
-		<key>66D36ED6-01F7-48F9-8B35-3AB5ED24BE63</key>
+		<key>6C82A38C-FAEE-4DB1-8DB5-6DFC317B8927</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1919,7 +321,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>66D36ED6-01F7-48F9-8B35-3AB5ED24BE63.xcactivitylog</string>
+			<string>6C82A38C-FAEE-4DB1-8DB5-6DFC317B8927.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1936,15 +338,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681690790.28658402</real>
+			<real>681807759.85817301</real>
 			<key>timeStoppedRecording</key>
-			<real>681690790.32569206</real>
+			<real>681807760.91192806</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>66D36ED6-01F7-48F9-8B35-3AB5ED24BE63</string>
+			<string>6C82A38C-FAEE-4DB1-8DB5-6DFC317B8927</string>
 		</dict>
-		<key>68BC8C84-4629-447A-B595-661229799725</key>
+		<key>7171EC32-3654-4E84-93F7-96FDA0312A01</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1953,7 +355,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>68BC8C84-4629-447A-B595-661229799725.xcactivitylog</string>
+			<string>7171EC32-3654-4E84-93F7-96FDA0312A01.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -1970,15 +372,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681686444.52833605</real>
+			<real>681809311.38763404</real>
 			<key>timeStoppedRecording</key>
-			<real>681686445.59537804</real>
+			<real>681809311.95339501</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>68BC8C84-4629-447A-B595-661229799725</string>
+			<string>7171EC32-3654-4E84-93F7-96FDA0312A01</string>
 		</dict>
-		<key>6B44C3C8-ACEE-4D23-9C66-72EC7C7CE1B0</key>
+		<key>728320E8-822B-4586-80C5-7E5A1C2D8ACB</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -1987,2359 +389,13 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>6B44C3C8-ACEE-4D23-9C66-72EC7C7CE1B0.xcactivitylog</string>
+			<string>728320E8-822B-4586-80C5-7E5A1C2D8ACB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688013.99542105</real>
-			<key>timeStoppedRecording</key>
-			<real>681688014.59497094</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>6B44C3C8-ACEE-4D23-9C66-72EC7C7CE1B0</string>
-		</dict>
-		<key>6DC1AE67-47FA-408A-A972-139AA02A8EEA</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>6DC1AE67-47FA-408A-A972-139AA02A8EEA.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697685.90673006</real>
-			<key>timeStoppedRecording</key>
-			<real>681697685.93543005</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>6DC1AE67-47FA-408A-A972-139AA02A8EEA</string>
-		</dict>
-		<key>6DCB73E9-7749-4FD2-9EC0-46700C54AC16</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>6DCB73E9-7749-4FD2-9EC0-46700C54AC16.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689506.82551205</real>
-			<key>timeStoppedRecording</key>
-			<real>681689506.86062706</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>6DCB73E9-7749-4FD2-9EC0-46700C54AC16</string>
-		</dict>
-		<key>72C66112-C742-4D53-BFE8-9197ADAC4102</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>72C66112-C742-4D53-BFE8-9197ADAC4102.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688892.205598</real>
-			<key>timeStoppedRecording</key>
-			<real>681688892.25267994</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>72C66112-C742-4D53-BFE8-9197ADAC4102</string>
-		</dict>
-		<key>7407A513-1460-4A07-851E-3879D8CB8998</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>7407A513-1460-4A07-851E-3879D8CB8998.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681686641.64322495</real>
-			<key>timeStoppedRecording</key>
-			<real>681686642.25760901</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>7407A513-1460-4A07-851E-3879D8CB8998</string>
-		</dict>
-		<key>75CDE5F3-B876-4C65-8691-41E258BDAF57</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>75CDE5F3-B876-4C65-8691-41E258BDAF57.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689179.18002999</real>
-			<key>timeStoppedRecording</key>
-			<real>681689179.21619105</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>75CDE5F3-B876-4C65-8691-41E258BDAF57</string>
-		</dict>
-		<key>765FE4B7-699D-46F0-A672-F87BB0D56236</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>765FE4B7-699D-46F0-A672-F87BB0D56236.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697701.14073396</real>
-			<key>timeStoppedRecording</key>
-			<real>681697701.16782403</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>765FE4B7-699D-46F0-A672-F87BB0D56236</string>
-		</dict>
-		<key>76D36AA1-20E0-42D1-8F9B-541DEABAE9C5</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>76D36AA1-20E0-42D1-8F9B-541DEABAE9C5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688653.89880002</real>
-			<key>timeStoppedRecording</key>
-			<real>681688653.93092799</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>76D36AA1-20E0-42D1-8F9B-541DEABAE9C5</string>
-		</dict>
-		<key>777802F3-E592-46EE-985D-F856B1426742</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>777802F3-E592-46EE-985D-F856B1426742.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691860.41381097</real>
-			<key>timeStoppedRecording</key>
-			<real>681691861.28958595</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>777802F3-E592-46EE-985D-F856B1426742</string>
-		</dict>
-		<key>79E6A7DB-507C-4819-B059-F7ADE736C0D8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>79E6A7DB-507C-4819-B059-F7ADE736C0D8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689463.08671105</real>
-			<key>timeStoppedRecording</key>
-			<real>681689463.717978</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>79E6A7DB-507C-4819-B059-F7ADE736C0D8</string>
-		</dict>
-		<key>7D931218-BF72-4596-8BD9-DBD1AF75E48A</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>7D931218-BF72-4596-8BD9-DBD1AF75E48A.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689481.17162097</real>
-			<key>timeStoppedRecording</key>
-			<real>681689481.20272899</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>7D931218-BF72-4596-8BD9-DBD1AF75E48A</string>
-		</dict>
-		<key>864DF436-6DAE-47F2-A15A-9069B34EAA87</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>864DF436-6DAE-47F2-A15A-9069B34EAA87.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688024.35133195</real>
-			<key>timeStoppedRecording</key>
-			<real>681688024.38444495</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>864DF436-6DAE-47F2-A15A-9069B34EAA87</string>
-		</dict>
-		<key>87027D83-3DDD-424E-B696-583E10D28A37</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>87027D83-3DDD-424E-B696-583E10D28A37.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689477.60435104</real>
-			<key>timeStoppedRecording</key>
-			<real>681689477.65192604</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>87027D83-3DDD-424E-B696-583E10D28A37</string>
-		</dict>
-		<key>8943EBCD-351C-47F3-AAEA-6D64E6DB475F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>8943EBCD-351C-47F3-AAEA-6D64E6DB475F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692002.95771098</real>
-			<key>timeStoppedRecording</key>
-			<real>681692002.98540795</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>8943EBCD-351C-47F3-AAEA-6D64E6DB475F</string>
-		</dict>
-		<key>8D67633C-105F-4AB4-9345-E1F2580B834E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>8D67633C-105F-4AB4-9345-E1F2580B834E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697674.80233002</real>
-			<key>timeStoppedRecording</key>
-			<real>681697674.82583201</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>8D67633C-105F-4AB4-9345-E1F2580B834E</string>
-		</dict>
-		<key>8D89399B-701A-4219-B3F8-DEB52AEC12DE</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>8D89399B-701A-4219-B3F8-DEB52AEC12DE.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697647.98879099</real>
-			<key>timeStoppedRecording</key>
-			<real>681697648.02033997</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>8D89399B-701A-4219-B3F8-DEB52AEC12DE</string>
-		</dict>
-		<key>8FBE129D-5BD3-4738-A13E-2BE5AAA05D6F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>8FBE129D-5BD3-4738-A13E-2BE5AAA05D6F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691899.63944101</real>
-			<key>timeStoppedRecording</key>
-			<real>681691899.67429495</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>8FBE129D-5BD3-4738-A13E-2BE5AAA05D6F</string>
-		</dict>
-		<key>914A01CB-9ABE-4CEE-B8DD-829E9AAB5E0B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>914A01CB-9ABE-4CEE-B8DD-829E9AAB5E0B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697655.51981699</real>
-			<key>timeStoppedRecording</key>
-			<real>681697655.54596901</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>914A01CB-9ABE-4CEE-B8DD-829E9AAB5E0B</string>
-		</dict>
-		<key>92B39771-55F9-4071-A308-774BC9AF717E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>92B39771-55F9-4071-A308-774BC9AF717E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681687460.22386706</real>
-			<key>timeStoppedRecording</key>
-			<real>681687460.89150095</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>92B39771-55F9-4071-A308-774BC9AF717E</string>
-		</dict>
-		<key>9832271B-A241-4CBD-B333-246CF0BE730D</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9832271B-A241-4CBD-B333-246CF0BE730D.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688642.28661299</real>
-			<key>timeStoppedRecording</key>
-			<real>681688642.31062996</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9832271B-A241-4CBD-B333-246CF0BE730D</string>
-		</dict>
-		<key>98892FF3-E4E4-4F21-9813-98626D9D529F</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>98892FF3-E4E4-4F21-9813-98626D9D529F.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697724.32266104</real>
-			<key>timeStoppedRecording</key>
-			<real>681697724.36630499</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>98892FF3-E4E4-4F21-9813-98626D9D529F</string>
-		</dict>
-		<key>9966AFF2-B8A5-48BC-96AA-CED20B3BCF7D</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9966AFF2-B8A5-48BC-96AA-CED20B3BCF7D.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697671.05657196</real>
-			<key>timeStoppedRecording</key>
-			<real>681697671.085307</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9966AFF2-B8A5-48BC-96AA-CED20B3BCF7D</string>
-		</dict>
-		<key>9AC4FE40-6B83-4BFD-A979-1D788689F661</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9AC4FE40-6B83-4BFD-A979-1D788689F661.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691896.64421797</real>
-			<key>timeStoppedRecording</key>
-			<real>681691896.67562902</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9AC4FE40-6B83-4BFD-A979-1D788689F661</string>
-		</dict>
-		<key>9D986356-8D8A-43DC-95A2-80CFEE04CE21</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9D986356-8D8A-43DC-95A2-80CFEE04CE21.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697581.92044902</real>
-			<key>timeStoppedRecording</key>
-			<real>681697581.96345103</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9D986356-8D8A-43DC-95A2-80CFEE04CE21</string>
-		</dict>
-		<key>9E1E3ED2-2909-480C-9B6B-018D077FB644</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9E1E3ED2-2909-480C-9B6B-018D077FB644.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689202.59623897</real>
-			<key>timeStoppedRecording</key>
-			<real>681689202.62964296</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9E1E3ED2-2909-480C-9B6B-018D077FB644</string>
-		</dict>
-		<key>9FF36294-3481-41AE-8D16-1C9DE0B9BA1C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>9FF36294-3481-41AE-8D16-1C9DE0B9BA1C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691885.93775797</real>
-			<key>timeStoppedRecording</key>
-			<real>681691885.97063899</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>9FF36294-3481-41AE-8D16-1C9DE0B9BA1C</string>
-		</dict>
-		<key>A12836A4-5850-4BC1-9E1B-D238F6E22F29</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A12836A4-5850-4BC1-9E1B-D238F6E22F29.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690811.863168</real>
-			<key>timeStoppedRecording</key>
-			<real>681690811.91319597</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A12836A4-5850-4BC1-9E1B-D238F6E22F29</string>
-		</dict>
-		<key>A31295F9-50B1-496B-8FCD-4918B4292344</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A31295F9-50B1-496B-8FCD-4918B4292344.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691889.707829</real>
-			<key>timeStoppedRecording</key>
-			<real>681691889.73357999</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A31295F9-50B1-496B-8FCD-4918B4292344</string>
-		</dict>
-		<key>A4F4E2C2-F213-4FF6-985F-BF25C18EDC33</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A4F4E2C2-F213-4FF6-985F-BF25C18EDC33.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688896.02493596</real>
-			<key>timeStoppedRecording</key>
-			<real>681688896.05582595</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A4F4E2C2-F213-4FF6-985F-BF25C18EDC33</string>
-		</dict>
-		<key>A55E45D5-B678-40E6-83CE-F8680FCC47F5</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A55E45D5-B678-40E6-83CE-F8680FCC47F5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689473.95007503</real>
-			<key>timeStoppedRecording</key>
-			<real>681689473.98256397</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A55E45D5-B678-40E6-83CE-F8680FCC47F5</string>
-		</dict>
-		<key>A6DB4CE1-954C-4775-8C61-4CA6CE09D114</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A6DB4CE1-954C-4775-8C61-4CA6CE09D114.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688902.41607296</real>
-			<key>timeStoppedRecording</key>
-			<real>681688902.44728506</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A6DB4CE1-954C-4775-8C61-4CA6CE09D114</string>
-		</dict>
-		<key>A7EE28E3-84FE-4E38-8BB1-1ECA45F2ED30</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A7EE28E3-84FE-4E38-8BB1-1ECA45F2ED30.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692013.00813603</real>
-			<key>timeStoppedRecording</key>
-			<real>681692013.04115903</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A7EE28E3-84FE-4E38-8BB1-1ECA45F2ED30</string>
-		</dict>
-		<key>A99E6570-1EC8-463F-93DF-0B56937994DF</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A99E6570-1EC8-463F-93DF-0B56937994DF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689189.71729505</real>
-			<key>timeStoppedRecording</key>
-			<real>681689189.76232398</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A99E6570-1EC8-463F-93DF-0B56937994DF</string>
-		</dict>
-		<key>A9CAA39A-FF7E-4B86-B220-DB43A03301E8</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>A9CAA39A-FF7E-4B86-B220-DB43A03301E8.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697826.52521396</real>
-			<key>timeStoppedRecording</key>
-			<real>681697826.55473995</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>A9CAA39A-FF7E-4B86-B220-DB43A03301E8</string>
-		</dict>
-		<key>AAAF1043-ECD9-4A94-9F03-13D9FD7C45E6</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>AAAF1043-ECD9-4A94-9F03-13D9FD7C45E6.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690739.66032302</real>
-			<key>timeStoppedRecording</key>
-			<real>681690739.69116902</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>AAAF1043-ECD9-4A94-9F03-13D9FD7C45E6</string>
-		</dict>
-		<key>AB8649A1-E5E1-4370-A7C6-879ACDA00E0D</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>AB8649A1-E5E1-4370-A7C6-879ACDA00E0D.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697714.16206598</real>
-			<key>timeStoppedRecording</key>
-			<real>681697714.19772995</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>AB8649A1-E5E1-4370-A7C6-879ACDA00E0D</string>
-		</dict>
-		<key>AD408100-ADEE-4C65-B4A7-E371084D399E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>AD408100-ADEE-4C65-B4A7-E371084D399E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681686860.32633698</real>
-			<key>timeStoppedRecording</key>
-			<real>681686861.066131</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>AD408100-ADEE-4C65-B4A7-E371084D399E</string>
-		</dict>
-		<key>AD532E57-8B3F-4285-B198-78E0359533DF</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>AD532E57-8B3F-4285-B198-78E0359533DF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689182.615605</real>
-			<key>timeStoppedRecording</key>
-			<real>681689182.64936805</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>AD532E57-8B3F-4285-B198-78E0359533DF</string>
-		</dict>
-		<key>AECDAA3C-877F-4C24-BDA5-B1FF356BFA98</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>AECDAA3C-877F-4C24-BDA5-B1FF356BFA98.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688479.63343298</real>
-			<key>timeStoppedRecording</key>
-			<real>681688479.66807604</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>AECDAA3C-877F-4C24-BDA5-B1FF356BFA98</string>
-		</dict>
-		<key>B1EA8CA0-D3C3-4E04-B022-FE02A78942AB</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>B1EA8CA0-D3C3-4E04-B022-FE02A78942AB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697550.97120404</real>
-			<key>timeStoppedRecording</key>
-			<real>681697551.00593102</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>B1EA8CA0-D3C3-4E04-B022-FE02A78942AB</string>
-		</dict>
-		<key>B50FF266-94E7-4175-B21F-427454CD7FDA</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>B50FF266-94E7-4175-B21F-427454CD7FDA.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688561.64748299</real>
-			<key>timeStoppedRecording</key>
-			<real>681688561.68343306</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>B50FF266-94E7-4175-B21F-427454CD7FDA</string>
-		</dict>
-		<key>BAB26793-9509-47E6-B1DE-2050F1894D43</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BAB26793-9509-47E6-B1DE-2050F1894D43.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697717.65455902</real>
-			<key>timeStoppedRecording</key>
-			<real>681697717.68486702</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BAB26793-9509-47E6-B1DE-2050F1894D43</string>
-		</dict>
-		<key>BBF66C8C-9235-4969-8AF9-78FA36B3F263</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BBF66C8C-9235-4969-8AF9-78FA36B3F263.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697587.14915097</real>
-			<key>timeStoppedRecording</key>
-			<real>681697587.18435299</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BBF66C8C-9235-4969-8AF9-78FA36B3F263</string>
-		</dict>
-		<key>BC701D43-7527-4865-8205-EFD39741D3A1</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BC701D43-7527-4865-8205-EFD39741D3A1.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697659.57451999</real>
-			<key>timeStoppedRecording</key>
-			<real>681697659.60404897</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BC701D43-7527-4865-8205-EFD39741D3A1</string>
-		</dict>
-		<key>BDEC4B22-A71A-401F-84F0-CA0344B68FC7</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BDEC4B22-A71A-401F-84F0-CA0344B68FC7.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691882.588691</real>
-			<key>timeStoppedRecording</key>
-			<real>681691882.62107396</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BDEC4B22-A71A-401F-84F0-CA0344B68FC7</string>
-		</dict>
-		<key>BF0D16E0-854A-4B23-83B0-EA9DA77A53F5</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BF0D16E0-854A-4B23-83B0-EA9DA77A53F5.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691589.219347</real>
-			<key>timeStoppedRecording</key>
-			<real>681691589.91988003</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BF0D16E0-854A-4B23-83B0-EA9DA77A53F5</string>
-		</dict>
-		<key>BF90649B-862E-42D2-986F-619E4FC744F0</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>BF90649B-862E-42D2-986F-619E4FC744F0.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688704.96402097</real>
-			<key>timeStoppedRecording</key>
-			<real>681688705.81639194</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>BF90649B-862E-42D2-986F-619E4FC744F0</string>
-		</dict>
-		<key>C12DC770-2F41-4C92-B2AB-8AB6F9816E6B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C12DC770-2F41-4C92-B2AB-8AB6F9816E6B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697697.53793097</real>
-			<key>timeStoppedRecording</key>
-			<real>681697697.57063305</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C12DC770-2F41-4C92-B2AB-8AB6F9816E6B</string>
-		</dict>
-		<key>C1E22E64-090A-40BD-8FE8-3AFD8D45F832</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C1E22E64-090A-40BD-8FE8-3AFD8D45F832.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697667.08249497</real>
-			<key>timeStoppedRecording</key>
-			<real>681697667.11679101</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C1E22E64-090A-40BD-8FE8-3AFD8D45F832</string>
-		</dict>
-		<key>C4BC674C-5D84-4F26-BA3B-76BA9571E1D3</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C4BC674C-5D84-4F26-BA3B-76BA9571E1D3.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691997.52639306</real>
-			<key>timeStoppedRecording</key>
-			<real>681691997.55679297</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C4BC674C-5D84-4F26-BA3B-76BA9571E1D3</string>
-		</dict>
-		<key>C7FB3374-5B69-4EBD-A35C-9077A0F4BE78</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C7FB3374-5B69-4EBD-A35C-9077A0F4BE78.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697481.67457998</real>
-			<key>timeStoppedRecording</key>
-			<real>681697482.76533401</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C7FB3374-5B69-4EBD-A35C-9077A0F4BE78</string>
-		</dict>
-		<key>C8F02196-A4AB-495E-92A1-4890B7CC1E52</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C8F02196-A4AB-495E-92A1-4890B7CC1E52.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690883.512586</real>
-			<key>timeStoppedRecording</key>
-			<real>681690883.54916203</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C8F02196-A4AB-495E-92A1-4890B7CC1E52</string>
-		</dict>
-		<key>C93F4396-04BF-4A65-AF24-84FF8D341E3E</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C93F4396-04BF-4A65-AF24-84FF8D341E3E.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688549.157251</real>
-			<key>timeStoppedRecording</key>
-			<real>681688549.19124198</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C93F4396-04BF-4A65-AF24-84FF8D341E3E</string>
-		</dict>
-		<key>C9A7E2CF-F060-4036-A90F-E4BD756CDA8C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>C9A7E2CF-F060-4036-A90F-E4BD756CDA8C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688557.894171</real>
-			<key>timeStoppedRecording</key>
-			<real>681688557.91893804</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>C9A7E2CF-F060-4036-A90F-E4BD756CDA8C</string>
-		</dict>
-		<key>CEC037EE-A047-498A-A8B6-CD6F348D94AF</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>CEC037EE-A047-498A-A8B6-CD6F348D94AF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692022.64307404</real>
-			<key>timeStoppedRecording</key>
-			<real>681692022.67450094</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>CEC037EE-A047-498A-A8B6-CD6F348D94AF</string>
-		</dict>
-		<key>D02B96E3-F109-4B73-8DA2-440D14240ABD</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>D02B96E3-F109-4B73-8DA2-440D14240ABD.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688486.77318895</real>
-			<key>timeStoppedRecording</key>
-			<real>681688486.80106497</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>D02B96E3-F109-4B73-8DA2-440D14240ABD</string>
-		</dict>
-		<key>D1B270AE-552C-42BC-90CE-D3F76AE12340</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>D1B270AE-552C-42BC-90CE-D3F76AE12340.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689199.038885</real>
-			<key>timeStoppedRecording</key>
-			<real>681689199.06852102</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>D1B270AE-552C-42BC-90CE-D3F76AE12340</string>
-		</dict>
-		<key>D23C65BD-2162-4A06-BF18-6A6BCE62EE31</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>D23C65BD-2162-4A06-BF18-6A6BCE62EE31.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688565.43046105</real>
-			<key>timeStoppedRecording</key>
-			<real>681688565.47531295</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>D23C65BD-2162-4A06-BF18-6A6BCE62EE31</string>
-		</dict>
-		<key>E020407A-F460-464F-AD78-D138DE02A291</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E020407A-F460-464F-AD78-D138DE02A291.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691600.90829504</real>
-			<key>timeStoppedRecording</key>
-			<real>681691600.93991601</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E020407A-F460-464F-AD78-D138DE02A291</string>
-		</dict>
-		<key>E0AC0BD8-C112-49EF-8E10-8A7DC2ED4931</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E0AC0BD8-C112-49EF-8E10-8A7DC2ED4931.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689496.51434696</real>
-			<key>timeStoppedRecording</key>
-			<real>681689496.55474102</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E0AC0BD8-C112-49EF-8E10-8A7DC2ED4931</string>
-		</dict>
-		<key>E0C8E72C-26A9-4F3E-BA6E-67112A7DCE4C</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E0C8E72C-26A9-4F3E-BA6E-67112A7DCE4C.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689194.45325994</real>
-			<key>timeStoppedRecording</key>
-			<real>681689194.48391199</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E0C8E72C-26A9-4F3E-BA6E-67112A7DCE4C</string>
-		</dict>
-		<key>E0F92E32-5CC6-42B5-9A51-86F16BCB17A4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E0F92E32-5CC6-42B5-9A51-86F16BCB17A4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681697678.76451397</real>
-			<key>timeStoppedRecording</key>
-			<real>681697678.79614198</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E0F92E32-5CC6-42B5-9A51-86F16BCB17A4</string>
-		</dict>
-		<key>E327AF36-D1F6-4874-A626-0CD5E32D2A51</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E327AF36-D1F6-4874-A626-0CD5E32D2A51.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681691626.07002294</real>
-			<key>timeStoppedRecording</key>
-			<real>681691626.10221004</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E327AF36-D1F6-4874-A626-0CD5E32D2A51</string>
-		</dict>
-		<key>E3865250-466B-429C-B8AC-35A01A2A8324</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E3865250-466B-429C-B8AC-35A01A2A8324.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681692009.350299</real>
-			<key>timeStoppedRecording</key>
-			<real>681692009.37653995</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E3865250-466B-429C-B8AC-35A01A2A8324</string>
-		</dict>
-		<key>E4FB0495-A2DA-42A3-98C7-BE33A477B1A4</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E4FB0495-A2DA-42A3-98C7-BE33A477B1A4.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688543.04290104</real>
-			<key>timeStoppedRecording</key>
-			<real>681688543.91873205</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E4FB0495-A2DA-42A3-98C7-BE33A477B1A4</string>
-		</dict>
-		<key>E50CAE4C-F8B8-43E8-A5EE-96D2BAE5FA78</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E50CAE4C-F8B8-43E8-A5EE-96D2BAE5FA78.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681688491.74785602</real>
-			<key>timeStoppedRecording</key>
-			<real>681688491.78067803</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E50CAE4C-F8B8-43E8-A5EE-96D2BAE5FA78</string>
-		</dict>
-		<key>E67AECEA-EFB5-4EA1-99BE-6F29DD6246EB</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E67AECEA-EFB5-4EA1-99BE-6F29DD6246EB.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681689134.75634098</real>
-			<key>timeStoppedRecording</key>
-			<real>681689135.40851402</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E67AECEA-EFB5-4EA1-99BE-6F29DD6246EB</string>
-		</dict>
-		<key>E70415D5-9490-4D33-A607-81DE5EC8D1A1</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E70415D5-9490-4D33-A607-81DE5EC8D1A1.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681686553.41588104</real>
-			<key>timeStoppedRecording</key>
-			<real>681686553.46185005</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E70415D5-9490-4D33-A607-81DE5EC8D1A1</string>
-		</dict>
-		<key>E8D1D4F0-40B2-425E-BE00-0B813A20249B</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>E8D1D4F0-40B2-425E-BE00-0B813A20249B.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
-			</dict>
-			<key>schemeIdentifier-containerName</key>
-			<string>TunnelMan project</string>
-			<key>schemeIdentifier-schemeName</key>
-			<string>TunnelMan</string>
-			<key>schemeIdentifier-sharedScheme</key>
-			<integer>1</integer>
-			<key>signature</key>
-			<string>Build TunnelMan</string>
-			<key>timeStartedRecording</key>
-			<real>681690887.77476704</real>
-			<key>timeStoppedRecording</key>
-			<real>681690887.80761397</real>
-			<key>title</key>
-			<string>Build TunnelMan</string>
-			<key>uniqueIdentifier</key>
-			<string>E8D1D4F0-40B2-425E-BE00-0B813A20249B</string>
-		</dict>
-		<key>F07C11DC-62B5-4C4C-8557-20525977E0EF</key>
-		<dict>
-			<key>className</key>
-			<string>IDEActivityLogSection</string>
-			<key>documentTypeString</key>
-			<string>&lt;nil&gt;</string>
-			<key>domainType</key>
-			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
-			<key>fileName</key>
-			<string>F07C11DC-62B5-4C4C-8557-20525977E0EF.xcactivitylog</string>
-			<key>hasPrimaryLog</key>
-			<true/>
-			<key>primaryObservable</key>
-			<dict>
-				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>TunnelMan project</string>
@@ -4350,15 +406,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681697747.01220798</real>
+			<real>681809292.65981901</real>
 			<key>timeStoppedRecording</key>
-			<real>681697747.04565299</real>
+			<real>681809293.11370802</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F07C11DC-62B5-4C4C-8557-20525977E0EF</string>
+			<string>728320E8-822B-4586-80C5-7E5A1C2D8ACB</string>
 		</dict>
-		<key>F4164C98-5D4B-4BC7-B125-BD014B1D6656</key>
+		<key>7341890B-9E07-4C46-A37E-D78F15BF9BDA</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4367,7 +423,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F4164C98-5D4B-4BC7-B125-BD014B1D6656.xcactivitylog</string>
+			<string>7341890B-9E07-4C46-A37E-D78F15BF9BDA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4384,15 +440,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681697663.50172806</real>
+			<real>681809174.54820096</real>
 			<key>timeStoppedRecording</key>
-			<real>681697663.54814196</real>
+			<real>681809174.60312498</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F4164C98-5D4B-4BC7-B125-BD014B1D6656</string>
+			<string>7341890B-9E07-4C46-A37E-D78F15BF9BDA</string>
 		</dict>
-		<key>F4BB5889-B60D-462B-A7A7-DB570DCDB9E3</key>
+		<key>7B66B19E-FA48-41FC-B107-DE0E8C72B469</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4401,7 +457,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F4BB5889-B60D-462B-A7A7-DB570DCDB9E3.xcactivitylog</string>
+			<string>7B66B19E-FA48-41FC-B107-DE0E8C72B469.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4418,15 +474,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688649.69738996</real>
+			<real>681806329.59961104</real>
 			<key>timeStoppedRecording</key>
-			<real>681688649.72268498</real>
+			<real>681806330.71639204</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F4BB5889-B60D-462B-A7A7-DB570DCDB9E3</string>
+			<string>7B66B19E-FA48-41FC-B107-DE0E8C72B469</string>
 		</dict>
-		<key>F549C744-F338-48BC-840C-6F8E345ADE15</key>
+		<key>877213F9-C1B6-4B42-8611-8D9450513612</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4435,7 +491,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F549C744-F338-48BC-840C-6F8E345ADE15.xcactivitylog</string>
+			<string>877213F9-C1B6-4B42-8611-8D9450513612.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4452,15 +508,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681691902.75937796</real>
+			<real>681807711.77333403</real>
 			<key>timeStoppedRecording</key>
-			<real>681691902.79132795</real>
+			<real>681807711.80038297</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F549C744-F338-48BC-840C-6F8E345ADE15</string>
+			<string>877213F9-C1B6-4B42-8611-8D9450513612</string>
 		</dict>
-		<key>F58E52FA-2814-4369-A2D2-6BA08E73808F</key>
+		<key>8BFF1B0F-48C7-471F-9FE5-B9C7B43476BC</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4469,13 +525,13 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F58E52FA-2814-4369-A2D2-6BA08E73808F.xcactivitylog</string>
+			<string>8BFF1B0F-48C7-471F-9FE5-B9C7B43476BC.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
 			<dict>
 				<key>highLevelStatus</key>
-				<string>W</string>
+				<string>E</string>
 			</dict>
 			<key>schemeIdentifier-containerName</key>
 			<string>TunnelMan project</string>
@@ -4486,15 +542,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681687941.88890302</real>
+			<real>681809284.97395301</real>
 			<key>timeStoppedRecording</key>
-			<real>681687942.52092195</real>
+			<real>681809285.49981296</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F58E52FA-2814-4369-A2D2-6BA08E73808F</string>
+			<string>8BFF1B0F-48C7-471F-9FE5-B9C7B43476BC</string>
 		</dict>
-		<key>F5B7F35B-B3B6-433D-86FE-872C7A2056A6</key>
+		<key>A8DE88F0-81EF-46BA-A1AC-468CC3874DA3</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4503,7 +559,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F5B7F35B-B3B6-433D-86FE-872C7A2056A6.xcactivitylog</string>
+			<string>A8DE88F0-81EF-46BA-A1AC-468CC3874DA3.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4520,15 +576,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681689171.46948695</real>
+			<real>681808900.50187099</real>
 			<key>timeStoppedRecording</key>
-			<real>681689171.50125003</real>
+			<real>681808901.79366505</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F5B7F35B-B3B6-433D-86FE-872C7A2056A6</string>
+			<string>A8DE88F0-81EF-46BA-A1AC-468CC3874DA3</string>
 		</dict>
-		<key>F62AC538-528B-41B1-B648-D8C77E405F83</key>
+		<key>B4573DF8-9FD7-4B22-ADFA-1C6E59D23618</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4537,7 +593,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F62AC538-528B-41B1-B648-D8C77E405F83.xcactivitylog</string>
+			<string>B4573DF8-9FD7-4B22-ADFA-1C6E59D23618.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4554,15 +610,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681691994.05021906</real>
+			<real>681807958.25842905</real>
 			<key>timeStoppedRecording</key>
-			<real>681691994.09301198</real>
+			<real>681807958.86721897</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F62AC538-528B-41B1-B648-D8C77E405F83</string>
+			<string>B4573DF8-9FD7-4B22-ADFA-1C6E59D23618</string>
 		</dict>
-		<key>F8069EFE-17F3-4135-A70C-9A04DB6A2360</key>
+		<key>D8DD0C89-CE7D-4869-A9BB-61338CB89CAB</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4571,7 +627,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>F8069EFE-17F3-4135-A70C-9A04DB6A2360.xcactivitylog</string>
+			<string>D8DD0C89-CE7D-4869-A9BB-61338CB89CAB.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4588,15 +644,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688630.89034903</real>
+			<real>681807928.69705999</real>
 			<key>timeStoppedRecording</key>
-			<real>681688630.92198205</real>
+			<real>681807928.807796</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>F8069EFE-17F3-4135-A70C-9A04DB6A2360</string>
+			<string>D8DD0C89-CE7D-4869-A9BB-61338CB89CAB</string>
 		</dict>
-		<key>FB1B8732-838E-4A8F-B13B-4823903B23B1</key>
+		<key>DE7B38C3-2BC3-40A9-B9BE-C223A0C107A8</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4605,7 +661,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>FB1B8732-838E-4A8F-B13B-4823903B23B1.xcactivitylog</string>
+			<string>DE7B38C3-2BC3-40A9-B9BE-C223A0C107A8.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4622,15 +678,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681690765.41988599</real>
+			<real>681807985.94058895</real>
 			<key>timeStoppedRecording</key>
-			<real>681690765.45464694</real>
+			<real>681807985.99412596</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>FB1B8732-838E-4A8F-B13B-4823903B23B1</string>
+			<string>DE7B38C3-2BC3-40A9-B9BE-C223A0C107A8</string>
 		</dict>
-		<key>FD7A3C2B-5D25-47DB-B428-1733D7D0B80E</key>
+		<key>F83E745C-BF74-4185-A9BF-4B81222B1182</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4639,7 +695,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>FD7A3C2B-5D25-47DB-B428-1733D7D0B80E.xcactivitylog</string>
+			<string>F83E745C-BF74-4185-A9BF-4B81222B1182.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4656,15 +712,15 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688470.22406995</real>
+			<real>681807969.07562101</real>
 			<key>timeStoppedRecording</key>
-			<real>681688470.86462998</real>
+			<real>681807969.892102</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>FD7A3C2B-5D25-47DB-B428-1733D7D0B80E</string>
+			<string>F83E745C-BF74-4185-A9BF-4B81222B1182</string>
 		</dict>
-		<key>FD86EA20-B068-4936-B60A-E2FEE946C481</key>
+		<key>F840AF64-4CDF-45F2-B270-C6E5F708F2AF</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogSection</string>
@@ -4673,7 +729,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.BuildLog</string>
 			<key>fileName</key>
-			<string>FD86EA20-B068-4936-B60A-E2FEE946C481.xcactivitylog</string>
+			<string>F840AF64-4CDF-45F2-B270-C6E5F708F2AF.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -4690,13 +746,13 @@
 			<key>signature</key>
 			<string>Build TunnelMan</string>
 			<key>timeStartedRecording</key>
-			<real>681688624.69266498</real>
+			<real>681785494.17247498</real>
 			<key>timeStoppedRecording</key>
-			<real>681688625.26696503</real>
+			<real>681785495.385795</real>
 			<key>title</key>
 			<string>Build TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>FD86EA20-B068-4936-B60A-E2FEE946C481</string>
+			<string>F840AF64-4CDF-45F2-B270-C6E5F708F2AF</string>
 		</dict>
 	</dict>
 </dict>

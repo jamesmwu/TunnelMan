@@ -94,6 +94,41 @@ void Boulder::doSomething(){
 
 Boulder::~Boulder(){
     setVisible(false);
+    m_studentWorld = nullptr;
+}
+
+/*========== Barrel ==========*/
+Barrel::Barrel(int x, int y, TunnelMan* tm, StudentWorld* sw) : GameObject(TID_BARREL, x, y, Direction::right, 1.0, 2){
+    alive = true;
+    setVisible(false);
+    m_tunnelMan = tm;
+    m_studentWorld = sw;
+}
+
+void Barrel::doSomething(){
+    if(!alive) return;
+    
+    //If not visible and within radius of TunnelMan make visible
+    if(!isVisible() && distance(getX(), getY(), m_tunnelMan->getX(), m_tunnelMan->getY(), 4)){
+        setVisible(true);
+        return;
+    }
+    
+    //Barrel is visible, if in range then collect
+    if(distance(getX(), getY(), m_tunnelMan->getX(), m_tunnelMan->getY(), 3)){
+        alive = false;
+        m_studentWorld->playSound(SOUND_FOUND_OIL);
+        m_studentWorld->increaseScore(1000);
+        m_studentWorld->decBarrel();
+    }
+    
+    
+}
+
+Barrel::~Barrel(){
+    setVisible(false);
+    m_tunnelMan = nullptr;
+    m_studentWorld = nullptr;
 }
 
 /*========== TunnelMan ==========*/
@@ -113,7 +148,8 @@ void TunnelMan::doSomething(){
     int x = getX();
     int y = getY();
     
-    m_studentWorld->earthOverlap(x, y);
+    bool earth = m_studentWorld->earthOverlap(x, y);
+    if(earth) m_studentWorld->playSound(SOUND_DIG);
 
     int ch;
     if (m_studentWorld->getKey(ch) == true)
@@ -166,4 +202,14 @@ bool TunnelMan::isAlive(){
 
 TunnelMan::~TunnelMan(){
     setVisible(false);  //Delete tunnelman, remove
+    m_studentWorld = nullptr;
+}
+
+
+/*========== Auxiliary Functions ==========*/
+bool distance(int x, int y, int x2, int y2, int radius){
+    //Cover just the anchor point of the 4x4 sprites
+    int dist = sqrt(pow(x - x2, 2) + pow(y - y2, 2));
+    
+    return dist <= radius ? true : false;
 }
