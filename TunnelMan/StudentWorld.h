@@ -30,7 +30,11 @@ public:
     void generate(int amt, int xRange, int yRange, std::string type);
     
     void decBarrel();
+    
+    std::string format(int level, int lives, int health, int squirts, int gold, int barrelsLeft, int sonar, int score);
 
+    int digits(int num);
+    
     virtual void cleanUp();
     
     ~StudentWorld();

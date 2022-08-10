@@ -29,6 +29,13 @@ void GameObject::updateY(int val){
     y += val;
 }
 
+bool GameObject::distance(int x, int y, int x2, int y2, int radius){
+    //Cover just the anchor point of the 4x4 sprites
+    int dist = sqrt(pow(x - x2, 2) + pow(y - y2, 2));
+    
+    return dist <= radius ? true : false;
+}
+
 void GameObject::doSomething(){}
 
 void GameObject::annoyed(int val){}
@@ -200,16 +207,25 @@ bool TunnelMan::isAlive(){
     return hitPoints <= 0 ? false : true;
 }
 
+//Returns percentage
+int TunnelMan::getHealth(){
+    return hitPoints * 10;
+}
+
+int TunnelMan::getSquirts(){
+    return water;
+}
+
+int TunnelMan::getNuggets(){
+    return nuggets;
+}
+
+int TunnelMan::getSonar(){
+    return sonar;
+}
+
 TunnelMan::~TunnelMan(){
     setVisible(false);  //Delete tunnelman, remove
     m_studentWorld = nullptr;
 }
 
-
-/*========== Auxiliary Functions ==========*/
-bool distance(int x, int y, int x2, int y2, int radius){
-    //Cover just the anchor point of the 4x4 sprites
-    int dist = sqrt(pow(x - x2, 2) + pow(y - y2, 2));
-    
-    return dist <= radius ? true : false;
-}

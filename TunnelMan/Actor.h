@@ -22,6 +22,9 @@ public:
     int getY() const;
     void updateY(int val);
     
+    //Auxiliary function
+    bool distance(int x, int y, int x2, int y2, int radius);
+    
     virtual ~GameObject();
 
 private:
@@ -84,6 +87,14 @@ public:
     
     bool isAlive();
     
+    int getHealth();
+    
+    int getSquirts();
+    
+    int getNuggets();
+    
+    int getSonar();
+    
     virtual ~TunnelMan();
 
 private:
@@ -95,7 +106,5 @@ private:
     StudentWorld* m_studentWorld;
 };
 
-/*========== Auxiliary Functions ==========*/
-bool distance(int x, int y, int x2, int y2, int radius);
 
 #endif // ACTOR_H_

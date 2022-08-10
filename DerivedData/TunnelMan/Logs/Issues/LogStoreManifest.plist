@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>8ECC948F-FB06-428A-9753-6FE8E8073E95</key>
+		<key>343164BF-0C99-4E32-BA51-3D90A3273A78</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
 			<key>fileName</key>
-			<string>8ECC948F-FB06-428A-9753-6FE8E8073E95.xcactivitylog</string>
+			<string>343164BF-0C99-4E32-BA51-3D90A3273A78.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>TunnelMan-goyvvdkbmdjmxnhivjqebpgvbqos</string>
 			<key>timeStartedRecording</key>
-			<real>681809311.43291998</real>
+			<real>681843479.98531306</real>
 			<key>timeStoppedRecording</key>
-			<real>681809311.94777906</real>
+			<real>681843480.79647899</real>
 			<key>title</key>
 			<string>Build target TunnelMan</string>
 			<key>uniqueIdentifier</key>
-			<string>8ECC948F-FB06-428A-9753-6FE8E8073E95</string>
+			<string>343164BF-0C99-4E32-BA51-3D90A3273A78</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

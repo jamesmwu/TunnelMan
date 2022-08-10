@@ -62,7 +62,20 @@ int StudentWorld::init(){
 }
 
 int StudentWorld::move(){
-    setGameStatText("Scr: 000000 Lvl: 0 Lives: 3 Hlth: 100% Wtr: 5 Gld: 1 Sonar: 1 Oil Left: 2");
+    
+    //Status bar
+    int level = getLevel();
+    int lives = getLives();
+    int health = tunnelManPtr->getHealth();
+    int squirts = tunnelManPtr->getSquirts();
+    int gold = tunnelManPtr->getNuggets();
+    int barrelsLeft = barrels;
+    int sonar = tunnelManPtr->getSonar();
+    int score = getScore();
+    
+    string res = format(level, lives, health, squirts, gold, barrelsLeft, sonar, score);
+    
+    setGameStatText(res);
     
     if(barrels == 0){
         playSound(SOUND_FINISHED_LEVEL);
@@ -71,6 +84,7 @@ int StudentWorld::move(){
     
     if(!tunnelManPtr->isAlive()){
         decLives();
+        playSound(SOUND_PLAYER_GIVE_UP);
         return GWSTATUS_PLAYER_DIED;
     }
     
@@ -85,6 +99,78 @@ int StudentWorld::move(){
 }
 
 /*========== Helper functions ==========*/
+std::string StudentWorld::format(int level, int lives, int health, int squirts, int gold, int barrelsLeft, int sonar, int score){
+    
+    string result;
+    
+    //Score
+    result += "Scr: ";
+    for(int i = digits(score); i < 6; i++){
+        result += "0";
+    }
+    result += to_string(score)+ "  ";
+    
+    //Level
+    if(digits(level) == 1){
+        result += "Lvl:  " + to_string(level) + "  ";
+    }
+    else result += "Lvl: " + to_string(level) + "  ";
+    
+    //Lives
+    if(digits(lives) == 1){
+        result += "Lives:  " + to_string(lives) + "  ";
+    }
+    else result += "Lives: " + to_string(lives) + "  ";
+    
+    //Health
+    result += "Hlth: ";
+    for(int i = digits(health); i < 3; i++){
+        result += " ";
+    }
+    result += to_string(health) + "%  ";
+    
+    //Water
+    if(digits(squirts) == 1){
+        result += "Wtr:  " + to_string(squirts) + "  ";
+    }
+    else result += "Wtr: " + to_string(squirts) + "  ";
+    
+    //Gold
+    if(digits(gold) == 1){
+        result += "Gld:  " + to_string(gold) + "  ";
+    }
+    else result += "Gld: " + to_string(gold) + "  ";
+    
+    //Sonar
+    if(digits(sonar) == 1){
+        result += "Sonar:  " + to_string(sonar) + "  ";
+    }
+    else result += "Sonar: " + to_string(gold) + "  ";
+    
+    //Oil
+    if(digits(barrelsLeft) == 1){
+        result += "Oil Left:  " + to_string(barrelsLeft) + "  ";
+    }
+    else result += "Oil Left: " + to_string(barrelsLeft) + "  ";
+    
+    return result;
+}
+
+int StudentWorld::digits(int num){
+    int digits = 0;
+    
+    while(num > 0){
+        num /= 10;
+        digits++;
+    }
+    
+    //Edge case
+    if(digits == 0) digits = 1;
+    
+    return digits;
+}
+
+
 void StudentWorld::decBarrel(){
     barrels--;
 }
