@@ -10,7 +10,7 @@ class TunnelMan;
 class GameObject : public GraphObject {
 public:
     //Default values of GraphObject constructor
-    GameObject(int imageID, int startX, int startY, Direction dir = right, double size = 1.0, unsigned int depth = 0);
+    GameObject(int imageID, int startX, int startY, Direction dir = right, double size = 1.0, unsigned int depth = 0, TunnelMan* tm = nullptr, StudentWorld* sw = nullptr);
     
     virtual void doSomething();
     
@@ -29,6 +29,9 @@ public:
     bool isBoulder() const;
     void imABoulder();
     
+    TunnelMan* tm() const;
+    StudentWorld* sw() const;
+    
     //Auxiliary function
     bool distance(int x, int y, int x2, int y2, int radius);
     
@@ -39,6 +42,8 @@ private:
     int y;
     bool alive;
     bool bldr;
+    TunnelMan* m_tunnelMan;
+    StudentWorld* m_studentWorld;
 };
 
 /*========== Earth class ==========*/
@@ -54,7 +59,7 @@ public:
 /*========== Boulder class ==========*/
 class Boulder : public GameObject {
 public:
-    Boulder(int x, int y, StudentWorld* sw);
+    Boulder(int x, int y, StudentWorld* sw, TunnelMan* tm);
     
     virtual void doSomething();
     
@@ -63,8 +68,6 @@ public:
 private:
     std::string state;
     int tick;
-    
-    StudentWorld* m_studentWorld;
 };
 
 /*========== Barrel class ==========*/
@@ -76,9 +79,6 @@ public:
     
     virtual ~Barrel();
     
-private:
-    TunnelMan* m_tunnelMan;
-    StudentWorld* m_studentWorld;
 };
 
 /*========== Nugget class ==========*/
@@ -93,9 +93,7 @@ public:
 private:
     bool tunnelManCanPickUp;
     std::string state;
-    
-    StudentWorld* m_studentWorld;
-    TunnelMan* m_tunnelMan;
+    int ticks;
 };
 
 /*========== TunnelMan class ==========*/
@@ -123,8 +121,6 @@ private:
     int water;
     int sonar;
     int nuggets;
-    
-    StudentWorld* m_studentWorld;
 };
 
 

@@ -41,7 +41,7 @@ int StudentWorld::init(){
     //Create other game objects
     int level = getLevel();
     int boulder = min(level / 2 + 2, 9);
-//    int nugget = max(5 - level / 2, 2);
+    int nugget = max(5 - level / 2, 2);
     int barrel = min(2 + level, 21);
     
     barrels = barrel;
@@ -57,6 +57,9 @@ int StudentWorld::init(){
     
     //Generate barrels
     generate(barrel, xRange, yRange, "barrel");
+    
+    //Generate nuggets
+    generate(nugget, xRange, yRange, "nugget");
     
     return GWSTATUS_CONTINUE_GAME;
 }
@@ -85,6 +88,7 @@ int StudentWorld::move(){
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         if(!(*it)->isAlive()){
             delete *it;
+            *it = nullptr;
             it = gameObjects.erase(it);
             it--;
         }
@@ -93,6 +97,8 @@ int StudentWorld::move(){
     if(!tunnelManPtr->isAlive()){
         decLives();
         playSound(SOUND_PLAYER_GIVE_UP);
+        delete tunnelManPtr;
+        tunnelManPtr = nullptr;
         return GWSTATUS_PLAYER_DIED;
     }
     
@@ -179,7 +185,7 @@ void StudentWorld::generate(int amt, int xRange, int yRange, std::string type){
                 inRange = distance(x, y);
             }
             
-            GameObject* bldr = new Boulder(x, y, this);
+            GameObject* bldr = new Boulder(x, y, this, tunnelManPtr);
             gameObjects.push_back(bldr);
         }
     }
@@ -201,6 +207,27 @@ void StudentWorld::generate(int amt, int xRange, int yRange, std::string type){
             
             GameObject* brl = new Barrel(x, y, tunnelManPtr, this);
             gameObjects.push_back(brl);
+        }
+    }
+    //Nugget
+    else if(type == "nugget"){
+        for(int i = 0; i < amt; i++){
+            
+            //Generate 2 random x and y locations for nugget
+            int x = rand() % xRange;
+            int y = rand() % yRange;
+            bool inRange = distance(x, y);
+            
+            //Ensure nugget is within the oil field and not in the tunnel and not in range of other objects
+            while(x < 0 || x > 60 || y < 20 || y > 56 || (x >= 25 && x <= 35 && y >= 1) || inRange){
+                x = rand() % xRange;
+                y = rand() % yRange;
+                inRange = distance(x, y);
+            }
+            
+            GameObject* nug = new Nugget(x, y, false, true, "permanent", tunnelManPtr, this);
+
+            gameObjects.push_back(nug);
         }
     }
     
@@ -302,12 +329,15 @@ bool StudentWorld::checkObjectUnderBoulder(int x, int y, Boulder* bldr){
 
 void StudentWorld::cleanUp(){
     //Free tunnelMan
-    delete tunnelManPtr;
-    tunnelManPtr = nullptr;
-    
+    if(tunnelManPtr){
+        delete tunnelManPtr;
+        tunnelManPtr = nullptr;
+    }
+
     //Free gameObjects
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         delete *it;
+        *it = nullptr;
         it = gameObjects.erase(it);
         it--;
     }
