@@ -23,7 +23,9 @@ public:
     
     bool checkEarthUnderBoulder(int x, int y);
     
-    bool checkObjectUnderBoulder(int x, int y);
+    bool checkObjectUnderBoulder(int x, int y, Boulder* bldr);
+    
+    bool checkTunnelManNearBoulder(int x, int y, std::string direction);
     
     bool distance(int x, int y);
     

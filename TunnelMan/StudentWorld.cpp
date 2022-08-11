@@ -62,7 +62,6 @@ int StudentWorld::init(){
 }
 
 int StudentWorld::move(){
-    
     //Status bar
     int level = getLevel();
     int lives = getLives();
@@ -80,6 +79,15 @@ int StudentWorld::move(){
     if(barrels == 0){
         playSound(SOUND_FINISHED_LEVEL);
         return GWSTATUS_FINISHED_LEVEL;
+    }
+    
+    //Remove dead actors
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        if(!(*it)->isAlive()){
+            delete *it;
+            it = gameObjects.erase(it);
+            it--;
+        }
     }
     
     if(!tunnelManPtr->isAlive()){
@@ -111,47 +119,25 @@ std::string StudentWorld::format(int level, int lives, int health, int squirts, 
     result += to_string(score)+ "  ";
     
     //Level
-    if(digits(level) == 1){
-        result += "Lvl:  " + to_string(level) + "  ";
-    }
-    else result += "Lvl: " + to_string(level) + "  ";
+    result += "Lvl: " + to_string(level) + "  ";
     
     //Lives
-    if(digits(lives) == 1){
-        result += "Lives:  " + to_string(lives) + "  ";
-    }
-    else result += "Lives: " + to_string(lives) + "  ";
-    
+    result += "Lives: " + to_string(lives) + "  ";
+
     //Health
-    result += "Hlth: ";
-    for(int i = digits(health); i < 3; i++){
-        result += " ";
-    }
-    result += to_string(health) + "%  ";
+    result += "Hlth: " + to_string(health) + "%  ";
     
     //Water
-    if(digits(squirts) == 1){
-        result += "Wtr:  " + to_string(squirts) + "  ";
-    }
-    else result += "Wtr: " + to_string(squirts) + "  ";
+    result += "Wtr: " + to_string(squirts) + "  ";
     
     //Gold
-    if(digits(gold) == 1){
-        result += "Gld:  " + to_string(gold) + "  ";
-    }
-    else result += "Gld: " + to_string(gold) + "  ";
+    result += "Gld: " + to_string(gold) + "  ";
     
     //Sonar
-    if(digits(sonar) == 1){
-        result += "Sonar:  " + to_string(sonar) + "  ";
-    }
-    else result += "Sonar: " + to_string(gold) + "  ";
+    result += "Sonar: " + to_string(gold) + "  ";
     
     //Oil
-    if(digits(barrelsLeft) == 1){
-        result += "Oil Left:  " + to_string(barrelsLeft) + "  ";
-    }
-    else result += "Oil Left: " + to_string(barrelsLeft) + "  ";
+    result += "Oil Left: " + to_string(barrelsLeft) + "  ";
     
     return result;
 }
@@ -248,6 +234,26 @@ bool StudentWorld::earthOverlap(int x, int y){
             
 }
 
+//x and y are the TunnelMan's x and y
+bool StudentWorld::checkTunnelManNearBoulder(int x, int y, std::string direction){
+    if(direction == "left") x--;
+    else if(direction == "right") x++;
+    else if(direction == "up") y++;
+    else if(direction == "down") y--;
+    
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        
+        int bldrX = (*it)->getX();
+        int bldrY = (*it)->getY();
+        
+        if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
+            return true;
+        }
+    }
+    
+    return false;
+}
+
 //Uses distance formula to determine if a given coordinate is in the range of a gameObject
 bool StudentWorld::distance(int x, int y){
     
@@ -279,11 +285,16 @@ bool StudentWorld::checkEarthUnderBoulder(int x, int y){
 }
 
 //Returns whether there is another game object under boulder
-bool StudentWorld::checkObjectUnderBoulder(int x, int y){
+bool StudentWorld::checkObjectUnderBoulder(int x, int y, Boulder* bldr){
     y--;
     
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-        if((*it)->getY() + 3 == y && (x - 3 <= (*it)->getX() <= x + 3)) return true;
+        if((*it) == bldr) continue;
+        
+        if((*it)->getY() + 3 == y && ((x - 3 <= (*it)->getX()) && ((*it)->getX() <= x + 3))){
+            return true;
+        }
+
     }
     
     return false;
@@ -297,6 +308,8 @@ void StudentWorld::cleanUp(){
     //Free gameObjects
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         delete *it;
+        it = gameObjects.erase(it);
+        it--;
     }
     gameObjects.clear();
     

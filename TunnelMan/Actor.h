@@ -22,6 +22,13 @@ public:
     int getY() const;
     void updateY(int val);
     
+    bool isAlive() const;
+    void dead();
+    void live();
+    
+    bool isBoulder() const;
+    void imABoulder();
+    
     //Auxiliary function
     bool distance(int x, int y, int x2, int y2, int radius);
     
@@ -30,7 +37,8 @@ public:
 private:
     int x;
     int y;
-    
+    bool alive;
+    bool bldr;
 };
 
 /*========== Earth class ==========*/
@@ -53,7 +61,6 @@ public:
     virtual ~Boulder();
     
 private:
-    bool alive;
     std::string state;
     int tick;
     
@@ -70,10 +77,25 @@ public:
     virtual ~Barrel();
     
 private:
-    bool alive;
-    
     TunnelMan* m_tunnelMan;
     StudentWorld* m_studentWorld;
+};
+
+/*========== Nugget class ==========*/
+class Nugget : public GameObject {
+public:
+    Nugget(int x, int y, bool visible, bool tunnelManPickUp, std::string nugState, TunnelMan* tm, StudentWorld* sw);
+    
+    virtual void doSomething();
+    
+    virtual ~Nugget();
+    
+private:
+    bool tunnelManCanPickUp;
+    std::string state;
+    
+    StudentWorld* m_studentWorld;
+    TunnelMan* m_tunnelMan;
 };
 
 /*========== TunnelMan class ==========*/
@@ -84,14 +106,13 @@ public:
     virtual void doSomething();
     
     virtual void annoyed(int val);
-    
-    bool isAlive();
-    
+        
     int getHealth();
     
     int getSquirts();
     
     int getNuggets();
+    void updateNuggets();
     
     int getSonar();
     
