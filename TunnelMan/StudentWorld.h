@@ -25,7 +25,7 @@ public:
     
     bool checkObjectUnderBoulder(int x, int y, Boulder* bldr);
     
-    bool checkTunnelManNearBoulder(int x, int y, std::string direction);
+    bool nearObj(int x, int y, std::string direction, std::string type);
     
     bool distance(int x, int y);
     
@@ -36,6 +36,10 @@ public:
     std::string format(int level, int lives, int health, int squirts, int gold, int barrelsLeft, int sonar, int score);
 
     int digits(int num);
+    
+    void dropNugget(int x, int y);
+    
+    void squirt(int x, int y, std::string dir);
     
     virtual void cleanUp();
     

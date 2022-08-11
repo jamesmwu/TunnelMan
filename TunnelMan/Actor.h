@@ -29,6 +29,9 @@ public:
     bool isBoulder() const;
     void imABoulder();
     
+    bool isEarth() const;
+    void imEarth();
+    
     TunnelMan* tm() const;
     StudentWorld* sw() const;
     
@@ -42,6 +45,7 @@ private:
     int y;
     bool alive;
     bool bldr;
+    bool earth;
     TunnelMan* m_tunnelMan;
     StudentWorld* m_studentWorld;
 };
@@ -94,6 +98,21 @@ private:
     bool tunnelManCanPickUp;
     std::string state;
     int ticks;
+};
+
+/*========== Squirt class ==========*/
+class Squirt : public GameObject {
+public:
+    Squirt(int x, int y, TunnelMan* tm, StudentWorld* sw);
+    
+    virtual void doSomething();
+    
+    virtual ~Squirt();
+    
+private:
+    int distTraveled;
+    std::string dir;
+    
 };
 
 /*========== TunnelMan class ==========*/

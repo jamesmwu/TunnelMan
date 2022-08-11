@@ -13,6 +13,7 @@ GameObject::GameObject(int imageID, int startX, int startY, Direction dir, doubl
     y = startY;
     alive = true;
     bldr = false;
+    earth = false;
     m_tunnelMan = tm;
     m_studentWorld = sw;
 }
@@ -53,6 +54,14 @@ void GameObject::imABoulder(){
     bldr = true;
 }
 
+bool GameObject::isEarth() const{
+    return earth;
+}
+
+void GameObject::imEarth(){
+    earth = true;
+}
+
 TunnelMan* GameObject::tm() const{
     return m_tunnelMan;
 }
@@ -80,6 +89,7 @@ GameObject::~GameObject(){
 /*========== Earth ==========*/
 Earth::Earth(int xLoc, int yLoc) : GameObject(TID_EARTH, xLoc, yLoc, Direction::right, 0.25, 3){
     setVisible(true);
+    imEarth();
 }
 
 Earth::~Earth(){
@@ -174,7 +184,7 @@ Barrel::~Barrel(){
 
 /*========== Nugget ==========*/
 //State can either be "temporary" or "permanent"
-Nugget::Nugget(int x, int y, bool visible, bool tunnelManPickUp, std::string nugState, TunnelMan* tm, StudentWorld* sw) : GameObject(TID_GOLD, x, y, Direction::right, 1.0, 2, tm, sw){
+Nugget::Nugget(int x, int y, bool visible, bool tunnelManPickUp, string nugState, TunnelMan* tm, StudentWorld* sw) : GameObject(TID_GOLD, x, y, Direction::right, 1.0, 2, tm, sw){
     setVisible(visible);
     tunnelManCanPickUp = tunnelManPickUp;
     state = nugState;
@@ -217,12 +227,68 @@ Nugget::~Nugget(){
     dead();
 }
 
+/*========== Squirt ==========*/
+Squirt::Squirt(int x, int y, TunnelMan* tm, StudentWorld* sw) : GameObject(TID_WATER_SPURT, x, y, tm->getDirection(), 1.0, 1, tm, sw){
+    setVisible(true);
+    distTraveled = 0;
+    if(tm->getDirection() == Direction::up){
+        dir = "up";
+    }
+    else if(tm->getDirection() == Direction::down){
+        dir = "down";
+    }
+    else if(tm->getDirection() == Direction::left){
+        dir = "left";
+    }
+    else if(tm->getDirection() == Direction::right){
+        dir = "right";
+    }
+}
+
+void Squirt::doSomething(){
+    //If in radius of protestor
+    
+    if(distTraveled == 4){
+        dead();
+    }
+    
+    
+    if(sw()->nearObj(getX(), getY(), dir, "squirt")){
+        dead();
+    }
+    else{
+        distTraveled++;
+        if(dir == "up"){
+            moveTo(getX(), getY() + 1);
+            updateY(1);
+        }
+        else if(dir == "down"){
+            moveTo(getX(), getY() - 1);
+            updateY(-1);
+        }
+        else if(dir == "left"){
+            moveTo(getX() - 1, getY());
+            updateX(-1);
+        }
+        else{
+            moveTo(getX() + 1, getY());
+            updateX(1);
+        }
+    }
+    
+    
+}
+
+Squirt::~Squirt(){};
+
 
 /*========== TunnelMan ==========*/
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0, nullptr, sw){
     setVisible(true);
     hitPoints = 10;
-    water = 5;
+//    water = 5;
+
+    water = 100;
     sonar = 1;
     nuggets = 0;
 }
@@ -241,32 +307,54 @@ void TunnelMan::doSomething(){
     {
         // user hit a key this tick!
         if(ch == KEY_PRESS_LEFT){
-            if(x > 0 && getDirection() == Direction::left && !sw()->checkTunnelManNearBoulder(getX(), getY(), "left")){
+            if(x > 0 && getDirection() == Direction::left && !sw()->nearObj(getX(), getY(), "left", "tunnelman")){
                 moveTo(x - 1, y);
                 updateX(-1);
             }
             else setDirection(Direction::left);
         }
         else if(ch == KEY_PRESS_RIGHT){
-            if(x < 60 && getDirection() == Direction::right && !sw()->checkTunnelManNearBoulder(getX(), getY(), "right")){
+            if(x < 60 && getDirection() == Direction::right && !sw()->nearObj(getX(), getY(), "right", "tunnelman")){
                 moveTo(x + 1, y);
                 updateX(1);
             }
             else setDirection(Direction::right);
         }
         else if(ch == KEY_PRESS_DOWN){
-            if(y > 0 && getDirection() == Direction::down && !sw()->checkTunnelManNearBoulder(getX(), getY(), "down")){
+            if(y > 0 && getDirection() == Direction::down && !sw()->nearObj(getX(), getY(), "down", "tunnelman")){
                 moveTo(x, y - 1);
                 updateY(-1);
             }
             else setDirection(Direction::down);
         }
         else if(ch == KEY_PRESS_UP){
-            if(y < 60 && getDirection() == Direction::up && !sw()->checkTunnelManNearBoulder(getX(), getY(), "up")){
+            if(y < 60 && getDirection() == Direction::up && !sw()->nearObj(getX(), getY(), "up", "tunnelman")){
                 moveTo(x, y + 1);
                 updateY(1);
             }
             else setDirection(Direction::up);
+        }
+        else if(ch == KEY_PRESS_TAB && nuggets >= 1){
+            //Drop nugget
+            nuggets--;
+            sw()->dropNugget(getX(), getY());
+        }
+        else if(ch == KEY_PRESS_SPACE && water > 0){
+            string dir;
+            if(getDirection() == Direction::up){
+                dir = "up";
+            }
+            else if(getDirection() == Direction::down){
+                dir = "down";
+            }
+            else if(getDirection() == Direction::left){
+                dir = "left";
+            }
+            else if(getDirection() == Direction::right){
+                dir = "right";
+            }
+            water--;
+            sw()->squirt(getX(), getY(), dir);
         }
         else if(ch == KEY_PRESS_ESCAPE){
             hitPoints = 0;  //Kill tunnelman

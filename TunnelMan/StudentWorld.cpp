@@ -261,24 +261,58 @@ bool StudentWorld::earthOverlap(int x, int y){
             
 }
 
-//x and y are the TunnelMan's x and y
-bool StudentWorld::checkTunnelManNearBoulder(int x, int y, std::string direction){
+bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type){
     if(direction == "left") x--;
     else if(direction == "right") x++;
     else if(direction == "up") y++;
     else if(direction == "down") y--;
     
-    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-        
-        int bldrX = (*it)->getX();
-        int bldrY = (*it)->getY();
-        
-        if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
-            return true;
+    if(type == "tunnelman"){
+        for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+            
+            int bldrX = (*it)->getX();
+            int bldrY = (*it)->getY();
+            
+            if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
+                return true;
+            }
+        }
+    }
+    else if(type == "squirt"){
+        for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+            
+            int objX = (*it)->getX();
+            int objY = (*it)->getY();
+            
+            //If x/y is occupied by boulder or earth, can't move
+            if(((*it)->isBoulder() || (*it)->isEarth()) && x == objX && y == objY){
+                return true;
+            }
         }
     }
     
     return false;
+}
+
+void StudentWorld::squirt(int x, int y, std::string dir){
+    
+    if(dir == "up"){
+        y += 3;
+    }
+    else if(dir == "down"){
+        y -= 3;
+    }
+    else if(dir == "left"){
+        x -= 3;
+    }
+    else if(dir == "right"){
+        x += 3;
+    }
+    
+    
+    GameObject* sqrt = new Squirt(x, y, tunnelManPtr, this);
+    gameObjects.push_back(sqrt);
+    playSound(SOUND_PLAYER_SQUIRT);
 }
 
 //Uses distance formula to determine if a given coordinate is in the range of a gameObject
@@ -325,6 +359,14 @@ bool StudentWorld::checkObjectUnderBoulder(int x, int y, Boulder* bldr){
     }
     
     return false;
+}
+
+//Add nugget into playing field
+void StudentWorld::dropNugget(int x, int y){
+    //Nugget is pickupable by protestors and temporary
+    GameObject* insert = new Nugget(x, y, true, false, "temporary", tunnelManPtr, this);
+    
+    gameObjects.push_back(insert);
 }
 
 void StudentWorld::cleanUp(){
