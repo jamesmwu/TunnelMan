@@ -16,6 +16,7 @@ GameWorld* createStudentWorld(string assetDir)
 StudentWorld::StudentWorld(std::string assetDir): GameWorld(assetDir){
     tunnelManPtr = nullptr;
     barrels = 0;
+    sonarActive = false;
 }
 
 //Initialize data structures, construct new oil field, allocate / insert TunnelMan Object
@@ -61,6 +62,9 @@ int StudentWorld::init(){
     //Generate nuggets
     generate(nugget, xRange, yRange, "nugget");
     
+//    gameObjects.push_back(new SonarKit(0, 60, tunnelManPtr, this));
+
+    
     return GWSTATUS_CONTINUE_GAME;
 }
 
@@ -87,6 +91,7 @@ int StudentWorld::move(){
     //Remove dead actors
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         if(!(*it)->isAlive()){
+            if((*it)->isSonar()) sonarActive = false;
             delete *it;
             *it = nullptr;
             it = gameObjects.erase(it);
@@ -107,6 +112,25 @@ int StudentWorld::move(){
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         (*it)->doSomething();
     }
+    
+    //Random chance for sonar / water pool to be added (1 in G chance)
+    //If something IS added, 1/5 chance for Sonar and 4/5 chance for Water
+    int G = level * 25 + 300;
+    int num = rand() % G;
+    if(num == 1){
+        num = rand() % 5;
+        // 1 out of 5 chance for sonar
+        if(num == 1 && !sonarActive){
+            gameObjects.push_back(new SonarKit(0, 60, tunnelManPtr, this));
+            sonarActive = true;
+        }
+        //Else, water
+        else {
+            generate(1, 60, 56, "water");
+        }
+    }
+    
+    
     
     return GWSTATUS_CONTINUE_GAME;
 
@@ -140,7 +164,7 @@ std::string StudentWorld::format(int level, int lives, int health, int squirts, 
     result += "Gld: " + to_string(gold) + "  ";
     
     //Sonar
-    result += "Sonar: " + to_string(gold) + "  ";
+    result += "Sonar: " + to_string(sonar) + "  ";
     
     //Oil
     result += "Oil Left: " + to_string(barrelsLeft) + "  ";
@@ -230,10 +254,54 @@ void StudentWorld::generate(int amt, int xRange, int yRange, std::string type){
             gameObjects.push_back(nug);
         }
     }
+    else if(type == "water"){
+        for(int i = 0; i < amt; i++){
+            
+            //Generate 2 random x and y locations for water
+            int x = rand() % xRange;
+            int y = rand() % yRange;
+            bool inRange = distance(x, y);
+            bool earth = checkEarth(x, y);
+            
+            //Ensure water is within the oil field in a valid, 4x4 area
+            while(x < 0 || x > 60 || y < 20 || y > 56 || inRange || earth){
+                x = rand() % xRange;
+                y = rand() % yRange;
+                inRange = distance(x, y);
+                earth = checkEarth(x, y);
+                
+            }
+            
+            GameObject* wtr = new WaterPool(x, y, tunnelManPtr, this);
+            gameObjects.push_back(wtr);
+        }
+    }
     
 }
 
+//Checks to see if earth is present at the given coord
+bool StudentWorld::checkEarth(int x, int y){
+    //Check for Earth
+    for(int i = 0; i < 4; i++){
+        if(y >= 60) break;
+        if(x >= 64) break;
+        
+        for(int j = 0; j < 4; j++){
+            if(earthObjects[y][x] != nullptr){
+                return true;
+            }
+            
+            x++;
+        }
+        x -= 4;
+        y++;
+    }
+    
+    return false;
+}
 
+
+//DELETES earth at the given coord
 bool StudentWorld::earthOverlap(int x, int y){
     
     //Delete any earth objects that have same coords as a given obj
@@ -279,13 +347,47 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
         }
     }
     else if(type == "squirt"){
+        //Check for boundaries of oil field
+        if((direction == "left" && x < 0) || (direction == "right" && x >= 60) || (direction == "up" && y >= 60) || (direction == "down" && y < 0)){
+            return true;
+        }
+        
+        
+        //Check for Earth (can't use checkEarth function since this requires different y increments based on direction
+        int ogY = y;
+        int ogX = x;
+        if(y < 60){
+            for(int i = 0; i < 4; i++){
+                if(y >= 60) break;
+                if(x >= 64) break;
+                
+                for(int j = 0; j < 4; j++){
+                    if(earthObjects[y][x] != nullptr){
+                        return true;
+                    }
+                    
+                    x++;
+                }
+                x -= 4;
+                direction == "down" ? y-- : y++;
+            }
+        }
+        //Reset x and y
+        y = ogY;
+        x = ogX;
+        //Uncomment this if the squirt should not show up at all if it overlaps with boulders.
+//        if(direction == "left") x -= 3;
+//        else if(direction == "right") x += 3;
+//        else if(direction == "up") y += 3;
+//        else if(direction == "down") y -= 3;
+        
+        //Check for boulders
         for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
             
-            int objX = (*it)->getX();
-            int objY = (*it)->getY();
+            int bldrX = (*it)->getX();
+            int bldrY = (*it)->getY();
             
-            //If x/y is occupied by boulder or earth, can't move
-            if(((*it)->isBoulder() || (*it)->isEarth()) && x == objX && y == objY){
+            if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
                 return true;
             }
         }
@@ -297,16 +399,16 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
 void StudentWorld::squirt(int x, int y, std::string dir){
     
     if(dir == "up"){
-        y += 3;
+        y += 4;
     }
     else if(dir == "down"){
-        y -= 3;
+        y -= 4;
     }
     else if(dir == "left"){
-        x -= 3;
+        x -= 4;
     }
     else if(dir == "right"){
-        x += 3;
+        x += 4;
     }
     
     
@@ -367,6 +469,22 @@ void StudentWorld::dropNugget(int x, int y){
     GameObject* insert = new Nugget(x, y, true, false, "temporary", tunnelManPtr, this);
     
     gameObjects.push_back(insert);
+}
+
+//Reveals objects within radius 12 of the TunnelMan's current distance
+void StudentWorld::sonarCharge(){
+    
+    int x = tunnelManPtr->getX();
+    int y = tunnelManPtr->getY();
+    
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        int objX = (*it)->getX();
+        int objY = (*it)->getY();
+        
+        if(tunnelManPtr->distance(x, y, objX, objY, 12)){
+            (*it)->setVisible(true);
+        }
+    }
 }
 
 void StudentWorld::cleanUp(){

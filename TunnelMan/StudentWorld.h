@@ -41,6 +41,10 @@ public:
     
     void squirt(int x, int y, std::string dir);
     
+    void sonarCharge();
+    
+    bool checkEarth(int x, int y);
+    
     virtual void cleanUp();
     
     ~StudentWorld();
@@ -50,6 +54,7 @@ private:
     std::vector<GameObject*> gameObjects;
     Earth* earthObjects[60][64];  //Rows 0 - 59 are filled with Earth objs
     int barrels;
+    bool sonarActive;
 };
 
 #endif // STUDENTWORLD_H_

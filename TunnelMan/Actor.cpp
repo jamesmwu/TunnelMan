@@ -13,7 +13,7 @@ GameObject::GameObject(int imageID, int startX, int startY, Direction dir, doubl
     y = startY;
     alive = true;
     bldr = false;
-    earth = false;
+    sonar = false;
     m_tunnelMan = tm;
     m_studentWorld = sw;
 }
@@ -54,12 +54,12 @@ void GameObject::imABoulder(){
     bldr = true;
 }
 
-bool GameObject::isEarth() const{
-    return earth;
+bool GameObject::isSonar() const {
+    return sonar;
 }
 
-void GameObject::imEarth(){
-    earth = true;
+void GameObject::imASonar() {
+    sonar = true;
 }
 
 TunnelMan* GameObject::tm() const{
@@ -89,7 +89,6 @@ GameObject::~GameObject(){
 /*========== Earth ==========*/
 Earth::Earth(int xLoc, int yLoc) : GameObject(TID_EARTH, xLoc, yLoc, Direction::right, 0.25, 3){
     setVisible(true);
-    imEarth();
 }
 
 Earth::~Earth(){
@@ -279,17 +278,79 @@ void Squirt::doSomething(){
     
 }
 
-Squirt::~Squirt(){};
+Squirt::~Squirt(){
+    setVisible(false);
+};
+
+/*========== Sonar Kit ==========*/
+SonarKit::SonarKit(int x, int y, TunnelMan* t, StudentWorld* s) : GameObject(TID_SONAR, x, y, Direction::right, 1.0, 2, t, s){
+    setVisible(true);
+    int level = sw()->getLevel();
+    ticks = max(100, (300 - 10 * level));
+    imASonar();
+}
+
+void SonarKit::doSomething(){
+    if(!isAlive()) return;
+    
+    if(ticks <= 0){
+        dead();
+        return;
+    }
+    
+    if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 3)){
+        dead();
+        sw()->playSound(SOUND_GOT_GOODIE);
+        tm()->updateSonar();
+        sw()->increaseScore(75);
+    }
+    
+    ticks--;
+    
+}
+
+SonarKit::~SonarKit(){
+    setVisible(false);
+}
+
+/*========== Water Pool ==========*/
+WaterPool::WaterPool(int x, int y, TunnelMan* t, StudentWorld* s) : GameObject(TID_WATER_POOL, x, y, Direction::right, 1.0, 2, t, s){
+    setVisible(true);
+    int level = sw()->getLevel();
+    ticks = max(100, 300 - 10 * level);
+}
+
+void WaterPool::doSomething(){
+    if(!isAlive()) return;
+    
+    if(ticks <= 0){
+        dead();
+        return;
+    }
+    
+    if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 3)){
+        dead();
+        sw()->playSound(SOUND_GOT_GOODIE);
+        tm()->updateSquirts();
+        sw()->increaseScore(100);
+    }
+    
+    ticks--;
+}
+
+WaterPool::~WaterPool(){
+    setVisible(false);
+}
 
 
 /*========== TunnelMan ==========*/
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0, nullptr, sw){
     setVisible(true);
     hitPoints = 10;
-//    water = 5;
-
-    water = 100;
+    water = 5;
+//    water = 10000;
     sonar = 1;
+//    sonar = 10000;
     nuggets = 0;
 }
 
@@ -340,6 +401,7 @@ void TunnelMan::doSomething(){
             sw()->dropNugget(getX(), getY());
         }
         else if(ch == KEY_PRESS_SPACE && water > 0){
+                        
             string dir;
             if(getDirection() == Direction::up){
                 dir = "up";
@@ -354,7 +416,12 @@ void TunnelMan::doSomething(){
                 dir = "right";
             }
             water--;
-            sw()->squirt(getX(), getY(), dir);
+            if(!sw()->nearObj(getX(), getY(), dir, "squirt"))
+                sw()->squirt(getX(), getY(), dir);
+        }
+        else if((ch == 'z' || ch == 'Z' )&& sonar > 0){
+            sonar--;
+            sw()->sonarCharge();
         }
         else if(ch == KEY_PRESS_ESCAPE){
             hitPoints = 0;  //Kill tunnelman
@@ -381,6 +448,10 @@ int TunnelMan::getSquirts(){
     return water;
 }
 
+void TunnelMan::updateSquirts(){
+    water += 5;
+}
+
 int TunnelMan::getNuggets(){
     return nuggets;
 }
@@ -391,6 +462,10 @@ void TunnelMan::updateNuggets(){
 
 int TunnelMan::getSonar(){
     return sonar;
+}
+
+void TunnelMan::updateSonar(){
+    sonar++;
 }
 
 TunnelMan::~TunnelMan(){

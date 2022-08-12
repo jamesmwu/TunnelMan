@@ -29,8 +29,8 @@ public:
     bool isBoulder() const;
     void imABoulder();
     
-    bool isEarth() const;
-    void imEarth();
+    bool isSonar() const;
+    void imASonar();
     
     TunnelMan* tm() const;
     StudentWorld* sw() const;
@@ -45,7 +45,7 @@ private:
     int y;
     bool alive;
     bool bldr;
-    bool earth;
+    bool sonar;
     TunnelMan* m_tunnelMan;
     StudentWorld* m_studentWorld;
 };
@@ -115,6 +115,33 @@ private:
     
 };
 
+/*========== Sonar Kit ==========*/
+class SonarKit : public GameObject {
+public:
+    SonarKit(int x, int y, TunnelMan* t, StudentWorld* s);
+    
+    virtual void doSomething();
+    
+    virtual ~SonarKit();
+
+private:
+    int ticks;
+    
+};
+
+/*========== Water Pool ==========*/
+class WaterPool : public GameObject {
+public:
+    WaterPool(int x, int y, TunnelMan* t, StudentWorld* s);
+    
+    virtual void doSomething();
+    
+    virtual ~WaterPool();
+    
+private:
+    int ticks;
+};
+
 /*========== TunnelMan class ==========*/
 class TunnelMan : public GameObject {
 public:
@@ -127,11 +154,13 @@ public:
     int getHealth();
     
     int getSquirts();
+    void updateSquirts();
     
     int getNuggets();
     void updateNuggets();
     
     int getSonar();
+    void updateSonar();
     
     virtual ~TunnelMan();
 
