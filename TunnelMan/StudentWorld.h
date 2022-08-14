@@ -7,8 +7,6 @@
 #include <string>
 #include <vector>
 
-class TunnelMan;
-class Actor;
 
 class StudentWorld : public GameWorld
 {
@@ -41,6 +39,8 @@ public:
     
     void squirt(int x, int y, std::string dir);
     
+    bool tunnelManLineOfSight(int x, int y, std::string dir);
+    
     void sonarCharge();
     
     bool checkEarth(int x, int y);
@@ -55,6 +55,8 @@ private:
     Earth* earthObjects[60][64];  //Rows 0 - 59 are filled with Earth objs
     int barrels;
     bool sonarActive;
+    int ticksSinceLastProtesterAdded;
+    int protesters;
 };
 
 #endif // STUDENTWORLD_H_

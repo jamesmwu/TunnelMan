@@ -343,12 +343,260 @@ WaterPool::~WaterPool(){
 }
 
 
+/*========== Protester ==========*/
+Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 60, 60, Direction::left, 1.0, 0, t, s){
+    hitPoints = 5;
+    leaveTheOilFieldState = false;
+    moved = 8 + rand()%61;
+    setVisible(true);
+    
+    int level = sw()->getLevel();
+    ticksBetween = max(0, 5 - level / 4);
+    ticks = 0;
+    shoutCooldown = 0;
+    perpTurnCooldown = 0;
+}
+
+void Protester::doSomething(){
+    if(!isAlive()) return;
+    
+    if(ticks >= 0){
+        ticks--;
+        return;
+    }
+    else ticks = ticksBetween;
+    
+    //Track shout cooldown
+    if(shoutCooldown != 0) shoutCooldown--;
+    
+    //Track perp cooldown
+    if(perpTurnCooldown != 0) perpTurnCooldown--;
+    
+    //Leaves the oil field
+    if(leaveTheOilFieldState){
+        if(getX() == 60 && getY() == 60){
+            dead();
+            return;
+        }
+        
+        //Navigate protester towards exit
+    }
+    
+    string dir;
+    if(getDirection() == Direction::up){
+        dir = "up";
+    }
+    else if(getDirection() == Direction::down){
+        dir = "down";
+    }
+    else if(getDirection() == Direction::left){
+        dir = "left";
+    }
+    else if(getDirection() == Direction::right){
+        dir = "right";
+    }
+    
+    //Check if within distance of 4 units to TunnelMan (account for distance protester facing as well)
+    if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 4)){
+        if(shoutCooldown == 0){
+            sw()->playSound(SOUND_PROTESTER_YELL);
+            shoutCooldown = 15;
+            tm()->annoyed(2);
+        }
+        return;
+    }
+    
+    //Within line of sight to tunnelman
+    if(sw()->tunnelManLineOfSight(getX(), getY(), dir)){
+        
+        cout << moved << endl;
+        
+        if(!sw()->nearObj(getX(), getY(), dir, "protester")){
+            int x = getX();
+            int y = getY();
+            
+            if(getDirection() == Direction::up){
+                moveTo(x, y + 1);
+                updateY(1);
+            }
+            else if(getDirection() == Direction::down){
+                moveTo(x, y - 1);
+                updateY(-1);
+            }
+            else if(getDirection() == Direction:: left){
+                moveTo(x - 1, y);
+                updateX(-1);
+            }
+            else{
+                moveTo(x + 1, y);
+                updateX(1);
+            }
+            
+            moved--;
+            return;
+        }
+        //Protester is blocked for some reason
+        else {
+            moved = 0;
+        }
+    }
+    
+    //See if Protester movement needs to switch directions
+    if(moved <= 0){
+        string dir = "";
+        int newDir = rand()%4; //0 to 3
+        //Change to random new direction
+        switch (newDir) {
+            case 0:
+                setDirection(Direction::left);
+                dir = "left";
+                break;
+            
+            case 1:
+                setDirection(Direction::right);
+                dir = "right";
+                break;
+                
+            case 2:
+                setDirection(Direction::up);
+                dir = "up";
+                break;
+                
+            case 3:
+                setDirection(Direction::down);
+                dir = "down";
+                break;
+                
+            default:
+                break;
+        }
+        
+        //Keep cycling for a new direction
+        while(sw()->nearObj(getX(), getY(), dir, "protester")){
+            newDir = rand()%4; //0 to 3
+            dir = "";
+            //Change to random new direction
+            switch (newDir) {
+                case 0:
+                    setDirection(Direction::left);
+                    dir = "left";
+                    break;
+                
+                case 1:
+                    setDirection(Direction::right);
+                    dir = "right";
+                    break;
+                    
+                case 2:
+                    setDirection(Direction::up);
+                    dir = "up";
+                    break;
+                    
+                case 3:
+                    setDirection(Direction::down);
+                    dir = "down";
+                    break;
+                    
+                default:
+                    break;
+            }
+        }
+        
+        moved = 8 + rand()%61;
+    }
+    //Check if protester can move in a perpendicular direction and hasn't made a perpendicular turn in last 200 non-rest ticks
+    else if(perpTurnCooldown == 0 && checkPerpendicular()){
+        moved = 8 + rand()%61;
+        perpTurnCooldown = 200;
+    }
+    
+    if(getDirection() == Direction::up){
+        dir = "up";
+    }
+    else if(getDirection() == Direction::down){
+        dir = "down";
+    }
+    else if(getDirection() == Direction::left){
+        dir = "left";
+    }
+    else if(getDirection() == Direction::right){
+        dir = "right";
+    }
+    
+    //Attempt to take one step in its current facing direction
+    if(!sw()->nearObj(getX(), getY(), dir, "protester")){
+        int x = getX();
+        int y = getY();
+        
+        if(getDirection() == Direction::up){
+            moveTo(x, y + 1);
+            updateY(1);
+        }
+        else if(getDirection() == Direction::down){
+            moveTo(x, y - 1);
+            updateY(-1);
+        }
+        else if(getDirection() == Direction:: left){
+            moveTo(x - 1, y);
+            updateX(-1);
+        }
+        else{
+            moveTo(x + 1, y);
+            updateX(1);
+        }
+    }
+    //Protester is blocked for some reason
+    else {
+        moved = 0;
+        return;
+    }
+    
+    moved--;
+    
+    //Still to implement: Annoyed and Bribing
+    
+}
+
+Protester::~Protester(){
+    setVisible(false);
+}
+
+//Returns whether the protester can move in a direction perpendicular to it, and sets direction to that if so
+bool Protester::checkPerpendicular(){
+
+    //Set direction to perpendicular
+    if(getDirection() == Direction::up || getDirection() == Direction::down){
+        if(!sw()->nearObj(getX(), getY(), "right", "protester")){
+            setDirection(Direction::right);
+            return true;
+        }
+        else if(!sw()->nearObj(getX(), getY(), "left", "protester")){
+            setDirection(Direction::left);
+            return true;
+        }
+    }
+    else if(getDirection() == Direction::left || getDirection() == Direction::right){
+        if(!sw()->nearObj(getX(), getY(), "up", "protester")){
+            setDirection(Direction::up);
+            return true;
+        }
+        else if(!sw()->nearObj(getX(), getY(), "down", "protester")){
+            setDirection(Direction::down);
+            return true;
+        }
+    }
+    
+    return false;
+
+}
+
+
 /*========== TunnelMan ==========*/
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0, nullptr, sw){
     setVisible(true);
     hitPoints = 10;
-    water = 5;
-//    water = 10000;
+//    water = 5;
+    water = 10000;
     sonar = 1;
 //    sonar = 10000;
     nuggets = 0;
@@ -401,7 +649,8 @@ void TunnelMan::doSomething(){
             sw()->dropNugget(getX(), getY());
         }
         else if(ch == KEY_PRESS_SPACE && water > 0){
-                        
+            sw()->playSound(SOUND_PLAYER_SQUIRT);
+
             string dir;
             if(getDirection() == Direction::up){
                 dir = "up";

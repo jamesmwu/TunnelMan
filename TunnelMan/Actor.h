@@ -142,6 +142,27 @@ private:
     int ticks;
 };
 
+/*========== Protester ==========*/
+class Protester : public GameObject{
+public:
+    Protester(TunnelMan* t, StudentWorld* s);
+    
+    virtual void doSomething();
+    
+    virtual ~Protester();
+    
+private:
+    bool checkPerpendicular();
+    
+    int hitPoints;
+    bool leaveTheOilFieldState;
+    int moved;
+    int ticksBetween;
+    int ticks;
+    int shoutCooldown;
+    int perpTurnCooldown;
+};
+
 /*========== TunnelMan class ==========*/
 class TunnelMan : public GameObject {
 public:
