@@ -17,6 +17,14 @@ StudentWorld::StudentWorld(std::string assetDir): GameWorld(assetDir){
     tunnelManPtr = nullptr;
     barrels = 0;
     sonarActive = false;
+    //Fill rows 0 to 59 with NULL (if you don't do this, the destructor will have bad access if you close the window quickly)
+    //Rows (y)
+    for(int i = 0; i < 60; i++){
+        //Cols (x)
+        for(int j = 0; j < 64; j++){
+            earthObjects[i][j] = NULL;
+        }
+    }
 }
 
 //Initialize data structures, construct new oil field, allocate / insert TunnelMan Object
@@ -388,11 +396,13 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
         y = ogY;
         x = ogX;
         //Uncomment this if the squirt should not show up at all if it overlaps with boulders.
-        if(direction == "left") x -= 2;
-        else if(direction == "right") x += 2;
-        else if(direction == "up") y += 2;
-        else if(direction == "down") y -= 2;
-        
+        if(type == "squirt"){
+            if(direction == "left") x -= 2;
+            else if(direction == "right") x += 2;
+            else if(direction == "up") y += 2;
+            else if(direction == "down") y -= 2;
+        }
+
         //Check for boulders
         for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
             
@@ -463,7 +473,7 @@ bool StudentWorld::checkObjectUnderBoulder(int x, int y, Boulder* bldr){
     y--;
     
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-        if((*it) == bldr) continue;
+        if((*it) == bldr || (*it)->isProtester()) continue;
         
         if((*it)->getY() + 3 == y && ((x - 3 <= (*it)->getX()) && ((*it)->getX() <= x + 3))){
             return true;
@@ -500,23 +510,22 @@ void StudentWorld::sonarCharge(){
     playSound(SOUND_SONAR);
 }
 
-bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir){
-    
+bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir, Protester* prot){
+        
     if(y == tunnelManPtr->getY()){
-        if(dir == "left"){
-            //Check for Earth (can't use checkEarth function since this requires different y increments based on direction
-            //y
-            int ogX = x;
+        
+        //Determine what side the tunnelman is on
+        bool right = tunnelManPtr->getX() > x ? true : false;
+        
+        if(right){
+            //Check for Earth / Boulder
+            //Y
             for(int i = 0; i < 4; i++){
-                //x
-                while(x >= 0){
-                    if(earthObjects[y][x] != nullptr){
-                        return false;
-                    }
+                while(x < tunnelManPtr->getX()){
+                    if(y < 60 && x < 64 && earthObjects[y][x] != nullptr) return false;
                     
-                    //Check for boulders
+                    //Boulder check
                     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-                        
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
@@ -524,68 +533,53 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir){
                             return false;
                         }
                     }
-                    
-                    if(tunnelManPtr->getX() == x && tunnelManPtr->getY() == y) return true;
-                    
-                    x--;
-
-                }
-                x = ogX;
-                y++;
-            }
-            
-            return false;
-        }
-        else if(dir == "right"){
-            //Check for Earth (can't use checkEarth function since this requires different y increments based on direction
-            //y
-            int ogX = x;
-            for(int i = 0; i < 4; i++){
-                //x
-                while(x <= 63){
-                    if(earthObjects[y][x] != nullptr){
-                        return false;
-                    }
-                    
-                    //Check for boulders
-                    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-                        
-                        int bldrX = (*it)->getX();
-                        int bldrY = (*it)->getY();
-                        
-                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
-                            return false;
-                        }
-                    }
-                    
-                    if(tunnelManPtr->getX() == x && tunnelManPtr->getY() == y) return true;
-                    
                     x++;
                 }
-                x = ogX;
                 y++;
             }
-            
-            return false;
+            prot->setDirection(Protester::Direction::right);
+            return true;
+        }
+        //Else tunnelman is on the left side
+        else {
+            //Check for Earth / Boulder
+            //Y
+            for(int i = 0; i < 4; i++){
+                while(x > tunnelManPtr->getX()){
+                    if(y < 60 && x < 64 && earthObjects[y][x] != nullptr) return false;
+                    
+                    //Boulder check
+                    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+                        int bldrX = (*it)->getX();
+                        int bldrY = (*it)->getY();
+                        
+                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
+                            return false;
+                        }
+                    }
+                    x--;
+                }
+                y++;
+            }
+            prot->setDirection(Protester::Direction::left);
+            return true;
         }
 
-        
     }
     else if(x == tunnelManPtr->getX()){
-        if(dir == "up"){
-            //Check for Earth (can't use checkEarth function since this requires different y increments based on direction
-            //x
-            int ogY = y;
+        
+        //Determine what side the tunnelman is on
+        bool up = tunnelManPtr->getY() > y ? true : false;
+        
+        if(up){
+            //Check for Earth / Boulder
+            //X
             for(int i = 0; i < 4; i++){
-                //y
-                while(y <= 60){
-                    if(y < 60 && earthObjects[y][x] != nullptr){
-                        return false;
-                    }
+                while(y < tunnelManPtr->getY()){
+                    if(y < 60 && x < 64 && earthObjects[y][x] != nullptr) return false;
                     
-                    //Check for boulders
+                    //Boulder check
                     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-                        
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
@@ -593,36 +587,24 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir){
                             return false;
                         }
                     }
-                    
-                    //Check for TunnelMan
-                    if(tunnelManPtr->getX() == x && tunnelManPtr->getY() == y) return true;
-                    
                     y++;
-
                 }
-                y = ogY;
                 x++;
             }
-            
-            return false;
+            prot->setDirection(Protester::Direction::up);
+            return true;
         }
-        else if(dir == "down"){
-            //Check for Earth (can't use checkEarth function since this requires different y increments based on direction
-            //x
-            int ogY = y;
+        //Else tunnelman is on the bottom
+        else {
+            //Check for Earth / Boulder
+            //X
             for(int i = 0; i < 4; i++){
-                if(y >= 60) break;
-                if(x >= 64) break;
-                
-                //y
-                while(y >= 0){
-                    if(earthObjects[y][x] != nullptr){
+                while(y > tunnelManPtr->getY()){
+                    if(y < 60 && x < 64 && earthObjects[y][x] != nullptr)
                         return false;
-                    }
                     
-                    //Check for boulders
+                    //Boulder check
                     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-                        
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
@@ -630,22 +612,30 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir){
                             return false;
                         }
                     }
-                    
-                    if(tunnelManPtr->getX() == x && tunnelManPtr->getY() == y) return true;
-                    
                     y--;
-
                 }
-                y = ogY;
                 x++;
             }
+            prot->setDirection(Protester::Direction::down);
+            return true;
         }
-        return false;
+
     }
     
-
-    
     return false;
+}
+
+void StudentWorld::protesterAnnoyed(int x, int y){
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        int objX = (*it)->getX();
+        int objY = (*it)->getY();
+        
+        if((*it)->isProtester() && (*it)->distance(objX, objY, x, y, 3)){
+            (*it)->annoyed(100, "boulder");
+            break;
+        }
+    }
+    
 }
 
 void StudentWorld::cleanUp(){

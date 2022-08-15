@@ -15,6 +15,7 @@ public:
     virtual void doSomething();
     
     virtual void annoyed(int val);
+    virtual void annoyed(int val, std::string annoyer);
     
     int getX() const;
     void updateX(int val);
@@ -32,6 +33,9 @@ public:
     bool isSonar() const;
     void imASonar();
     
+    bool isProtester() const;
+    void imAProtester();
+    
     TunnelMan* tm() const;
     StudentWorld* sw() const;
     
@@ -46,6 +50,7 @@ private:
     bool alive;
     bool bldr;
     bool sonar;
+    bool protester;
     TunnelMan* m_tunnelMan;
     StudentWorld* m_studentWorld;
 };
@@ -148,6 +153,8 @@ public:
     Protester(TunnelMan* t, StudentWorld* s);
     
     virtual void doSomething();
+    
+    void annoyed(int val, std::string annoyer);
     
     virtual ~Protester();
     

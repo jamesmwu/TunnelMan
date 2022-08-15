@@ -39,11 +39,13 @@ public:
     
     void squirt(int x, int y, std::string dir);
     
-    bool tunnelManLineOfSight(int x, int y, std::string dir);
+    bool tunnelManLineOfSight(int x, int y, std::string dir, Protester* prot);
     
     void sonarCharge();
     
     bool checkEarth(int x, int y);
+    
+    void protesterAnnoyed(int x, int y);
     
     virtual void cleanUp();
     

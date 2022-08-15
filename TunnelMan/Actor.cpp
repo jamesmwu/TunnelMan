@@ -14,6 +14,7 @@ GameObject::GameObject(int imageID, int startX, int startY, Direction dir, doubl
     alive = true;
     bldr = false;
     sonar = false;
+    protester = false;
     m_tunnelMan = tm;
     m_studentWorld = sw;
 }
@@ -62,6 +63,14 @@ void GameObject::imASonar() {
     sonar = true;
 }
 
+bool GameObject::isProtester() const {
+    return protester;
+}
+
+void GameObject::imAProtester() {
+    protester = true;
+}
+
 TunnelMan* GameObject::tm() const{
     return m_tunnelMan;
 }
@@ -80,6 +89,8 @@ bool GameObject::distance(int x, int y, int x2, int y2, int radius){
 void GameObject::doSomething(){}
 
 void GameObject::annoyed(int val){}
+
+void GameObject::annoyed(int val, std::string annoyer){}
 
 GameObject::~GameObject(){
     m_tunnelMan = nullptr;
@@ -140,6 +151,8 @@ void Boulder::doSomething(){
         if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 3))
             tm()->annoyed(100);
         
+        //If boulder hits protesters, deals 100 points of annoyance
+        sw()->protesterAnnoyed(getX(), getY());
     }
     
     
@@ -355,6 +368,8 @@ Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 
     ticks = 0;
     shoutCooldown = 0;
     perpTurnCooldown = 0;
+    
+    imAProtester();
 }
 
 void Protester::doSomething(){
@@ -380,6 +395,7 @@ void Protester::doSomething(){
         }
         
         //Navigate protester towards exit
+        return;
     }
     
     string dir;
@@ -407,7 +423,7 @@ void Protester::doSomething(){
     }
     
     //Within line of sight to tunnelman
-    if(sw()->tunnelManLineOfSight(getX(), getY(), dir)){
+    if(sw()->tunnelManLineOfSight(getX(), getY(), dir, this)){
         
         cout << moved << endl;
         
@@ -504,8 +520,10 @@ void Protester::doSomething(){
         
         moved = 8 + rand()%61;
     }
+    
     //Check if protester can move in a perpendicular direction and hasn't made a perpendicular turn in last 200 non-rest ticks
-    else if(perpTurnCooldown == 0 && checkPerpendicular()){
+//    cout << perpTurnCooldown << endl;
+    if(perpTurnCooldown == 0 && checkPerpendicular()){
         moved = 8 + rand()%61;
         perpTurnCooldown = 200;
     }
@@ -554,7 +572,32 @@ void Protester::doSomething(){
     moved--;
     
     //Still to implement: Annoyed and Bribing
+        
     
+}
+
+void Protester::annoyed(int val, string annoyer){
+    if(annoyer == "boulder"){
+        sw()->increaseScore(500);
+    }
+    else if(annoyer == "squirt"){
+        sw()->increaseScore(100);
+    }
+    
+    hitPoints -= val;
+    
+    if(hitPoints <= 0){
+        leaveTheOilFieldState = true;
+        ticks = 0;
+        sw()->playSound(SOUND_PROTESTER_GIVE_UP);
+
+    }
+    else {
+        //Resting ticks
+        int level = sw()->getLevel();
+        ticks = max(50, 100 - level * 10);
+        sw()->playSound(SOUND_PROTESTER_ANNOYED);
+    }
 }
 
 Protester::~Protester(){
