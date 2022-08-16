@@ -662,19 +662,37 @@ void StudentWorld::protesterAnnoyed(int x, int y){
     
 }
 
-void StudentWorld::getEarthArray(std::string arr[60][64]){
-    for(int i = 0; i < 60; i++){
+void StudentWorld::getEarthArray(std::string arr[64][64]){
+    for(int i = 0; i < 64; i++){
         //Cols (x)
         for(int j = 0; j < 64; j++){
-            if(earthObjects[i][j] != NULL){
+            if(i >= 60){
+                arr[i][j] = ".";
+                continue;
+            }
+            else if(earthObjects[i][j] != NULL){
                 arr[i][j] = "X";
+                continue;
             }
             else arr[i][j] = ".";
+            
+            //Check to see if any boulders occupy the same space as well.
+            for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+                int objX = (*it)->getX();
+                int objY = (*it)->getY();
+                if((*it)->isBoulder()){
+                    if(objX == j || objY == i || (j > objX && j < objX + 4 && i > objY && i < objY + 4)){
+                        arr[i][j] = "X";
+                        break;
+                    }
+                }
+            }
+            
         }
     }
     
     //Mark the exit point so we know
-    arr[59][59] = "E";
+    arr[60][60] = "E";
 }
 
 void StudentWorld::cleanUp(){

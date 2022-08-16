@@ -3,6 +3,7 @@
 
 #include "GraphObject.h"
 #include <queue>
+#include <vector>
 
 class StudentWorld;
 class TunnelMan;
@@ -161,7 +162,9 @@ public:
     
     virtual void bribed();
     
-    void pathing(std::string maze[60][64], int sr, int sc);
+    void pathing(int x, int y);
+    
+    void print();
         
     virtual ~Protester();
     
@@ -175,8 +178,8 @@ private:
     int ticks;
     int shoutCooldown;
     int perpTurnCooldown;
-    std::string earthSnapshot[60][64];
-    std::queue<std::string> BFS;
+    std::string earthSnapshot[64][64];
+    std::queue<std::vector<int>> BFS;
 
 };
 

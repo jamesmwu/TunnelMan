@@ -1,6 +1,7 @@
 #include "Actor.h"
 #include "StudentWorld.h"
 #include <queue>    //Used for protester navigation
+#include <vector>
 
 //Used (so far) for testing:
 #include<iostream>
@@ -383,12 +384,12 @@ Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 
     shoutCooldown = 0;
     perpTurnCooldown = 0;
     
-//    for(int i = 0; i < 60; i++){
-//        //Cols (x)
-//        for(int j = 0; j < 64; j++){
-//            earthSnapshot[i][j] = NULL;
-//        }
-//    }
+    for(int i = 0; i < 63; i++){
+        //Cols (x)
+        for(int j = 0; j < 63; j++){
+            earthSnapshot[i][j] = "";
+        }
+    }
     
     imAProtester();
 }
@@ -416,8 +417,9 @@ void Protester::doSomething(){
         }
         
         //Navigate protester towards exit
-//        pathing(earthSnapshot, getX(), getY());
-        
+        pathing(getX(), getY());
+        print();
+
         return;
     }
     
@@ -632,49 +634,65 @@ void Protester::annoyed(int val, string annoyer){
 }
 
 //Helper function to navigate protester to exit when they die
-void Protester::pathing(std::string maze[60][64], int x, int y){
+void Protester::pathing(int x, int y){
     
-    BFS.push(maze[y][x]);
+//    print();
+    BFS.push({y, x});
     
-//    if(BFS.front() == "E") break;    //Done!
-//    else
-    BFS.front() = "v";
-    
-    BFS.pop();
-    
-    //North
-    if((y + 1 >= 0 && maze[y + 1][x] == ".") || (y >= 60)){
-        BFS.push(maze[y + 1][x]);
-        moveTo(getX(), getY() + 1);
-        updateY(1);
-    }
-    //West
-    if(x - 1 >= 0 && maze[y][x - 1] == "."){
-        BFS.push(maze[y][x - 1]);
-        moveTo(getX() - 1, getY());
-        updateX(-1);
-    }
-    
-    //South
-    if(y - 1 < 60 && maze[y - 1][x] == "."){
-        BFS.push(maze[y - 1][x]);
-        moveTo(getX(), getY() - 1);
-        updateY(-1);
+    while(!BFS.empty()){
+        int Qy = BFS.front()[0];
+        int Qx = BFS.front()[1];
+        if(earthSnapshot[Qy][Qx] == "E") break;
+        
+        earthSnapshot[Qy][Qx] = "v";
+//        print();
+        
+        BFS.pop();
+        
+        //North
+        if((Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "." && Qy < 64) || (Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "E" && Qy < 64)){
+            BFS.push({Qy + 1, Qx});
+//            moveTo(getX(), getY() + 1);
+//            updateY(1);
+        }
+        //West
+        if((Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "." && Qx > 0) || (Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "E" && Qx > 0)){
+            BFS.push({Qy, Qx - 1});
+//            moveTo(getX() - 1, getY());
+//            updateX(-1);
+        }
+        
+        //South
+        if((Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "." && Qy > 0) || (Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "E" && Qy > 0)){
+            BFS.push({Qy - 1, Qx});
+//            moveTo(getX(), getY() - 1);
+//            updateY(-1);
 
+        }
+        
+        //East
+        if((Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "." && Qx < 64) || (Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "E" && Qx < 64)){
+            BFS.push({Qy, Qx + 1});
+//            moveTo(getX(), getX() + 1);
+//            updateX(1);
+
+        }
     }
     
-    //East
-    if((x + 1 < 64 && maze[y][x + 1] == ".") || y >= 60){
-        BFS.push(maze[y][x + 1]);
-        moveTo(getX(), getX() + 1);
-        updateX(1);
-
-    }
+    //Clear queue
+    while(!BFS.empty()) BFS.pop();
         
 }
 
-Protester::~Protester(){
-    setVisible(false);
+void Protester::print(){
+    //Rows Y
+    for(int i = 63; i >= 0; i--){
+        //Cols X
+        for(int j = 0; j < 64; j++){
+            cout << earthSnapshot[i][j];
+        }
+        cout << endl;
+    }
 }
 
 //Returns whether the protester can move in a direction perpendicular to it, and sets direction to that if so
@@ -704,6 +722,11 @@ bool Protester::checkPerpendicular(){
     
     return false;
 
+}
+
+
+Protester::~Protester(){
+    setVisible(false);
 }
 
 

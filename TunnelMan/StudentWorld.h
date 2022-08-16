@@ -49,7 +49,7 @@ public:
     
     void protesterAnnoyed(int x, int y);
     
-    void getEarthArray(std::string arr[60][64]);
+    void getEarthArray(std::string arr[64][64]);
         
     virtual void cleanUp();
     
