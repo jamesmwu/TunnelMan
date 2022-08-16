@@ -25,6 +25,8 @@ public:
     
     bool nearObj(int x, int y, std::string direction, std::string type);
     
+    bool nearProtester(int x, int y, std::string direction, std::string parent);
+    
     bool distance(int x, int y);
     
     void generate(int amt, int xRange, int yRange, std::string type);
@@ -47,6 +49,8 @@ public:
     
     void protesterAnnoyed(int x, int y);
     
+    void getEarthArray(std::string arr[60][64]);
+        
     virtual void cleanUp();
     
     ~StudentWorld();

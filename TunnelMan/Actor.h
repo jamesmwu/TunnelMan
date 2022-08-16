@@ -2,6 +2,7 @@
 #define ACTOR_H_
 
 #include "GraphObject.h"
+#include <queue>
 
 class StudentWorld;
 class TunnelMan;
@@ -16,6 +17,8 @@ public:
     
     virtual void annoyed(int val);
     virtual void annoyed(int val, std::string annoyer);
+    
+    virtual void bribed();
     
     int getX() const;
     void updateX(int val);
@@ -154,8 +157,12 @@ public:
     
     virtual void doSomething();
     
-    void annoyed(int val, std::string annoyer);
+    virtual void annoyed(int val, std::string annoyer);
     
+    virtual void bribed();
+    
+    void pathing(std::string maze[60][64], int sr, int sc);
+        
     virtual ~Protester();
     
 private:
@@ -168,6 +175,9 @@ private:
     int ticks;
     int shoutCooldown;
     int perpTurnCooldown;
+    std::string earthSnapshot[60][64];
+    std::queue<std::string> BFS;
+
 };
 
 /*========== TunnelMan class ==========*/

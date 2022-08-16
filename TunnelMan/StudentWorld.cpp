@@ -406,15 +406,39 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
         //Check for boulders
         for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
             
-            int bldrX = (*it)->getX();
-            int bldrY = (*it)->getY();
+            int objX = (*it)->getX();
+            int objY = (*it)->getY();
             
-            if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
+            if((*it)->isBoulder() && (*it)->distance(x, y, objX, objY, 3)){
                 return true;
             }
         }
     }
     
+    return false;
+}
+
+bool StudentWorld::nearProtester(int x, int y, std::string direction, std::string parent){
+    if(direction == "left") x -= 2;
+    else if(direction == "right") x += 2;
+    else if(direction == "up") y += 2;
+    else if(direction == "down") y -= 2;
+    
+    for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
+        
+        int objX = (*it)->getX();
+        int objY = (*it)->getY();
+        
+        if(parent == "squirt" && (*it)->isProtester() && (*it)->distance(x, y, objX, objY, 3)){
+            (*it)->annoyed(2, "squirt");
+            return true;
+        }
+        else if(parent == "nugget" && (*it)->isProtester() && (*it)->distance(x, y, objX, objY, 3)){
+            (*it)->bribed();
+            return true;
+        }
+    }
+
     return false;
 }
 
@@ -636,6 +660,21 @@ void StudentWorld::protesterAnnoyed(int x, int y){
         }
     }
     
+}
+
+void StudentWorld::getEarthArray(std::string arr[60][64]){
+    for(int i = 0; i < 60; i++){
+        //Cols (x)
+        for(int j = 0; j < 64; j++){
+            if(earthObjects[i][j] != NULL){
+                arr[i][j] = "X";
+            }
+            else arr[i][j] = ".";
+        }
+    }
+    
+    //Mark the exit point so we know
+    arr[59][59] = "E";
 }
 
 void StudentWorld::cleanUp(){

@@ -14,8 +14,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
             landmarkName = "Earth::Earth(xLoc, yLoc)"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "654"
-            endingLineNumber = "654"
+            startingLineNumber = "727"
+            endingLineNumber = "727"
             landmarkName = "TunnelMan::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -46,8 +46,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "658"
-            endingLineNumber = "658"
+            startingLineNumber = "697"
+            endingLineNumber = "697"
             landmarkName = "StudentWorld::cleanUp()"
             landmarkType = "7">
          </BreakpointContent>
@@ -62,8 +62,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "665"
-            endingLineNumber = "665"
+            startingLineNumber = "704"
+            endingLineNumber = "704"
             landmarkName = "StudentWorld::~StudentWorld()"
             landmarkType = "7">
             <Locations>
@@ -205,8 +205,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "138"
-            endingLineNumber = "138"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "Boulder::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -221,8 +221,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "142"
-            endingLineNumber = "142"
+            startingLineNumber = "145"
+            endingLineNumber = "145"
             landmarkName = "Boulder::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -237,8 +237,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "473"
-            endingLineNumber = "473"
+            startingLineNumber = "497"
+            endingLineNumber = "497"
             landmarkName = "StudentWorld::checkObjectUnderBoulder(x, y, bldr)"
             landmarkType = "7">
          </BreakpointContent>
@@ -253,8 +253,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "478"
-            endingLineNumber = "478"
+            startingLineNumber = "502"
+            endingLineNumber = "502"
             landmarkName = "StudentWorld::checkObjectUnderBoulder(x, y, bldr)"
             landmarkType = "7">
          </BreakpointContent>
@@ -445,8 +445,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "378"
-            endingLineNumber = "378"
+            startingLineNumber = "399"
+            endingLineNumber = "399"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -461,8 +461,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
+            startingLineNumber = "449"
+            endingLineNumber = "449"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -477,8 +477,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "634"
-            endingLineNumber = "634"
+            startingLineNumber = "658"
+            endingLineNumber = "658"
             landmarkName = "StudentWorld::protesterAnnoyed(x, y)"
             landmarkType = "7">
          </BreakpointContent>
@@ -493,8 +493,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "639"
-            endingLineNumber = "639"
+            startingLineNumber = "663"
+            endingLineNumber = "663"
             landmarkName = "StudentWorld::protesterAnnoyed(x, y)"
             landmarkType = "7">
             <Locations>
@@ -541,8 +541,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "629"
-            endingLineNumber = "629"
+            startingLineNumber = "653"
+            endingLineNumber = "653"
             landmarkName = "StudentWorld::protesterAnnoyed(x, y)"
             landmarkType = "7">
          </BreakpointContent>
@@ -589,8 +589,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "450"
-            endingLineNumber = "450"
+            startingLineNumber = "474"
+            endingLineNumber = "474"
             landmarkName = "StudentWorld::distance(x, y)"
             landmarkType = "7">
          </BreakpointContent>
@@ -605,8 +605,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "416"
-            endingLineNumber = "416"
+            startingLineNumber = "439"
+            endingLineNumber = "439"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -621,8 +621,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "461"
-            endingLineNumber = "461"
+            startingLineNumber = "484"
+            endingLineNumber = "484"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -637,8 +637,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "526"
-            endingLineNumber = "526"
+            startingLineNumber = "549"
+            endingLineNumber = "549"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -685,8 +685,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "611"
-            endingLineNumber = "611"
+            startingLineNumber = "684"
+            endingLineNumber = "684"
             landmarkName = "Protester::checkPerpendicular()"
             landmarkType = "7">
          </BreakpointContent>
@@ -749,8 +749,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "620"
-            endingLineNumber = "620"
+            startingLineNumber = "644"
+            endingLineNumber = "644"
             landmarkName = "StudentWorld::tunnelManLineOfSight(x, y, dir, prot)"
             landmarkType = "7">
          </BreakpointContent>
@@ -765,8 +765,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "615"
-            endingLineNumber = "615"
+            startingLineNumber = "639"
+            endingLineNumber = "639"
             landmarkName = "StudentWorld::tunnelManLineOfSight(x, y, dir, prot)"
             landmarkType = "7">
          </BreakpointContent>
@@ -781,8 +781,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "612"
-            endingLineNumber = "612"
+            startingLineNumber = "636"
+            endingLineNumber = "636"
             landmarkName = "StudentWorld::tunnelManLineOfSight(x, y, dir, prot)"
             landmarkType = "7">
          </BreakpointContent>
@@ -797,8 +797,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "603"
-            endingLineNumber = "603"
+            startingLineNumber = "627"
+            endingLineNumber = "627"
             landmarkName = "StudentWorld::tunnelManLineOfSight(x, y, dir, prot)"
             landmarkType = "7">
          </BreakpointContent>
@@ -813,8 +813,8 @@
             filePath = "TunnelMan/StudentWorld.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "604"
-            endingLineNumber = "604"
+            startingLineNumber = "628"
+            endingLineNumber = "628"
             landmarkName = "StudentWorld::tunnelManLineOfSight(x, y, dir, prot)"
             landmarkType = "7">
          </BreakpointContent>
@@ -829,8 +829,8 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "428"
-            endingLineNumber = "428"
+            startingLineNumber = "451"
+            endingLineNumber = "451"
             landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
@@ -845,9 +845,57 @@
             filePath = "TunnelMan/Actor.cpp"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "590"
-            endingLineNumber = "590"
+            startingLineNumber = "620"
+            endingLineNumber = "620"
             landmarkName = "Protester::annoyed(val, annoyer)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "839950AD-2F9B-48BB-8990-2FCBB9187C27"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TunnelMan/StudentWorld.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "412"
+            endingLineNumber = "412"
+            landmarkName = "StudentWorld::nearObj(x, y, direction, type)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "555FD5A3-7CEA-4FD7-B53A-01C04B153CD1"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TunnelMan/Actor.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "622"
+            endingLineNumber = "622"
+            landmarkName = "Protester::annoyed(val, annoyer)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "189FE324-AD6F-41E4-8D3A-3FBFF3D3274F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "TunnelMan/Actor.cpp"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "419"
+            endingLineNumber = "419"
+            landmarkName = "Protester::doSomething()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

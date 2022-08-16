@@ -1,5 +1,6 @@
 #include "Actor.h"
 #include "StudentWorld.h"
+#include <queue>    //Used for protester navigation
 
 //Used (so far) for testing:
 #include<iostream>
@@ -91,6 +92,8 @@ void GameObject::doSomething(){}
 void GameObject::annoyed(int val){}
 
 void GameObject::annoyed(int val, std::string annoyer){}
+
+void GameObject::bribed(){}
 
 GameObject::~GameObject(){
     m_tunnelMan = nullptr;
@@ -221,10 +224,17 @@ void Nugget::doSomething(){
         tm()->updateNuggets();
     }
     
-    //Protestor picks up nugget
-    
-    //Nugget decays
+    //Nuggets is dropped
     if(state == "temporary"){
+        //Protestor picks up nugget
+        if(!tunnelManCanPickUp && sw()->nearProtester(getX(), getY(), "NA", "nugget")){
+            dead();
+            setVisible(false);
+            sw()->playSound(SOUND_PROTESTER_FOUND_GOLD);
+            sw()->increaseScore(25);
+        }
+        
+        //Nugget decays
         if(ticks <= 0){
             dead();
             setVisible(false);
@@ -266,6 +276,10 @@ void Squirt::doSomething(){
     
     
     if(sw()->nearObj(getX(), getY(), dir, "squirt")){
+        dead();
+    }
+    //Annoy protesters
+    else if(sw()->nearProtester(getX(), getY(), dir, "squirt")){
         dead();
     }
     else{
@@ -369,6 +383,13 @@ Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 
     shoutCooldown = 0;
     perpTurnCooldown = 0;
     
+//    for(int i = 0; i < 60; i++){
+//        //Cols (x)
+//        for(int j = 0; j < 64; j++){
+//            earthSnapshot[i][j] = NULL;
+//        }
+//    }
+    
     imAProtester();
 }
 
@@ -395,6 +416,8 @@ void Protester::doSomething(){
         }
         
         //Navigate protester towards exit
+//        pathing(earthSnapshot, getX(), getY());
+        
         return;
     }
     
@@ -571,12 +594,19 @@ void Protester::doSomething(){
     
     moved--;
     
-    //Still to implement: Annoyed and Bribing
-        
+    //Annoyed implementation can be found in objects that annoy the Protester (boulder + squirt)
+    //Bribing implementation can be found in nugget
     
 }
 
+void Protester::bribed(){
+    leaveTheOilFieldState = true;
+    ticks = 0;
+}
+
 void Protester::annoyed(int val, string annoyer){
+    if(leaveTheOilFieldState) return;   //This prevents the sound from being played repeatedly
+    
     if(annoyer == "boulder"){
         sw()->increaseScore(500);
     }
@@ -588,6 +618,7 @@ void Protester::annoyed(int val, string annoyer){
     
     if(hitPoints <= 0){
         leaveTheOilFieldState = true;
+        sw()->getEarthArray(earthSnapshot);
         ticks = 0;
         sw()->playSound(SOUND_PROTESTER_GIVE_UP);
 
@@ -598,6 +629,48 @@ void Protester::annoyed(int val, string annoyer){
         ticks = max(50, 100 - level * 10);
         sw()->playSound(SOUND_PROTESTER_ANNOYED);
     }
+}
+
+//Helper function to navigate protester to exit when they die
+void Protester::pathing(std::string maze[60][64], int x, int y){
+    
+    BFS.push(maze[y][x]);
+    
+//    if(BFS.front() == "E") break;    //Done!
+//    else
+    BFS.front() = "v";
+    
+    BFS.pop();
+    
+    //North
+    if((y + 1 >= 0 && maze[y + 1][x] == ".") || (y >= 60)){
+        BFS.push(maze[y + 1][x]);
+        moveTo(getX(), getY() + 1);
+        updateY(1);
+    }
+    //West
+    if(x - 1 >= 0 && maze[y][x - 1] == "."){
+        BFS.push(maze[y][x - 1]);
+        moveTo(getX() - 1, getY());
+        updateX(-1);
+    }
+    
+    //South
+    if(y - 1 < 60 && maze[y - 1][x] == "."){
+        BFS.push(maze[y - 1][x]);
+        moveTo(getX(), getY() - 1);
+        updateY(-1);
+
+    }
+    
+    //East
+    if((x + 1 < 64 && maze[y][x + 1] == ".") || y >= 60){
+        BFS.push(maze[y][x + 1]);
+        moveTo(getX(), getX() + 1);
+        updateX(1);
+
+    }
+        
 }
 
 Protester::~Protester(){
