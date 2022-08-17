@@ -48,8 +48,14 @@ public:
     bool checkEarth(int x, int y);
     
     void protesterAnnoyed(int x, int y);
+        
+    void pathing(Protester* pr);
     
-    void getEarthArray(std::string arr[64][64]);
+    bool canMove(int x, int y, GameObject::Direction direction);
+    
+    bool earthExists(int x, int y);
+    
+    bool boulderExists(int x, int y, int radius);
         
     virtual void cleanUp();
     
@@ -63,6 +69,14 @@ private:
     bool sonarActive;
     int ticksSinceLastProtesterAdded;
     int protesters;
+    int maze[64][64];
+    
+    struct Coord {
+        int x;
+        int y;
+        Coord(int a, int b) : x(a), y(b) {}
+    };
+    
 };
 
 #endif // STUDENTWORLD_H_

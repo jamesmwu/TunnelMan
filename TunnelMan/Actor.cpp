@@ -384,13 +384,6 @@ Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 
     shoutCooldown = 0;
     perpTurnCooldown = 0;
     
-    for(int i = 0; i < 63; i++){
-        //Cols (x)
-        for(int j = 0; j < 63; j++){
-            earthSnapshot[i][j] = "";
-        }
-    }
-    
     imAProtester();
 }
 
@@ -417,9 +410,8 @@ void Protester::doSomething(){
         }
         
         //Navigate protester towards exit
-        pathing(getX(), getY());
-        print();
-
+        sw()->pathing(this);
+        
         return;
     }
     
@@ -620,7 +612,6 @@ void Protester::annoyed(int val, string annoyer){
     
     if(hitPoints <= 0){
         leaveTheOilFieldState = true;
-        sw()->getEarthArray(earthSnapshot);
         ticks = 0;
         sw()->playSound(SOUND_PROTESTER_GIVE_UP);
 
@@ -633,67 +624,6 @@ void Protester::annoyed(int val, string annoyer){
     }
 }
 
-//Helper function to navigate protester to exit when they die
-void Protester::pathing(int x, int y){
-    
-//    print();
-    BFS.push({y, x});
-    
-    while(!BFS.empty()){
-        int Qy = BFS.front()[0];
-        int Qx = BFS.front()[1];
-        if(earthSnapshot[Qy][Qx] == "E") break;
-        
-        earthSnapshot[Qy][Qx] = "v";
-//        print();
-        
-        BFS.pop();
-        
-        //North
-        if((Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "." && Qy < 64) || (Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "E" && Qy < 64)){
-            BFS.push({Qy + 1, Qx});
-//            moveTo(getX(), getY() + 1);
-//            updateY(1);
-        }
-        //West
-        if((Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "." && Qx > 0) || (Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "E" && Qx > 0)){
-            BFS.push({Qy, Qx - 1});
-//            moveTo(getX() - 1, getY());
-//            updateX(-1);
-        }
-        
-        //South
-        if((Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "." && Qy > 0) || (Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "E" && Qy > 0)){
-            BFS.push({Qy - 1, Qx});
-//            moveTo(getX(), getY() - 1);
-//            updateY(-1);
-
-        }
-        
-        //East
-        if((Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "." && Qx < 64) || (Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "E" && Qx < 64)){
-            BFS.push({Qy, Qx + 1});
-//            moveTo(getX(), getX() + 1);
-//            updateX(1);
-
-        }
-    }
-    
-    //Clear queue
-    while(!BFS.empty()) BFS.pop();
-        
-}
-
-void Protester::print(){
-    //Rows Y
-    for(int i = 63; i >= 0; i--){
-        //Cols X
-        for(int j = 0; j < 64; j++){
-            cout << earthSnapshot[i][j];
-        }
-        cout << endl;
-    }
-}
 
 //Returns whether the protester can move in a direction perpendicular to it, and sets direction to that if so
 bool Protester::checkPerpendicular(){
