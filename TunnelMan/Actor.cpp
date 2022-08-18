@@ -428,8 +428,41 @@ void Protester::doSomething(){
         return;
     }
     
-    //Hardcore: Check for pathing
-    hardcoreMovement();
+    //Hardcore: Check for pathing by doing a BFS that will find TunnelMan
+    if(getID() == TID_HARD_CORE_PROTESTER){
+        int M = 16 + (int)(sw()->getLevel()) * 2;
+        int x = getX();
+        int y = getY();
+        
+        //Determine if hardcore protester is within M legal moves to TunnelMan
+        Direction newdir = sw()->hardcoreSensePlayer(this, M);
+        
+        //Block does nothing if newdir is none, meaning the HC Protester does not detect Tunnelman.
+        if(newdir == Direction::up){
+            setDirection(Direction::up);
+            moveTo(x, y + 1);
+            updateY(1);
+            return;
+        }
+        else if(newdir == Direction::down){
+            setDirection(Direction::down);
+            moveTo(x, y - 1);
+            updateY(-1);
+            return;
+        }
+        else if(newdir == Direction::left){
+            setDirection(Direction::left);
+            moveTo(x - 1, y);
+            updateX(-1);
+            return;
+        }
+        else if(newdir == Direction::right){
+            setDirection(Direction::right);
+            moveTo(x + 1, y);
+            updateX(1);
+            return;
+        }
+    }
     
     //Used for auxiliary functions
     string dir;
@@ -639,26 +672,13 @@ bool Protester::checkPerpendicular(){
 
 }
 
-void Protester::hardcoreMovement(){
-    return;
-}
-
-
 Protester::~Protester(){
     setVisible(false);
 }
 
 /*========== Hardcore ==========*/
 Hardcore::Hardcore(TunnelMan* t, StudentWorld* s) : Protester(t, s, 20, TID_HARD_CORE_PROTESTER){
-    
-}
-
-//Do a BFS that will sense the TunnelMan
-void Hardcore::hardcoreMovement(){
-    int level = sw()->getLevel();
-    int M = 16 + level * 2;
-    
-    //Determine if hardcore protester is within M legal moves to TunnelMan
+    //This pretty much is just called to give the ID of hard core protester.
 }
 
 Hardcore::~Hardcore(){
@@ -672,8 +692,8 @@ TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Directio
     hitPoints = 10;
 //    water = 5;
     water = 10000;
-    sonar = 1;
-//    sonar = 10000;
+//    sonar = 1;
+    sonar = 10000;
     nuggets = 0;
 }
 

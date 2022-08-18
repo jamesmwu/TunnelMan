@@ -735,106 +735,40 @@ void StudentWorld::printMaze(){
 
 //Helps protester exit
 void StudentWorld::pathing(Protester* pro){
-//    for (int i = 0; i < 64; i++){
-//        for (int j = 0; j < 64; j++){
-//            maze[i][j]=0;
-//        }
-//    }
-//
-//    int a = pro->getX();
-//    int b = pro->getY();
-//    queue<Coord> q;
-//    q.push(Coord(60,60));
-//    maze[60][60]=1;
-//
-//    while (!q.empty()) {
-////        printMaze();
-//        Coord c = q.front();
-//        q.pop();
-//        int x = c.x;
-//        int y = c.y;
-//
-//        //left
-//        if(canMove(x, y, GameObject::left) && maze[y][x-1]==0){
-//            q.push(Coord(x-1,y));
-//            maze[y][x-1] = maze[y][x] + 1;
-//        }
-//        //right
-//        if(canMove(x, y, GameObject::right) && maze[y][x+1]==0){
-//            q.push(Coord(x + 1,y));
-//            maze[y][x+1] = maze[y][x] + 1;
-//        }
-//        //up
-//        if(canMove(x, y, GameObject::up) && maze[y+1][x]==0){
-//            q.push(Coord(x, y + 1));
-//            maze[y+1][x] = maze[y][x] + 1;
-//        }
-//        // down
-//        if(canMove(x, y, GameObject::down) && maze[y-1][x]==0){
-//            q.push(Coord(x, y - 1));
-//            maze[y-1][x] = maze[y][x] + 1;
-//        }
-//    }
-//
-//    int y = pro->getY();
-//    int x = pro->getX();
-//
-//    if(canMove(a,b, GameObject::left)&& maze[b][a-1] < maze[b][a]){
-//        pro->setDirection(GameObject::left);
-//        pro->moveTo(x - 1, y);
-//        pro->updateX(-1);
-//    }
-//    if(canMove(a,b, GameObject::right)&& maze[a+1][b] < maze[b][a]){
-//        pro->setDirection(GameObject::right);
-//        pro->moveTo(x + 1, y);
-//        pro->updateX(1);
-//    }
-//    if(canMove(a,b, GameObject::up)&& maze[b+1][a] < maze[b][a]){
-//        pro->setDirection(GameObject::up);
-//        pro->moveTo(x, y + 1);
-//        pro->updateY(1);
-//    }
-//    if(canMove(a,b, GameObject::down)&&maze[b-1][a] < maze[b][a]){
-//        pro->setDirection(GameObject::down);
-//        pro->moveTo(x, y - 1);
-//        pro->updateX(-1);
-//    }
-//
-//    return ;
     for (int i = 0; i < 64; i++){
         for (int j = 0; j < 64; j++){
             maze[i][j]=0;
         }
     }
-    int a =pro->getX();
-    int b =pro->getY();
-    queue<Coord> q;
-    q.push(Coord(60,60));
+    int a =pro->getX(); //x
+    int b =pro->getY(); //y
+    queue<Coord> BFS;
+    BFS.push(Coord(60,60));
     maze[60][60]=1;
-    while (!q.empty()) {
-        Coord c = q.front();
-        q.pop();
+    while (!BFS.empty()) {
+        Coord c = BFS.front();
+        BFS.pop();
         int x=c.x;
         int y=c.y;
 
         //left
         if(canMove(x,y, GraphObject::left)&& maze[x-1][y]==0){
-            q.push(Coord(x-1,y));
+            BFS.push(Coord(x-1,y));
             maze[x-1][y] = maze[x][y]+1;
         }
         //right
         if(canMove(x,y, GraphObject::right)&& maze[x+1][y]==0){
-            q.push(Coord(x+1,y));
+            BFS.push(Coord(x+1,y));
             maze[x+1][y] = maze[x][y]+1;
         }
         //up
         if(canMove(x,y, GraphObject::up)&& maze[x][y+1]==0){
-            q.push(Coord(x,y+1));
+            BFS.push(Coord(x,y+1));
             maze[x][y+1] =maze[x][y]+1;
         }
         // down
         if(canMove(x,y, GraphObject::down)&& maze[x][y-1]==0){
-            q.push(Coord(x,y-1));
+            BFS.push(Coord(x,y-1));
             maze[x][y-1] =maze[x][y]+1;
         }
     }
@@ -862,6 +796,64 @@ void StudentWorld::pathing(Protester* pro){
     
     return ;
 }
+
+GraphObject::Direction StudentWorld::hardcoreSensePlayer(Protester *pro, int M){
+    //Reset maze
+    for (int i = 0; i < 64; i++){
+        for (int j = 0; j < 64; j++){
+            maze[i][j]=0;
+        }
+    }
+    int a = pro->getX();
+    int b = pro->getY();
+    queue<Coord> BFS;
+    BFS.push(Coord(tunnelManPtr->getX(),tunnelManPtr->getY()));
+    maze[tunnelManPtr->getX()][tunnelManPtr->getY()]=1; //Set the "endpoint" goal as the current position of the Tunnelman
+    
+    //Do BFS same way as in pathing to exit
+    while (!BFS.empty()) {
+        Coord c = BFS.front();
+        BFS.pop();
+        int x=c.x;
+        int y=c.y;
+        
+        //left
+        if(canMove(x,y, GraphObject::left)&& maze[x-1][y]==0){
+            BFS.push(Coord(x-1,y));
+            maze[x-1][y] = maze[x][y]+1;
+        }
+        //right
+        if(canMove(x,y, GraphObject::right)&& maze[x+1][y]==0){
+            BFS.push(Coord(x+1,y));
+            maze[x+1][y] = maze[x][y]+1;
+        }
+        //up
+        if(canMove(x,y, GraphObject::up)&& maze[x][y+1]==0){
+            BFS.push(Coord(x,y+1));
+            maze[x][y+1] = maze[x][y]+1;
+        }
+        // down
+        if(canMove(x,y, GraphObject::down)&& maze[x][y-1]==0){
+            BFS.push(Coord(x,y-1));
+            maze[x][y-1] = maze[x][y]+1;
+        }
+    }
+    
+    //If the position of TM is within range of the M value, then return direction the hardcore protester should move.
+    if(maze[a][b] <= M+1){
+        if(canMove(a,b, GraphObject::left)&& maze[a-1][b] < maze[a][b])
+            return GraphObject::left;
+        else if(canMove(a,b, GraphObject::right)&& maze[a+1][b] < maze[a][b])
+            return GraphObject::right;
+        else if(canMove(a,b, GraphObject::up)&& maze[a][b+1] < maze[a][b])
+            return GraphObject::up;
+        else if(canMove(a,b, GraphObject::down)&& maze[a][b-1] < maze[a][b])
+            return GraphObject::down;
+    }
+    
+    return GraphObject::none;
+}
+
 
 void StudentWorld::cleanUp(){
     //Free tunnelMan

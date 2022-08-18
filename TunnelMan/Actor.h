@@ -162,9 +162,7 @@ public:
     virtual void bribed();
 
     virtual bool checkPerpendicular();
-    
-    virtual void hardcoreMovement();
-        
+            
     virtual ~Protester();
     
 private:
@@ -183,9 +181,7 @@ private:
 class Hardcore : public Protester{
 public:
     Hardcore(TunnelMan* t, StudentWorld* s);
-        
-    virtual void hardcoreMovement();
-    
+            
     virtual ~Hardcore();
     
     
