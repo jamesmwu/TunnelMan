@@ -663,9 +663,23 @@ void StudentWorld::protesterAnnoyed(int x, int y){
     
 }
 
-bool StudentWorld::earthExists(int x, int y){
-    if(earthObjects[y][x] != nullptr) return true;
-    
+bool StudentWorld::earthExists(int x, int y, string dir){
+    if(y < 60){
+        for(int i = 0; i < 4; i++){
+            if(y >= 60) break;
+            if(x >= 64) break;
+            
+            for(int j = 0; j < 4; j++){
+                if(earthObjects[y][x] != nullptr){
+                    return true;
+                }
+                
+                x++;
+            }
+            x -= 4;
+            dir == "down" ? y-- : y++;
+        }
+    }
     return false;
 }
 
@@ -679,13 +693,13 @@ bool StudentWorld::boulderExists(int x, int y, int radius){
 bool StudentWorld::canMove(int x, int y, GameObject::Direction direction){
     switch(direction){
         case GameObject::left:
-            return (x > 0 && !earthExists(x - 1, y) && !boulderExists(x, y, 3));
+            return (x > 0 && !earthExists(x - 1, y, "left") && !boulderExists(x, y, 3));
         case GameObject::right:
-            return(x < 60 && !earthExists(x + 1, y) && !boulderExists(x + 1, y, 3));
+            return(x < 60 && !earthExists(x + 1, y, "right") && !boulderExists(x + 1, y, 3));
         case GameObject::up:
-            return (y < 60 && !earthExists(x, y + 1) && !boulderExists(x, y + 1, 3));
+            return (y < 60 && !earthExists(x, y + 1, "up") && !boulderExists(x, y + 1, 3));
         case GameObject::down:
-            return (y > 0 && !earthExists(x, y - 1) && !boulderExists(x, y - 1, 3));
+            return (y > 0 && !earthExists(x, y - 1, "down") && !boulderExists(x, y - 1, 3));
         default:
             return false;
     }
@@ -703,8 +717,8 @@ void StudentWorld::pathing(Protester* pro){
         }
     }
 
-    int a =pro->getX();
-    int b =pro->getY();
+    int a = pro->getX();
+    int b = pro->getY();
     queue<Coord> q;
     q.push(Coord(60,60));
     maze[60][60]=1;
@@ -716,24 +730,24 @@ void StudentWorld::pathing(Protester* pro){
         int y = c.y;
 
         //left
-        if(canMove(x,y, GameObject::left) && maze[x-1][y]==0){
+        if(canMove(x, y, GameObject::left) && maze[x - 1][y]==0){
             q.push(Coord(x-1,y));
-            maze[x-1][y] =maze[x][y]+1;
+            maze[x - 1][y] =maze[x][y] + 1;
         }
         //right
-        if(canMove(x,y, GameObject::right)&& maze[x+1][y]==0){
-            q.push(Coord(x+1,y));
-            maze[x+1][y] = maze[x][y]+1;
+        if(canMove(x, y, GameObject::right) && maze[x + 1][y]==0){
+            q.push(Coord(x + 1,y));
+            maze[x + 1][y] = maze[x][y] + 1;
         }
         //up
-        if(canMove(x,y, GameObject::up)&& maze[x][y+1]==0){
-            q.push(Coord(x,y+1));
-            maze[x][y+1] = maze[x][y]+1;
+        if(canMove(x, y, GameObject::up) && maze[x][y+1]==0){
+            q.push(Coord(x, y + 1));
+            maze[x][y + 1] = maze[x][y] + 1;
         }
         // down
-        if(canMove(x,y, GameObject::down)&& maze[x][y-1]==0){
-            q.push(Coord(x,y-1));
-            maze[x][y-1] = maze[x][y]+1;
+        if(canMove(x, y, GameObject::down) && maze[x][y-1]==0){
+            q.push(Coord(x, y - 1));
+            maze[x][y - 1] = maze[x][y] + 1;
         }
     }
     
@@ -741,18 +755,22 @@ void StudentWorld::pathing(Protester* pro){
     int x = pro->getX();
     
     if(canMove(a,b, GameObject::left)&& maze[a-1][b]< maze[a][b]){
+        pro->setDirection(GameObject::left);
         pro->moveTo(x - 1, y);
         pro->updateX(-1);
     }
     if(canMove(a,b, GameObject::right)&& maze[a+1][b]< maze[a][b]){
+        pro->setDirection(GameObject::right);
         pro->moveTo(x + 1, y);
         pro->updateX(1);
     }
     if(canMove(a,b, GameObject::up)&& maze[a][b+1]< maze[a][b]){
+        pro->setDirection(GameObject::up);
         pro->moveTo(x, y + 1);
         pro->updateY(1);
     }
     if(canMove(a,b, GameObject::down)&&maze[a][b-1]< maze[a][b]){
+        pro->setDirection(GameObject::down);
         pro->moveTo(x, y - 1);
         pro->updateX(-1);
     }
@@ -787,58 +805,3 @@ void StudentWorld::cleanUp(){
 StudentWorld::~StudentWorld(){
     cleanUp();
 }
-
-//
-//{
-//
-////    print();
-//    BFS.push({y, x});
-//
-//    while(!BFS.empty()){
-//        int Qy = BFS.front()[0];
-//        int Qx = BFS.front()[1];
-//        if(earthSnapshot[Qy][Qx] == "E"){
-//            print();
-//            break;
-//        }
-//
-//        earthSnapshot[Qy][Qx] = "v";
-//
-//        BFS.pop();
-//
-//        //North
-//        if(Qy <= 59 && ((Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "." && Qy < 64) || (Qy + 1 >= 0 && earthSnapshot[Qy + 1][Qx] == "E" && Qy < 64))){
-//            BFS.push({Qy + 1, Qx});
-////            moveTo(getX(), getY() + 1);
-////            updateY(1);
-//        }
-//
-//        //East
-//        if((Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "." && Qx < 64) || (Qx + 1 < 64 && earthSnapshot[Qy][Qx + 1] == "E" && Qx < 64)){
-//            BFS.push({Qy, Qx + 1});
-////            moveTo(getX(), getX() + 1);
-////            updateX(1);
-//
-//        }
-//
-//        //West
-//        if(Qy <= 59 && ((Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "." && Qx > 0) || (Qx - 1 >= 0 && earthSnapshot[Qy][Qx - 1] == "E" && Qx > 0))){
-//            BFS.push({Qy, Qx - 1});
-////            moveTo(getX() - 1, getY());
-////            updateX(-1);
-//        }
-//
-//        //South
-//        if(Qy <= 59 && ((Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "." && Qy > 0) || (Qy - 1 < 64 && earthSnapshot[Qy - 1][Qx] == "E" && Qy > 0))){
-//            BFS.push({Qy - 1, Qx});
-////            moveTo(getX(), getY() - 1);
-////            updateY(-1);
-//
-//        }
-//
-//    }
-//
-//    //Clear queue
-//    while(!BFS.empty()) BFS.pop();
-//
-//}
