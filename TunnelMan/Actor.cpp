@@ -371,18 +371,21 @@ WaterPool::~WaterPool(){
 }
 
 
-/*========== Protester ==========*/
-Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 60, 60, Direction::left, 1.0, 0, t, s){
-    hitPoints = 5;
+/*========== Protester Base Class ==========*/
+Protester::Protester(TunnelMan* t, StudentWorld* s, int hp, const int ID) : GameObject(ID, 60, 60, Direction::left, 1.0, 0, t, s){
+    hitPoints = hp;
     leaveTheOilFieldState = false;
-    moved = 8 + rand()%61;
-    setVisible(true);
     
     int level = sw()->getLevel();
-    ticksBetween = max(0, 5 - level / 4);
+    
     ticks = 0;
     shoutCooldown = 0;
     perpTurnCooldown = 0;
+    
+    ticksToWait = max(0, 5 - level / 4);
+    numSquaresMoved = 8 + rand()%61;
+
+    setVisible(true);
     
     imAProtester();
 }
@@ -390,19 +393,14 @@ Protester::Protester(TunnelMan* t, StudentWorld* s) : GameObject(TID_PROTESTER, 
 void Protester::doSomething(){
     if(!isAlive()) return;
     
+    //Determine if in rest state
     if(ticks >= 0){
         ticks--;
         return;
     }
-    else ticks = ticksBetween;
+    else ticks = ticksToWait;
     
-    //Track shout cooldown
-    if(shoutCooldown != 0) shoutCooldown--;
-    
-    //Track perp cooldown
-    if(perpTurnCooldown != 0) perpTurnCooldown--;
-    
-    //Leaves the oil field
+    //Determine if in leave-the-oil-field state
     if(leaveTheOilFieldState){
         if(getX() == 60 && getY() == 60){
             dead();
@@ -415,21 +413,10 @@ void Protester::doSomething(){
         return;
     }
     
-    string dir;
-    if(getDirection() == Direction::up){
-        dir = "up";
-    }
-    else if(getDirection() == Direction::down){
-        dir = "down";
-    }
-    else if(getDirection() == Direction::left){
-        dir = "left";
-    }
-    else if(getDirection() == Direction::right){
-        dir = "right";
-    }
+    //Track shout cooldown
+    if(shoutCooldown != 0) shoutCooldown--;
     
-    //Check if within distance of 4 units to TunnelMan (account for distance protester facing as well)
+    //Check to see if within shouting distance of TunnelMan
     if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 4)){
         if(shoutCooldown == 0){
             sw()->playSound(SOUND_PROTESTER_YELL);
@@ -439,77 +426,73 @@ void Protester::doSomething(){
         return;
     }
     
-    //Within line of sight to tunnelman
-    if(sw()->tunnelManLineOfSight(getX(), getY(), dir, this)){
-        
-        cout << moved << endl;
-        
+    //Hardcore: Check for pathing
+    hardcoreMovement();
+    
+    //Used for auxiliary functions
+    string dir;
+    switch (getDirection()) {
+        case Direction::up:
+            dir = "up";
+            break;
+        case Direction::down:
+            dir = "down";
+            break;
+        case Direction::left:
+            dir = "left";
+            break;
+        case Direction::right:
+            dir = "right";
+            break;
+            
+        default:
+            break;
+    }
+    
+    //Determine if in line of sight with Tunnelman
+    if(sw()->tunnelManLineOfSight(getX(), getY(), this)){
+                
         if(!sw()->nearObj(getX(), getY(), dir, "protester")){
             int x = getX();
             int y = getY();
             
-            if(getDirection() == Direction::up){
-                moveTo(x, y + 1);
-                updateY(1);
-            }
-            else if(getDirection() == Direction::down){
-                moveTo(x, y - 1);
-                updateY(-1);
-            }
-            else if(getDirection() == Direction:: left){
-                moveTo(x - 1, y);
-                updateX(-1);
-            }
-            else{
-                moveTo(x + 1, y);
-                updateX(1);
+            switch (getDirection()) {
+                case Direction::up:
+                    moveTo(x, y + 1);
+                    updateY(1);
+                    break;
+                case Direction::down:
+                    moveTo(x, y - 1);
+                    updateY(-1);
+                    break;
+                case Direction::left:
+                    moveTo(x - 1, y);
+                    updateX(-1);
+                    break;
+                case Direction::right:
+                    moveTo(x + 1, y);
+                    updateX(1);
+                    break;
+                    
+                default:
+                    break;
             }
             
-            moved--;
+            numSquaresMoved = 0;
             return;
         }
         //Protester is blocked for some reason
         else {
-            moved = 0;
+            numSquaresMoved = 0;
         }
     }
     
-    //See if Protester movement needs to switch directions
-    if(moved <= 0){
-        string dir = "";
-        int newDir = rand()%4; //0 to 3
-        //Change to random new direction
-        switch (newDir) {
-            case 0:
-                setDirection(Direction::left);
-                dir = "left";
-                break;
-            
-            case 1:
-                setDirection(Direction::right);
-                dir = "right";
-                break;
-                
-            case 2:
-                setDirection(Direction::up);
-                dir = "up";
-                break;
-                
-            case 3:
-                setDirection(Direction::down);
-                dir = "down";
-                break;
-                
-            default:
-                break;
-        }
-        
-        //Keep cycling for a new direction
-        while(sw()->nearObj(getX(), getY(), dir, "protester")){
-            newDir = rand()%4; //0 to 3
-            dir = "";
+    //Protester can't see TunnelMan. Pick a new direction to move.
+    if(numSquaresMoved <= 0){
+        //Cycle for a new direction until valid one is found
+        do {
             //Change to random new direction
-            switch (newDir) {
+            switch (rand()%4) {
                 case 0:
                     setDirection(Direction::left);
                     dir = "left";
@@ -533,29 +516,31 @@ void Protester::doSomething(){
                 default:
                     break;
             }
-        }
-        
-        moved = 8 + rand()%61;
+        } while(sw()->nearObj(getX(), getY(), dir, "protester"));
+        numSquaresMoved = 8 + rand()%61;    //Reset squares to move
     }
-    
-    //Check if protester can move in a perpendicular direction and hasn't made a perpendicular turn in last 200 non-rest ticks
-//    cout << perpTurnCooldown << endl;
-    if(perpTurnCooldown == 0 && checkPerpendicular()){
-        moved = 8 + rand()%61;
+    //Otherwise if steps still remain, check if a perpendicular turn can be made
+    else if(perpTurnCooldown == 0 && checkPerpendicular()){
+        numSquaresMoved = 8 + rand()%61;
         perpTurnCooldown = 200;
     }
     
-    if(getDirection() == Direction::up){
-        dir = "up";
-    }
-    else if(getDirection() == Direction::down){
-        dir = "down";
-    }
-    else if(getDirection() == Direction::left){
-        dir = "left";
-    }
-    else if(getDirection() == Direction::right){
-        dir = "right";
+    switch (getDirection()) {
+        case Direction::up:
+            dir = "up";
+            break;
+        case Direction::down:
+            dir = "down";
+            break;
+        case Direction::left:
+            dir = "left";
+            break;
+        case Direction::right:
+            dir = "right";
+            break;
+            
+        default:
+            break;
     }
     
     //Attempt to take one step in its current facing direction
@@ -582,17 +567,15 @@ void Protester::doSomething(){
     }
     //Protester is blocked for some reason
     else {
-        moved = 0;
+        numSquaresMoved = 0;
         return;
     }
     
-    moved--;
-    
-    //Annoyed implementation can be found in objects that annoy the Protester (boulder + squirt)
-    //Bribing implementation can be found in nugget
+    numSquaresMoved--;
     
 }
 
+    
 void Protester::bribed(){
     leaveTheOilFieldState = true;
     ticks = 0;
@@ -600,16 +583,16 @@ void Protester::bribed(){
 
 void Protester::annoyed(int val, string annoyer){
     if(leaveTheOilFieldState) return;   //This prevents the sound from being played repeatedly
-    
+
     if(annoyer == "boulder"){
         sw()->increaseScore(500);
     }
     else if(annoyer == "squirt"){
         sw()->increaseScore(100);
     }
-    
+
     hitPoints -= val;
-    
+
     if(hitPoints <= 0){
         leaveTheOilFieldState = true;
         ticks = 0;
@@ -649,13 +632,34 @@ bool Protester::checkPerpendicular(){
             return true;
         }
     }
-    
+
     return false;
 
 }
 
+void Protester::hardcoreMovement(){
+    return;
+}
+
 
 Protester::~Protester(){
+    setVisible(false);
+}
+
+/*========== Hardcore ==========*/
+Hardcore::Hardcore(TunnelMan* t, StudentWorld* s) : Protester(t, s, 20, TID_HARD_CORE_PROTESTER){
+    
+}
+
+//Do a BFS that will sense the TunnelMan
+void Hardcore::hardcoreMovement(){
+    int level = sw()->getLevel();
+    int M = 16 + level * 2;
+    
+    //Determine if hardcore protester is within M legal moves to TunnelMan
+}
+
+Hardcore::~Hardcore(){
     setVisible(false);
 }
 

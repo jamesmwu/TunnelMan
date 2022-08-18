@@ -150,30 +150,45 @@ private:
     int ticks;
 };
 
-/*========== Protester ==========*/
+/*========== Protester Base Class ==========*/
 class Protester : public GameObject{
 public:
-    Protester(TunnelMan* t, StudentWorld* s);
+    Protester(TunnelMan* t, StudentWorld* s, int hp = 10, const int ID = TID_PROTESTER);
     
     virtual void doSomething();
     
     virtual void annoyed(int val, std::string annoyer);
-    
+
     virtual void bribed();
+
+    virtual bool checkPerpendicular();
+    
+    virtual void hardcoreMovement();
         
     virtual ~Protester();
     
 private:
-    bool checkPerpendicular();
     
     int hitPoints;
     bool leaveTheOilFieldState;
-    int moved;
-    int ticksBetween;
+    int ticksToWait;
     int ticks;
     int shoutCooldown;
+    int numSquaresMoved;
     int perpTurnCooldown;
 
+};
+
+/*========== Hardcore Protester ==========*/
+class Hardcore : public Protester{
+public:
+    Hardcore(TunnelMan* t, StudentWorld* s);
+        
+    virtual void hardcoreMovement();
+    
+    virtual ~Hardcore();
+    
+    
 };
 
 /*========== TunnelMan class ==========*/

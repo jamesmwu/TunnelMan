@@ -41,7 +41,7 @@ public:
     
     void squirt(int x, int y, std::string dir);
     
-    bool tunnelManLineOfSight(int x, int y, std::string dir, Protester* prot);
+    bool tunnelManLineOfSight(int x, int y, Protester* prot);
     
     void sonarCharge();
     

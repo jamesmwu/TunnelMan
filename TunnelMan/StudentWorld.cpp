@@ -73,7 +73,7 @@ int StudentWorld::init(){
     //Generate nuggets
     generate(nugget, xRange, yRange, "nugget");
     
-    //Generate protester (only 1 on first tick, and always in same spot)
+    //Generate regular protester (only 1 on first tick, and always in same spot)
     gameObjects.push_back(new Protester(tunnelManPtr, this));
     protesters--;
     
@@ -142,10 +142,16 @@ int StudentWorld::move(){
         }
     }
     
-    //Protester is added after certain amount of ticks
+    //Regular protester is added after certain amount of ticks
     if(ticksSinceLastProtesterAdded == 0 && protesters > 0){
-        gameObjects.push_back(new Protester(tunnelManPtr, this));
         int level = getLevel();
+        int probabilityOfHardCore = min(90, level * 10 + 30);
+        int num = rand() % 100; //Gives num between 0 and 100
+        if(num <= probabilityOfHardCore){
+            gameObjects.push_back(new Hardcore(tunnelManPtr, this));
+        }
+        else gameObjects.push_back(new Protester(tunnelManPtr, this));
+        
         ticksSinceLastProtesterAdded = max(25, 200 - level);
         protesters--;
     }
@@ -535,7 +541,7 @@ void StudentWorld::sonarCharge(){
     playSound(SOUND_SONAR);
 }
 
-bool StudentWorld::tunnelManLineOfSight(int x, int y, string dir, Protester* prot){
+bool StudentWorld::tunnelManLineOfSight(int x, int y, Protester* prot){
         
     if(y == tunnelManPtr->getY()){
         
@@ -680,7 +686,7 @@ bool StudentWorld::earthExists(int x, int y, string dir){
             dir == "down" ? y-- : y++;
         }
     }
-    return false;
+     return false;
 }
 
 bool StudentWorld::boulderExists(int x, int y, int radius){
