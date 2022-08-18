@@ -17,6 +17,8 @@ GameWorld* createStudentWorld(string assetDir)
 StudentWorld::StudentWorld(std::string assetDir): GameWorld(assetDir){
     tunnelManPtr = nullptr;
     barrels = 0;
+    protesters = 0;
+    ticksSinceLastProtesterAdded = 0;
     sonarActive = false;
     //Fill rows 0 to 59 with NULL (if you don't do this, the destructor will have bad access if you close the window quickly)
     //Rows (y)
@@ -53,7 +55,7 @@ int StudentWorld::init(){
     int boulder = min(level / 2 + 2, 9);
     int nugget = max(5 - level / 2, 2);
     int barrel = min(2 + level, 21);
-    int protesters = min(15.0, 2 + level * 1.5);
+    protesters = min(15.0, 2 + level * 1.5);
     
     barrels = barrel;
     ticksSinceLastProtesterAdded = max(25, 200 - level);
@@ -83,6 +85,7 @@ int StudentWorld::init(){
 int StudentWorld::move(){
     //Status bar
     int level = getLevel();
+
     int lives = getLives();
     int health = tunnelManPtr->getHealth();
     int squirts = tunnelManPtr->getSquirts();
@@ -104,6 +107,7 @@ int StudentWorld::move(){
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         if(!(*it)->isAlive()){
             if((*it)->isSonar()) sonarActive = false;
+            if((*it)->isProtester()) protesters++;
             delete *it;
             *it = nullptr;
             it = gameObjects.erase(it);
@@ -670,6 +674,9 @@ void StudentWorld::protesterAnnoyed(int x, int y){
 }
 
 bool StudentWorld::earthExists(int x, int y, string dir){
+//    x--;
+//    y--;
+
     if(y < 60){
         for(int i = 0; i < 4; i++){
             if(y >= 60) break;
@@ -713,71 +720,143 @@ bool StudentWorld::canMove(int x, int y, GameObject::Direction direction){
 
 }
 
+//Temp helper
+void StudentWorld::printMaze(){
+    cout << endl;
+    for (int i = 63; i >= 0; i--){
+        for (int j = 0; j < 64; j++){
+            cout << maze[i][j];
+        }
+        cout << endl;
+    }
+    cout << endl;
+}
 
 
 //Helps protester exit
 void StudentWorld::pathing(Protester* pro){
+//    for (int i = 0; i < 64; i++){
+//        for (int j = 0; j < 64; j++){
+//            maze[i][j]=0;
+//        }
+//    }
+//
+//    int a = pro->getX();
+//    int b = pro->getY();
+//    queue<Coord> q;
+//    q.push(Coord(60,60));
+//    maze[60][60]=1;
+//
+//    while (!q.empty()) {
+////        printMaze();
+//        Coord c = q.front();
+//        q.pop();
+//        int x = c.x;
+//        int y = c.y;
+//
+//        //left
+//        if(canMove(x, y, GameObject::left) && maze[y][x-1]==0){
+//            q.push(Coord(x-1,y));
+//            maze[y][x-1] = maze[y][x] + 1;
+//        }
+//        //right
+//        if(canMove(x, y, GameObject::right) && maze[y][x+1]==0){
+//            q.push(Coord(x + 1,y));
+//            maze[y][x+1] = maze[y][x] + 1;
+//        }
+//        //up
+//        if(canMove(x, y, GameObject::up) && maze[y+1][x]==0){
+//            q.push(Coord(x, y + 1));
+//            maze[y+1][x] = maze[y][x] + 1;
+//        }
+//        // down
+//        if(canMove(x, y, GameObject::down) && maze[y-1][x]==0){
+//            q.push(Coord(x, y - 1));
+//            maze[y-1][x] = maze[y][x] + 1;
+//        }
+//    }
+//
+//    int y = pro->getY();
+//    int x = pro->getX();
+//
+//    if(canMove(a,b, GameObject::left)&& maze[b][a-1] < maze[b][a]){
+//        pro->setDirection(GameObject::left);
+//        pro->moveTo(x - 1, y);
+//        pro->updateX(-1);
+//    }
+//    if(canMove(a,b, GameObject::right)&& maze[a+1][b] < maze[b][a]){
+//        pro->setDirection(GameObject::right);
+//        pro->moveTo(x + 1, y);
+//        pro->updateX(1);
+//    }
+//    if(canMove(a,b, GameObject::up)&& maze[b+1][a] < maze[b][a]){
+//        pro->setDirection(GameObject::up);
+//        pro->moveTo(x, y + 1);
+//        pro->updateY(1);
+//    }
+//    if(canMove(a,b, GameObject::down)&&maze[b-1][a] < maze[b][a]){
+//        pro->setDirection(GameObject::down);
+//        pro->moveTo(x, y - 1);
+//        pro->updateX(-1);
+//    }
+//
+//    return ;
     for (int i = 0; i < 64; i++){
         for (int j = 0; j < 64; j++){
             maze[i][j]=0;
         }
     }
-
-    int a = pro->getX();
-    int b = pro->getY();
+    int a =pro->getX();
+    int b =pro->getY();
     queue<Coord> q;
     q.push(Coord(60,60));
     maze[60][60]=1;
-    
     while (!q.empty()) {
         Coord c = q.front();
         q.pop();
-        int x = c.x;
-        int y = c.y;
+        int x=c.x;
+        int y=c.y;
 
         //left
-        if(canMove(x, y, GameObject::left) && maze[x - 1][y]==0){
+        if(canMove(x,y, GraphObject::left)&& maze[x-1][y]==0){
             q.push(Coord(x-1,y));
-            maze[x - 1][y] =maze[x][y] + 1;
+            maze[x-1][y] = maze[x][y]+1;
         }
         //right
-        if(canMove(x, y, GameObject::right) && maze[x + 1][y]==0){
-            q.push(Coord(x + 1,y));
-            maze[x + 1][y] = maze[x][y] + 1;
+        if(canMove(x,y, GraphObject::right)&& maze[x+1][y]==0){
+            q.push(Coord(x+1,y));
+            maze[x+1][y] = maze[x][y]+1;
         }
         //up
-        if(canMove(x, y, GameObject::up) && maze[x][y+1]==0){
-            q.push(Coord(x, y + 1));
-            maze[x][y + 1] = maze[x][y] + 1;
+        if(canMove(x,y, GraphObject::up)&& maze[x][y+1]==0){
+            q.push(Coord(x,y+1));
+            maze[x][y+1] =maze[x][y]+1;
         }
         // down
-        if(canMove(x, y, GameObject::down) && maze[x][y-1]==0){
-            q.push(Coord(x, y - 1));
-            maze[x][y - 1] = maze[x][y] + 1;
+        if(canMove(x,y, GraphObject::down)&& maze[x][y-1]==0){
+            q.push(Coord(x,y-1));
+            maze[x][y-1] =maze[x][y]+1;
         }
     }
-    
-    int y = pro->getY();
-    int x = pro->getX();
-    
-    if(canMove(a,b, GameObject::left)&& maze[a-1][b]< maze[a][b]){
+    if(canMove(a,b, GraphObject::left)&& maze[a-1][b]<maze[a][b]){
         pro->setDirection(GameObject::left);
-        pro->moveTo(x - 1, y);
+        pro->moveTo(a - 1, b);
         pro->updateX(-1);
     }
-    if(canMove(a,b, GameObject::right)&& maze[a+1][b]< maze[a][b]){
+
+    if(canMove(a,b, GraphObject::right)&& maze[a+1][b]<maze[a][b]){
         pro->setDirection(GameObject::right);
-        pro->moveTo(x + 1, y);
+        pro->moveTo(a + 1, b);
         pro->updateX(1);
     }
-    if(canMove(a,b, GameObject::up)&& maze[a][b+1]< maze[a][b]){
+    if(canMove(a,b, GraphObject::up)&& maze[a][b+1]<maze[a][b]){
         pro->setDirection(GameObject::up);
-        pro->moveTo(x, y + 1);
+        pro->moveTo(a, b + 1);
         pro->updateY(1);
     }
-    if(canMove(a,b, GameObject::down)&&maze[a][b-1]< maze[a][b]){
+    if(canMove(a,b, GraphObject::down)&& maze[a][b-1]<maze[a][b]){
         pro->setDirection(GameObject::down);
-        pro->moveTo(x, y - 1);
+        pro->moveTo(a, b - 1);
         pro->updateX(-1);
     }
     

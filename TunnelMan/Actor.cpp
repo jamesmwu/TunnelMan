@@ -415,6 +415,8 @@ void Protester::doSomething(){
     
     //Track shout cooldown
     if(shoutCooldown != 0) shoutCooldown--;
+    //Track perpturn cooldown
+    if(perpTurnCooldown != 0) perpTurnCooldown--;
     
     //Check to see if within shouting distance of TunnelMan
     if(distance(getX(), getY(), tm()->getX(), tm()->getY(), 4)){

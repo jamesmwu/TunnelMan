@@ -56,6 +56,8 @@ public:
     bool earthExists(int x, int y, std::string dir);
     
     bool boulderExists(int x, int y, int radius);
+    
+    void printMaze();
         
     virtual void cleanUp();
     
