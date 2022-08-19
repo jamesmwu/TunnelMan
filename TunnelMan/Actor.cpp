@@ -601,7 +601,8 @@ void Protester::bribed(){
     else {
         sw()->increaseScore(50);
         int level = sw()->getLevel();
-        ticks = max(50, 100 - level * 10);
+        stunned = max(50, 100 - level * 10);
+        ticks = 0;
     }
 }
 
@@ -688,7 +689,8 @@ TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Directio
     setVisible(true);
     hitPoints = 10;
     water = 5;
-    sonar = 1;
+//    sonar = 1;
+    sonar = 1000;
     nuggets = 0;
 }
 
