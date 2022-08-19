@@ -19,6 +19,7 @@ public:
     virtual void annoyed(int val, std::string annoyer);
     
     virtual void bribed();
+    virtual bool isStunned();
     
     int getX() const;
     void updateX(int val);
@@ -28,16 +29,6 @@ public:
     
     bool isAlive() const;
     void dead();
-    void live();
-    
-    bool isBoulder() const;
-    void imABoulder();
-    
-    bool isSonar() const;
-    void imASonar();
-    
-    bool isProtester() const;
-    void imAProtester();
     
     TunnelMan* tm() const;
     StudentWorld* sw() const;
@@ -51,9 +42,7 @@ private:
     int x;
     int y;
     bool alive;
-    bool bldr;
-    bool sonar;
-    bool protester;
+
     TunnelMan* m_tunnelMan;
     StudentWorld* m_studentWorld;
 };
@@ -153,7 +142,7 @@ private:
 /*========== Protester Base Class ==========*/
 class Protester : public GameObject{
 public:
-    Protester(TunnelMan* t, StudentWorld* s, int hp = 10, const int ID = TID_PROTESTER);
+    Protester(TunnelMan* t, StudentWorld* s, int hp = 5, const int ID = TID_PROTESTER);
     
     virtual void doSomething();
     
@@ -161,7 +150,9 @@ public:
 
     virtual void bribed();
 
-    virtual bool checkPerpendicular();
+    bool checkPerpendicular();
+    
+    virtual bool isStunned();
             
     virtual ~Protester();
     
@@ -174,7 +165,7 @@ private:
     int shoutCooldown;
     int numSquaresMoved;
     int perpTurnCooldown;
-
+    int stunned;
 };
 
 /*========== Hardcore Protester ==========*/

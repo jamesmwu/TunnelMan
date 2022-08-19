@@ -55,8 +55,6 @@ public:
         
     bool boulderExists(int x, int y, int radius);
     
-    void printMaze();
-
     GraphObject::Direction hardcoreSensePlayer(Protester* pro, int M);
     
     virtual void cleanUp();

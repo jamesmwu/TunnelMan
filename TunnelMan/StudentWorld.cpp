@@ -106,8 +106,8 @@ int StudentWorld::move(){
     //Remove dead actors
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         if(!(*it)->isAlive()){
-            if((*it)->isSonar()) sonarActive = false;
-            if((*it)->isProtester()) protesters++;
+            if((*it)->getID() == TID_SONAR) sonarActive = false;
+            if(((*it)->getID() == TID_PROTESTER || (*it)->getID() == TID_HARD_CORE_PROTESTER)) protesters++;
             delete *it;
             *it = nullptr;
             it = gameObjects.erase(it);
@@ -372,7 +372,7 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
             int bldrX = (*it)->getX();
             int bldrY = (*it)->getY();
             
-            if((*it)->isBoulder() && (*it)->distance(x, y, bldrX, bldrY, 3)){
+            if((*it)->getID() == TID_BOULDER && (*it)->distance(x, y, bldrX, bldrY, 3)){
                 return true;
             }
         }
@@ -423,7 +423,7 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
             int objX = (*it)->getX();
             int objY = (*it)->getY();
             
-            if((*it)->isBoulder() && (*it)->distance(x, y, objX, objY, 3)){
+            if((*it)->getID() == TID_BOULDER && (*it)->distance(x, y, objX, objY, 3)){
                 return true;
             }
         }
@@ -443,11 +443,13 @@ bool StudentWorld::nearProtester(int x, int y, std::string direction, std::strin
         int objX = (*it)->getX();
         int objY = (*it)->getY();
         
-        if(parent == "squirt" && (*it)->isProtester() && (*it)->distance(x, y, objX, objY, 3)){
-            (*it)->annoyed(2, "squirt");
+        if(parent == "squirt" && ((*it)->getID() == TID_PROTESTER || (*it)->getID() == TID_HARD_CORE_PROTESTER) && (*it)->distance(x, y, objX, objY, 3)){
+            if(!(*it)->isStunned()){
+                (*it)->annoyed(2, "squirt");
+            }
             return true;
         }
-        else if(parent == "nugget" && (*it)->isProtester() && (*it)->distance(x, y, objX, objY, 3)){
+        else if(parent == "nugget" && ((*it)->getID() == TID_PROTESTER || (*it)->getID() == TID_HARD_CORE_PROTESTER) && (*it)->distance(x, y, objX, objY, 3)){
             (*it)->bribed();
             return true;
         }
@@ -511,7 +513,7 @@ bool StudentWorld::checkObjectUnderBoulder(int x, int y, Boulder* bldr){
     y--;
     
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-        if((*it) == bldr || (*it)->isProtester()) continue;
+        if((*it) == bldr || ((*it)->getID() == TID_PROTESTER || (*it)->getID() == TID_HARD_CORE_PROTESTER)) continue;
         
         if((*it)->getY() + 3 == y && ((x - 3 <= (*it)->getX()) && ((*it)->getX() <= x + 3))){
             return true;
@@ -567,7 +569,7 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, Protester* prot){
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
-                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
+                        if((*it)->getID() == TID_BOULDER && x == bldrX && y == bldrY){
                             return false;
                         }
                     }
@@ -591,7 +593,7 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, Protester* prot){
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
-                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
+                        if((*it)->getID() == TID_BOULDER && x == bldrX && y == bldrY){
                             return false;
                         }
                     }
@@ -621,7 +623,7 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, Protester* prot){
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
-                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
+                        if((*it)->getID() == TID_BOULDER && x == bldrX && y == bldrY){
                             return false;
                         }
                     }
@@ -646,7 +648,7 @@ bool StudentWorld::tunnelManLineOfSight(int x, int y, Protester* prot){
                         int bldrX = (*it)->getX();
                         int bldrY = (*it)->getY();
                         
-                        if((*it)->isBoulder() && x == bldrX && y == bldrY){
+                        if((*it)->getID() == TID_BOULDER && x == bldrX && y == bldrY){
                             return false;
                         }
                     }
@@ -668,7 +670,7 @@ void StudentWorld::protesterAnnoyed(int x, int y){
         int objX = (*it)->getX();
         int objY = (*it)->getY();
         
-        if((*it)->isProtester() && (*it)->distance(objX, objY, x, y, 3)){
+        if(((*it)->getID() == TID_PROTESTER || (*it)->getID() == TID_HARD_CORE_PROTESTER) && (*it)->distance(objX, objY, x, y, 3)){
             (*it)->annoyed(100, "boulder");
             break;
         }
@@ -678,7 +680,7 @@ void StudentWorld::protesterAnnoyed(int x, int y){
 
 bool StudentWorld::boulderExists(int x, int y, int radius){
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
-        if((*it)->getID() == TID_BOULDER && (*it)->distance(x, y, (*it)->getX(), (*it)->getY(), 3)) return true;
+        if((*it)->getID() == TID_BOULDER && (*it)->distance(x, y, (*it)->getX(), (*it)->getY(), radius)) return true;
     }
     return false;
 }
@@ -701,19 +703,6 @@ bool StudentWorld::canMove(int x, int y, GameObject::Direction direction){
 
 }
 
-//Temp helper
-void StudentWorld::printMaze(){
-    cout << endl;
-    for (int i = 63; i >= 0; i--){
-        for (int j = 0; j < 64; j++){
-            cout << maze[i][j];
-        }
-        cout << endl;
-    }
-    cout << endl;
-}
-
-
 //Helps protester exit
 void StudentWorld::pathing(Protester* pro){
     for (int i = 0; i < 64; i++){
@@ -729,8 +718,8 @@ void StudentWorld::pathing(Protester* pro){
     while (!BFS.empty()) {
         Coord c = BFS.front();
         BFS.pop();
-        int x=c.x;
-        int y=c.y;
+        int x = c.x;
+        int y = c.y;
 
         //left
         if(canMove(x,y, GraphObject::left)&& maze[x-1][y]==0){
@@ -745,12 +734,12 @@ void StudentWorld::pathing(Protester* pro){
         //up
         if(canMove(x,y, GraphObject::up)&& maze[x][y+1]==0){
             BFS.push(Coord(x,y+1));
-            maze[x][y+1] =maze[x][y]+1;
+            maze[x][y+1] = maze[x][y]+1;
         }
         // down
         if(canMove(x,y, GraphObject::down)&& maze[x][y-1]==0){
             BFS.push(Coord(x,y-1));
-            maze[x][y-1] =maze[x][y]+1;
+            maze[x][y-1] = maze[x][y]+1;
         }
     }
     if(canMove(a,b, GraphObject::left)&& maze[a-1][b]<maze[a][b]){
@@ -775,7 +764,6 @@ void StudentWorld::pathing(Protester* pro){
         pro->updateY(-1);
     }
     
-    return ;
 }
 
 GraphObject::Direction StudentWorld::hardcoreSensePlayer(Protester *pro, int M){

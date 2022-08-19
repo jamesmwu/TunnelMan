@@ -14,9 +14,7 @@ GameObject::GameObject(int imageID, int startX, int startY, Direction dir, doubl
     x = startX;
     y = startY;
     alive = true;
-    bldr = false;
-    sonar = false;
-    protester = false;
+    
     m_tunnelMan = tm;
     m_studentWorld = sw;
 }
@@ -45,34 +43,6 @@ void GameObject::dead(){
     alive = false;
 }
 
-void GameObject::live(){
-    alive = true;
-}
-
-bool GameObject::isBoulder() const{
-    return bldr;
-}
-
-void GameObject::imABoulder(){
-    bldr = true;
-}
-
-bool GameObject::isSonar() const {
-    return sonar;
-}
-
-void GameObject::imASonar() {
-    sonar = true;
-}
-
-bool GameObject::isProtester() const {
-    return protester;
-}
-
-void GameObject::imAProtester() {
-    protester = true;
-}
-
 TunnelMan* GameObject::tm() const{
     return m_tunnelMan;
 }
@@ -96,9 +66,12 @@ void GameObject::annoyed(int val, std::string annoyer){}
 
 void GameObject::bribed(){}
 
+bool GameObject::isStunned(){return false;}
+
 GameObject::~GameObject(){
     m_tunnelMan = nullptr;
     m_studentWorld = nullptr;
+    setVisible(false);
 }
 
 /*========== Earth ==========*/
@@ -116,7 +89,6 @@ Boulder::Boulder(int x, int y, StudentWorld* sw, TunnelMan* tm) : GameObject(TID
     setVisible(true);
     state = "stable";
     tick = 30;
-    imABoulder();
 }
 
 void Boulder::doSomething(){
@@ -231,8 +203,6 @@ void Nugget::doSomething(){
         if(!tunnelManCanPickUp && sw()->nearProtester(getX(), getY(), "NA", "nugget")){
             dead();
             setVisible(false);
-            sw()->playSound(SOUND_PROTESTER_FOUND_GOLD);
-            sw()->increaseScore(25);
         }
         
         //Nugget decays
@@ -308,6 +278,7 @@ void Squirt::doSomething(){
 
 Squirt::~Squirt(){
     setVisible(false);
+    dead();
 };
 
 /*========== Sonar Kit ==========*/
@@ -315,7 +286,6 @@ SonarKit::SonarKit(int x, int y, TunnelMan* t, StudentWorld* s) : GameObject(TID
     setVisible(true);
     int level = sw()->getLevel();
     ticks = max(100, (300 - 10 * level));
-    imASonar();
 }
 
 void SonarKit::doSomething(){
@@ -339,6 +309,7 @@ void SonarKit::doSomething(){
 
 SonarKit::~SonarKit(){
     setVisible(false);
+    dead();
 }
 
 /*========== Water Pool ==========*/
@@ -368,6 +339,7 @@ void WaterPool::doSomething(){
 
 WaterPool::~WaterPool(){
     setVisible(false);
+    dead();
 }
 
 
@@ -384,14 +356,20 @@ Protester::Protester(TunnelMan* t, StudentWorld* s, int hp, const int ID) : Game
     
     ticksToWait = max(0, 5 - level / 4);
     numSquaresMoved = 8 + rand()%61;
-
-    setVisible(true);
     
-    imAProtester();
+    stunned = 0;
+    
+    setVisible(true);
 }
 
 void Protester::doSomething(){
     if(!isAlive()) return;
+    
+    //Determine if stunned
+    if(stunned > 0){
+        stunned--;
+        return;
+    }
     
     //Determine if in rest state
     if(ticks >= 0){
@@ -612,8 +590,19 @@ void Protester::doSomething(){
 
     
 void Protester::bribed(){
-    leaveTheOilFieldState = true;
-    ticks = 0;
+    sw()->playSound(SOUND_PROTESTER_FOUND_GOLD);
+
+    if(getID() == TID_PROTESTER){
+        leaveTheOilFieldState = true;
+        ticks = 0;
+        sw()->increaseScore(25);
+    }
+    //Hardcore Protester
+    else {
+        sw()->increaseScore(50);
+        int level = sw()->getLevel();
+        ticks = max(50, 100 - level * 10);
+    }
 }
 
 void Protester::annoyed(int val, string annoyer){
@@ -637,9 +626,15 @@ void Protester::annoyed(int val, string annoyer){
     else {
         //Resting ticks
         int level = sw()->getLevel();
-        ticks = max(50, 100 - level * 10);
+        stunned = max(50, 100 - level * 10);
+        ticks = 0;
         sw()->playSound(SOUND_PROTESTER_ANNOYED);
     }
+}
+
+//Returns whether protester is stunned
+bool Protester::isStunned(){
+    return stunned > 0 ? true : false;
 }
 
 
@@ -674,6 +669,7 @@ bool Protester::checkPerpendicular(){
 
 Protester::~Protester(){
     setVisible(false);
+    dead();
 }
 
 /*========== Hardcore ==========*/
@@ -683,6 +679,7 @@ Hardcore::Hardcore(TunnelMan* t, StudentWorld* s) : Protester(t, s, 20, TID_HARD
 
 Hardcore::~Hardcore(){
     setVisible(false);
+    dead();
 }
 
 
@@ -690,10 +687,8 @@ Hardcore::~Hardcore(){
 TunnelMan::TunnelMan(StudentWorld* sw) : GameObject(TID_PLAYER, 30, 60, Direction::right, 1.0, 0, nullptr, sw){
     setVisible(true);
     hitPoints = 10;
-//    water = 5;
-    water = 10000;
-//    sonar = 1;
-    sonar = 10000;
+    water = 5;
+    sonar = 1;
     nuggets = 0;
 }
 
@@ -738,7 +733,7 @@ void TunnelMan::doSomething(){
             }
             else setDirection(Direction::up);
         }
-        else if(ch == KEY_PRESS_TAB && nuggets >= 1){
+        else if(ch == KEY_PRESS_TAB && nuggets > 0){
             //Drop nugget
             nuggets--;
             sw()->dropNugget(getX(), getY());
