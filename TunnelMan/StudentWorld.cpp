@@ -379,7 +379,10 @@ bool StudentWorld::nearObj(int x, int y, std::string direction, std::string type
     }
     else if(type == "squirt" || "protester"){
         //Check for boundaries of oil field
-        if((direction == "left" && x < 0) || (direction == "right" && x >= 60) || (direction == "up" && y >= 60) || (direction == "down" && y < 0)){
+        if(type == "squirt" && ((direction == "left" && x < 0) || (direction == "right" && x >= 60) || (direction == "up" && y >= 60) || (direction == "down" && y < 0))){
+            return true;
+        }
+        else if(type == "protester" && ((direction == "left" && x < 1) || (direction == "right" && x >= 60) || (direction == "up" && y >= 60) || (direction == "down" && y < 1))){
             return true;
         }
         
@@ -673,29 +676,6 @@ void StudentWorld::protesterAnnoyed(int x, int y){
     
 }
 
-bool StudentWorld::earthExists(int x, int y, string dir){
-//    x--;
-//    y--;
-
-    if(y < 60){
-        for(int i = 0; i < 4; i++){
-            if(y >= 60) break;
-            if(x >= 64) break;
-            
-            for(int j = 0; j < 4; j++){
-                if(earthObjects[y][x] != nullptr){
-                    return true;
-                }
-                
-                x++;
-            }
-            x -= 4;
-            dir == "down" ? y-- : y++;
-        }
-    }
-     return false;
-}
-
 bool StudentWorld::boulderExists(int x, int y, int radius){
     for(auto it = gameObjects.begin(); it != gameObjects.end(); it++){
         if((*it)->getID() == TID_BOULDER && (*it)->distance(x, y, (*it)->getX(), (*it)->getY(), 3)) return true;
@@ -704,15 +684,16 @@ bool StudentWorld::boulderExists(int x, int y, int radius){
 }
 
 bool StudentWorld::canMove(int x, int y, GameObject::Direction direction){
+
     switch(direction){
         case GameObject::left:
-            return (x > 0 && !earthExists(x - 1, y, "left") && !boulderExists(x, y, 3));
+            return (x > 0 && !checkEarth(x - 1, y) && !boulderExists(x, y, 3));
         case GameObject::right:
-            return(x < 60 && !earthExists(x + 1, y, "right") && !boulderExists(x + 1, y, 3));
+            return(x < 60 && !checkEarth(x + 1, y) && !boulderExists(x + 1, y, 3));
         case GameObject::up:
-            return (y < 60 && !earthExists(x, y + 1, "up") && !boulderExists(x, y + 1, 3));
+            return (y < 60 && !checkEarth(x, y + 1) && !boulderExists(x, y + 1, 3));
         case GameObject::down:
-            return (y > 0 && !earthExists(x, y - 1, "down") && !boulderExists(x, y - 1, 3));
+            return (y > 0 && !checkEarth(x, y - 1) && !boulderExists(x, y - 1, 3));
         default:
             return false;
     }
@@ -791,7 +772,7 @@ void StudentWorld::pathing(Protester* pro){
     if(canMove(a,b, GraphObject::down)&& maze[a][b-1]<maze[a][b]){
         pro->setDirection(GameObject::down);
         pro->moveTo(a, b - 1);
-        pro->updateX(-1);
+        pro->updateY(-1);
     }
     
     return ;

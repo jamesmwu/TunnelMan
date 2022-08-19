@@ -52,9 +52,7 @@ public:
     void pathing(Protester* pr);
     
     bool canMove(int x, int y, GameObject::Direction direction);
-    
-    bool earthExists(int x, int y, std::string dir);
-    
+        
     bool boulderExists(int x, int y, int radius);
     
     void printMaze();
