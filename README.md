@@ -9,8 +9,6 @@ Upon being sufficiently "annoyed" by the squirt gun, a falling boulder, or bribe
 
 This game has visual sprites with animations and gameplay audio.
 
-file:///Users/jameswu/Downloads/Tunnelman%20(2).pdf
-
 ## Controls
 Arrow keys - move
 Space - Fire squirt gun
