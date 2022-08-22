@@ -11,6 +11,9 @@ This game has visual sprites with animations and gameplay audio.
 
 ## Controls
 Arrow keys - move
+
 Space - Fire squirt gun
+
 Z - Activate sonar
+
 Tab - Drop gold onto oil field (only works if TunnelMan has gold in inventory)
